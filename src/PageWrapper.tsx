@@ -3,10 +3,13 @@ import styled from 'styled-components/macro';
 
 const StyledPageWrapper = styled.div`
   background-color: black;
-  width: 100vw;
-  min-height: 100vh;
+  display: block;
   height: 100%;
+  padding: 0px 40px 0px 40px;
   text-align: center;
+  @media screen and (max-width: 600px) {
+    padding: 0;
+  }
 `;
 
 const PageWrapper: FC = ({ children }) => {

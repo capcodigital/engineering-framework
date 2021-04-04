@@ -86,7 +86,7 @@ export default function Header() {
           >
             <MenuIcon fontSize='large' />
           </StyledIconButton>
-          <img height={30} src={logo} alt='Logo' style={{ margin: '1rem' }} />
+          <img height={30} src={logo} alt='Logo' />
           {titleData.map((link: any) =>
             link.name === specialism ? (
               <StyledLink

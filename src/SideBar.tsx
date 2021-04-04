@@ -9,12 +9,15 @@ import ExpandLess from '@material-ui/icons/ExpandLess';
 import ExpandMore from '@material-ui/icons/ExpandMore';
 import { sideBarData, levels } from './data';
 
-const StyledList = styled(List)`
-  && {
-    width: 100%;
-    max-width: 325px;
+const SideNav = styled.div`
+  @media screen and (max-width: 600px) {
+    display: none;
+  }
+  padding-right: 20px;
+  && .list {
+    width: 325px;
     color: grey;
-
+    position: sticky;
     .MuiSvgIcon-root {
       display: none;
     }
@@ -47,8 +50,6 @@ const StyledList = styled(List)`
   }
 `;
 
-const SideNav = styled.div``;
-
 const SideBar = () => {
   const {
     level,
@@ -76,7 +77,7 @@ const SideBar = () => {
   return (
     <SideNav>
       {levels.map((levelName: string) => (
-        <StyledList key={levelName}>
+        <List className='list' key={levelName}>
           <ListItem
             button
             className={`level list-item ${levelName === level ? 'active' : ''}`}
@@ -129,7 +130,7 @@ const SideBar = () => {
               ))}
             </List>
           </Collapse>
-        </StyledList>
+        </List>
       ))}
     </SideNav>
   );
