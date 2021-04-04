@@ -1,10 +1,9 @@
 import React, { useState, useContext } from 'react';
 import { Link } from 'react-router-dom';
-import { makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import styled from 'styled-components/macro';
-import EngineeringContext from './EngineeringContext';
+import {EngineeringContext} from './EngineeringContext';
 import logo from './logo.png';
 import Drawer from '@material-ui/core/Drawer';
 import List from '@material-ui/core/List';
@@ -58,13 +57,11 @@ const titleData = [
 ];
 
 export default function Header() {
-  const { name, setName } = useContext(EngineeringContext);
-  const [title, setTitle] = useState('Software Engineer');
+  const { specialism, setSpecialism } = useContext(EngineeringContext);
   const [open, setOpen] = useState(false);
 
   const handleClick = (activeTitle: string) => {
-    setTitle(activeTitle);
-    setName(activeTitle);
+    setSpecialism(activeTitle);
   };
 
   const toggleDrawer = (open: boolean) => (event: any) => {
@@ -91,7 +88,7 @@ export default function Header() {
           </StyledIconButton>
           <img height={30} src={logo} alt='Logo' style={{ margin: '1rem' }} />
           {titleData.map((link: any) =>
-            link.name === title ? (
+            link.name === specialism ? (
               <StyledLink
                 key={link.name}
                 to={link.url}
@@ -129,6 +126,7 @@ export default function Header() {
           <List>
             {titleData.map((link: any) => (
               <ListItem
+                key={link.name}
                 button
                 component={Link}
                 to={link.url}
