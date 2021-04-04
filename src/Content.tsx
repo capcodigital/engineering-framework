@@ -12,15 +12,18 @@ const Main = styled.main`
 `;
 
 const Content: FC<ContentType> = ({ title }) => {
-  const { specialism, level, setSpecialism, setLevel } = useContext(
+  const { specialism, level, category, competency, setSpecialism } = useContext(
     EngineeringContext
   );
+
   useEffect(() => {
     setSpecialism(title);
-  }, [title]);
+  }, [title, setSpecialism]);
 
   console.log(specialism);
   console.log(level);
+  console.log(category);
+  console.log(competency);
   return (
     <Main>
       <SideBar />

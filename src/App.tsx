@@ -1,6 +1,11 @@
 import React from 'react';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import {EngineeringContextProvider} from './EngineeringContext';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Redirect,
+} from 'react-router-dom';
+import { EngineeringContextProvider } from './EngineeringContext';
 import Content from './Content';
 import Header from './Header';
 import PageWrapper from './PageWrapper';
@@ -14,6 +19,7 @@ function App() {
         <Switch>
           <EngineeringContextProvider>
             <Header />
+            <Route exact path='/' render={() => <Redirect to='/software' />} />
             <Route exact path='/software'>
               <Content title={'Software Engineer'} />
             </Route>

@@ -1,5 +1,5 @@
-import React, { useState, useContext } from 'react';
-import {EngineeringContext} from './EngineeringContext';
+import React, { useContext } from 'react';
+import { EngineeringContext } from './EngineeringContext';
 import List from '@material-ui/core/List';
 import { ListItem } from '@material-ui/core';
 import styled from 'styled-components/macro';
@@ -50,21 +50,27 @@ const StyledList = styled(List)`
 const SideNav = styled.div``;
 
 const SideBar = () => {
-  const { specialism, level, setSpecialism, setLevel } = useContext(EngineeringContext);
-  const [activeCategory, setActiveCategory] = useState(0);
-  const [activeCompetency, setActiveCompetency] = useState(0);
+  const {
+    level,
+    category,
+    competency,
+    setLevel,
+    setCategory,
+    setCompetency,
+  } = useContext(EngineeringContext);
 
-  const handleClickCategory = (idx: number) => {
-    setActiveCategory(idx);
-    setActiveCompetency(0);
+  const handleClickCategory = (
+    categoryName: string,
+    firstCompetency: string
+  ) => {
+    setCategory(categoryName);
+    setCompetency(firstCompetency);
   };
-  const handleClickCompetency = (idx: number) => {
-    setActiveCompetency(idx);
+  const handleClickCompetency = (competencyName: string) => {
+    setCompetency(competencyName);
   };
   const handleClickLevel = (levelName: string) => {
     setLevel(levelName);
-    setActiveCompetency(0);
-    setActiveCategory(0);
   };
 
   return (
@@ -73,9 +79,7 @@ const SideBar = () => {
         <StyledList key={levelName}>
           <ListItem
             button
-            className={`level list-item ${
-              levelName === level ? 'active' : ''
-            }`}
+            className={`level list-item ${levelName === level ? 'active' : ''}`}
             onClick={() => handleClickLevel(levelName)}
           >
             {levelName}
@@ -83,42 +87,42 @@ const SideBar = () => {
           </ListItem>
           <Collapse in={level === levelName} timeout='auto' unmountOnExit>
             <List component='nav' className={'nested'}>
-              {sideBarData.map((data: any, categoryIdx: number) => (
+              {sideBarData.map((data: any) => (
                 <span key={data.category}>
                   <ListItem
                     button
                     className={`category list-item ${
-                      categoryIdx === activeCategory ? 'active' : ''
+                      category === data.category ? 'active' : ''
                     }`}
-                    onClick={() => handleClickCategory(categoryIdx)}
+                    onClick={() =>
+                      handleClickCategory(data.category, data.competencies[0])
+                    }
                   >
                     {data.category}
-                    {activeCategory === categoryIdx ? (
+                    {category === data.category ? (
                       <ExpandLess />
                     ) : (
                       <ExpandMore />
                     )}
                   </ListItem>
                   <Collapse
-                    in={activeCategory === categoryIdx}
+                    in={category === data.category}
                     timeout='auto'
                     unmountOnExit
                   >
                     <List component='div' disablePadding>
-                      {data.competencies.map(
-                        (competencyName: string, competencyIdx: number) => (
-                          <ListItem
-                            key={competencyName}
-                            button
-                            className={`nested competency list-item ${
-                              competencyIdx === activeCompetency ? 'active' : ''
-                            }`}
-                            onClick={() => handleClickCompetency(competencyIdx)}
-                          >
-                            <ListItemText primary={competencyName} />
-                          </ListItem>
-                        )
-                      )}
+                      {data.competencies.map((competencyName: string) => (
+                        <ListItem
+                          key={competencyName}
+                          button
+                          className={`nested competency list-item ${
+                            competency === competencyName ? 'active' : ''
+                          }`}
+                          onClick={() => handleClickCompetency(competencyName)}
+                        >
+                          <ListItemText primary={competencyName} />
+                        </ListItem>
+                      ))}
                     </List>
                   </Collapse>
                 </span>
