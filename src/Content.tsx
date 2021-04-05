@@ -4,14 +4,16 @@ import List from '@material-ui/core/List';
 import { ListItem } from '@material-ui/core';
 import { EngineeringContext } from './EngineeringContext';
 import Divider from '@material-ui/core/Divider';
-import ListItemText from '@material-ui/core/ListItemText';
-import Typography from '@material-ui/core/Typography';
 import styled from 'styled-components/macro';
-import { titles, contentData } from './data';
+import { titles } from './data/data';
+import contentData from './data/content';
+import images from './img/';
 type ContentType = {
   title: 'Software Engineer' | 'Quality Engineer';
 };
-
+type ContentHeaderProps = {
+  level: string;
+};
 const Main = styled.main`
   margin-top: 4rem;
   display: flex;
@@ -23,16 +25,19 @@ const ContentContainer = styled.div`
   background-color: #1f1f1f;
   color: white;
   text-align: left;
-  overflow: scroll;
+  overflow: auto;
+  ::-webkit-scrollbar {
+    display: none;
+  }
 `;
-const ContentHeader = styled.div`
+const ContentHeader = styled.div<ContentHeaderProps>`
   width: 100%;
   height: 120px;
   padding: 25px 25px 25px 100px;
 
   background: purple;
   background-size: cover;
-  background-image: url(/img/associate.png);
+  background-image: url(${(props) => (images as any)[props.level]});
 
   .level-title {
     font-size: 16px;
@@ -56,6 +61,7 @@ const ContentDiv = styled.div`
   }
   .title {
     font-size: 24px;
+    font-weight: bold;
     padding-bottom: 16px;
   }
   .description {
@@ -83,7 +89,7 @@ const Content: FC<ContentType> = ({ title }) => {
     <Main>
       <SideBar />
       <ContentContainer>
-        <ContentHeader>
+        <ContentHeader level={level}>
           <div className='level-title'>
             <span className='level'>{level}</span> •{' '}
             {(titles as any)[specialism][level]}

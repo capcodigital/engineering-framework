@@ -7,7 +7,7 @@ import ListItemText from '@material-ui/core/ListItemText';
 import Collapse from '@material-ui/core/Collapse';
 import ExpandLess from '@material-ui/icons/ExpandLess';
 import ExpandMore from '@material-ui/icons/ExpandMore';
-import { sideBarData, levels } from './data';
+import { sideBarData, levels } from './data/data';
 
 const SideNav = styled.div`
   @media screen and (max-width: 600px) {
