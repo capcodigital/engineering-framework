@@ -4,7 +4,7 @@ import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import styled from 'styled-components/macro';
 import {EngineeringContext} from './EngineeringContext';
-import logo from './logo.png';
+import logo from './img/logo.png';
 import Drawer from '@material-ui/core/Drawer';
 import List from '@material-ui/core/List';
 import IconButton from '@material-ui/core/IconButton';

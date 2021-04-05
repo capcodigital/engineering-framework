@@ -8,12 +8,15 @@ import styled from 'styled-components/macro';
 import { titles } from './data/data';
 import contentData from './data/content';
 import images from './img/';
+
 type ContentType = {
   title: 'Software Engineer' | 'Quality Engineer';
 };
+
 type ContentHeaderProps = {
   level: string;
 };
+
 const Main = styled.main`
   margin-top: 4rem;
   display: flex;
@@ -30,12 +33,11 @@ const ContentContainer = styled.div`
     display: none;
   }
 `;
+
 const ContentHeader = styled.div<ContentHeaderProps>`
   width: 100%;
   height: 120px;
   padding: 25px 25px 25px 100px;
-
-  background: purple;
   background-size: cover;
   background-image: url(${(props) => (images as any)[props.level]});
 
@@ -76,6 +78,13 @@ const ContentDiv = styled.div`
   }
 `;
 
+const StyledBulletedList = styled.div`
+font-size: 16px;
+  li {
+    display: list-item;
+    margin-bottom: 16px;
+  }
+`;
 const Content: FC<ContentType> = ({ title }) => {
   const { specialism, level, category, competency, setSpecialism } = useContext(
     EngineeringContext
@@ -106,7 +115,14 @@ const Content: FC<ContentType> = ({ title }) => {
                     alignItems='flex-start'
                   >
                     <div className='title'>{comp.name}</div>
-                    <div className='description'>{comp.description}</div>
+                    {category === 'Overview' ? (
+                      <StyledBulletedList
+                        dangerouslySetInnerHTML={{ __html: comp.description }}
+                      />
+                    ) : (
+                      <div className='description'>{comp.description}</div>
+                    )}
+
                     <Divider />
                   </ListItem>
                 )

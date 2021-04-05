@@ -1,6 +1,25 @@
 const contentData = {
   Associate: {
-    Overview: [],
+    Overview: [
+      {
+        name: 'Job Description',
+        specialism: 'Software Engineer',
+        description:
+          'An associate developer has limited experience and is relatively new to the practice of software development.  Their focus should be on acquiring skills and improving their capabilities.  On the consulting side they should be focused on improving their communication and team work skills as these will be important for future leadership opportunities.',
+      },
+      {
+        name: 'You Have',
+        specialism: 'Software Engineer',
+        description:
+          '<ul><li>Theoretical background such as a university or college program in Computer Science (Technology)</li><li>Coop / internship or equivalent work experience</li><li>Desire / drive to scale your business and technology knowledge</li></ul>',
+      },
+      {
+        name: 'You Will',
+        specialism: 'Software Engineer',
+        description:
+          '<ul><li>Focus on increasing competencies in Software Development</li><li>Enhance communication and relationship management skills with stakeholders.</li></ul>',
+      },
+    ],
     Delivery: [
       {
         name: 'Creating and Understanding Code',
@@ -150,7 +169,26 @@ const contentData = {
     ],
   },
   Consultant: {
-    Overview: [],
+    Overview: [
+      {
+        name: 'Job Description',
+        specialism: 'Software Engineer',
+        description:
+          'A consultant developer has delivered on a few projects and has developed one or more areas of expertise.  They should continue to acquire skills but also focus on becoming experts in a few. On the consulting side their focus on developing expertise should position them well as leaders within projects.  They should proactively seek out leadership opportunities.',
+      },
+      {
+        name: 'You Have',
+        specialism: 'Software Engineer',
+        description:
+          '<ul><li>Demonstrated an ability to deliver on a small number of projects</li><li>Have an intermediate level of expertise in one or more technical subjects</li><li>Demonstrated an ability to be fungible in learning or acclimating new technologies</li></ul>',
+      },
+      {
+        name: 'You Will',
+        specialism: 'Software Engineer',
+        description:
+          '<ul><li>Continue to acquire skills but also focus on becoming an expert in a few</li><li>Gain expertise to position yourself as a leader within projects </li><li>Actively seek out leadership opportunities</li><li>Have an excellent understanding of standard processes  used to deliver a project</li></ul>',
+      },
+    ],
     Delivery: [
       {
         name: 'Creating and Understanding Code',
@@ -312,7 +350,32 @@ const contentData = {
     ],
   },
   'Senior Consultant': {
-    Overview: [],
+    Overview: [
+      {
+        name: 'Job Description',
+        specialism: 'Software Engineer',
+        description:
+          'A senior consultant developer leads teams to deliver high quality solutions.  They are considered SMEs on multiple technical topics and contribute valuable knowledge to the practice.',
+      },
+      {
+        name: 'You Have',
+        specialism: 'Software Engineer',
+        description:
+          '<ul><li> SME on multiple technology issues and contribute valuable knowledge to the practice</li><li>Led development teams (led a stream)</li><li>Delivered high quality solutions </li></ul>',
+      },
+      {
+        name: 'Traditional / Leadership Path',
+        specialism: 'Software Engineer',
+        description:
+          '<ul><li>Continue to build technical and relationship skills scaling towards program management</li><li>Begin demonstrating an  ability to straddle more than one activity stream </li><li>Scale leadership acumen to a level of expertise</li></ul>',
+      },
+      {
+        name: 'Technical / Independent Contributor',
+        specialism: 'Software Engineer',
+        description:
+          '<ul><li> Ability to take a strategic and future oriented approach to knowledge sharing in the practice</li><li>Drive recommendations for building practice level knowledge in up and coming technology areas</li><li>Scale deep technical expertise in a minimum of one area </li><li>  Breadth of technical capabilities and transferable / fungible skills</li><li>Recognize organizational needs and help others scale acumen in that area</li></ul>',
+      },
+    ],
     Delivery: [
       {
         name: 'Creating and Understanding Code',
@@ -475,8 +538,39 @@ const contentData = {
     ],
   },
   'Principal Consultant': {
-    Overview: [],
+    Overview: [
+      {
+        name: 'Job Description',
+        specialism: 'Software Engineer',
+        description:
+          'A technical principal consultant supports large project delivery of high quality software solutions.  On the consulting side a principal consultant will help with resource management and recruiting along with developing technical capabilities to support software projects and the evolution of the technology practice.',
+      },
+      {
+        name: 'You Have',
+        specialism: 'Software Engineer',
+        description:
+          '<ul><li> Supported mid/large sized projects / multiple streams</li><li>Become a SME in multiple areas</li></ul>',
+      },
+      {
+        name: 'Traditional / Leadership Path',
+        specialism: 'Software Engineer',
+        description:
+          '<ul><li>Support large program delivery of high quality software solutions</li><li>Participate in resource management and recruiting along with developing organizational capabilities to support software projects and the evolution of the technology practice.</li></ul>',
+      },
+      {
+        name: 'Technical / Independent Contributor',
+        specialism: 'Software Engineer',
+        description:
+          '<ul><li>Participate in the development of the individual capabilities of technical resources</li><li>Capable of working across business streams and apply SME </li><li>Creating standardizations and best practices in the technical consulting space </li><li> Ability to participate in the selling of a technical solution and communication of the value proposition </li></ul>',
+      },
+    ],
     Delivery: [
+      {
+        name: 'Technical Leadership',
+        specialism: 'All',
+        description:
+          'The Principal Engineer provides considerable high-level technical guidance across the engineering organisation and project teams. They can usually anticipate and plan for technical problems. They are highly knowledgeable in major parts of our technology stack and are the technical owner of significant components within client accounts or internal engineering projects. They act in a very hands-on role, and as such, they are a prolific contributor to both core projects at Capco as well as side and experimental work. When presented with a complex problem, process or existing system they are able to reduce the complexity in order to get more done with less work. They provide guidance, direction and help colleagues build and produce better outcomes. They are capable of driving groups of disparate interests to decisions, and clearly communicating and seeing those decisions through to impact. They are capable of setting short to medium term strategic direction for part of technology stacks, identifying areas of critical need based on future growth and developing roadmaps to attack those problems.',
+      },
       {
         name: 'Creating and Understanding Code',
         specialism: 'Software Engineer',
@@ -542,12 +636,6 @@ const contentData = {
         specialism: 'All',
         description:
           "Actively contributes to security designs based on the organisation's security strategy. Fosters a security first mindset across teams, and leads by example. Has advanced knowledge  of key security technologies, protocols & techniques (e.g. TLS, OAuth, Encryption, Networks)",
-      },
-      {
-        name: 'Technical Leadership',
-        specialism: 'All',
-        description:
-          'The Principal Engineer provides considerable high-level technical guidance across the engineering organisation and project teams. They can usually anticipate and plan for technical problems. They are highly knowledgeable in major parts of our technology stack and are the technical owner of significant components within client accounts or internal engineering projects. They act in a very hands-on role, and as such, they are a prolific contributor to both core projects at Capco as well as side and experimental work. When presented with a complex problem, process or existing system they are able to reduce the complexity in order to get more done with less work. They provide guidance, direction and help colleagues build and produce better outcomes. They are capable of driving groups of disparate interests to decisions, and clearly communicating and seeing those decisions through to impact. They are capable of setting short to medium term strategic direction for part of technology stacks, identifying areas of critical need based on future growth and developing roadmaps to attack those problems.',
       },
     ],
     People: [
@@ -643,6 +731,12 @@ const contentData = {
     Overview: [],
     Delivery: [
       {
+        name: 'Technical Leadership',
+        specialism: 'All',
+        description:
+          "The Distinguished Engineer has significant strategic vision and can take a high-level 3-5 year plan for growth at a business level and translate that into a strategic technology roadmap. They are deeply technically savvy and their primary job is focusing on the architectural and technology needs to grow the engineering organisation over the longer-term horizon; they deal with very deep technical problems and a long time horizon. A Distinguished Engineer is still acting in a very hands-on role, and as such, they are a prolific contributor to both core projects at Capco as well as side and experimental work. When presented with a complex problem, process or existing system they are consistently able to reduce the complexity in order to get more done with less work. The ability to manage and simplify complexity is the hallmark of the Distinguished Engineer; by working with the Distinguished Engineer, engineers across the internal and client organisations gain more insight into dealing with complex technology problems and delivering robust solutions. The Distinguished Engineer has broad impact across Capco tech and client accounts. They create architecture that shapes large parts of our business and our client's business, and ship complex projects including many systems or major pieces of infrastructure. The impact of their work is felt across the team in the quality of the engineering that we produce, the ways we write code, the core libraries that we use, and the underlying design of systems. There are multiple obvious large technical contributions that can be pointed to as originating from this team member.",
+      },
+      {
         name: 'Creating and Understanding Code',
         specialism: 'Software Engineer',
         description:
@@ -707,12 +801,6 @@ const contentData = {
         specialism: 'All',
         description:
           'Actively contributes to setting and refining organisation wide security strategy. Fosters a security first mindset across the organisation. Can recognize obscure security threats that go unnoticed to others.  Has advanced knowledge of key security technologies, protocols & techniques (e.g. TLS, OAuth, Encryption, Networks) and the wider security domain.',
-      },
-      {
-        name: 'Technical Leadership',
-        specialism: 'All',
-        description:
-          "The Distinguished Engineer has significant strategic vision and can take a high-level 3-5 year plan for growth at a business level and translate that into a strategic technology roadmap. They are deeply technically savvy and their primary job is focusing on the architectural and technology needs to grow the engineering organisation over the longer-term horizon; they deal with very deep technical problems and a long time horizon. A Distinguished Engineer is still acting in a very hands-on role, and as such, they are a prolific contributor to both core projects at Capco as well as side and experimental work. When presented with a complex problem, process or existing system they are consistently able to reduce the complexity in order to get more done with less work. The ability to manage and simplify complexity is the hallmark of the Distinguished Engineer; by working with the Distinguished Engineer, engineers across the internal and client organisations gain more insight into dealing with complex technology problems and delivering robust solutions. The Distinguished Engineer has broad impact across Capco tech and client accounts. They create architecture that shapes large parts of our business and our client's business, and ship complex projects including many systems or major pieces of infrastructure. The impact of their work is felt across the team in the quality of the engineering that we produce, the ways we write code, the core libraries that we use, and the underlying design of systems. There are multiple obvious large technical contributions that can be pointed to as originating from this team member.",
       },
     ],
     People: [
