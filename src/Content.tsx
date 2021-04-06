@@ -101,7 +101,7 @@ const Content: FC<ContentType> = ({ title }) => {
     <Main>
       <SideBar />
       <ContentContainer>
-        <ContentHeader level={level} id='content-header'>
+        <ContentHeader level={level}>
           <div className='level-title'>
             <span className='level'>{level}</span> •{' '}
             {(titles as any)[specialism][level]}

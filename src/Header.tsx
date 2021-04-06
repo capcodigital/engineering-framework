@@ -58,7 +58,7 @@ const titleData = [
 ];
 
 export default function Header() {
-  const { specialism, setSpecialism } = useContext(EngineeringContext);
+  const { specialism,category, competency, setSpecialism } = useContext(EngineeringContext);
   const [open, setOpen] = useState(false);
 
   const handleClick = (activeTitle: string) => {
@@ -77,7 +77,7 @@ export default function Header() {
 
   return (
     <>
-      <StyledAppBar position='sticky' id="header">
+      <StyledAppBar position='sticky'>
         <Toolbar>
           <StyledIconButton
             onClick={toggleDrawer(true)}
@@ -92,7 +92,10 @@ export default function Header() {
             link.name === specialism ? (
               <StyledLink
                 key={link.name}
-                to={link.url}
+                to={`${link.url}/#${category}-${competency.replaceAll(
+                  ' ',
+                  '-'
+                )}`.toLowerCase()}
                 className={'active'}
                 onClick={() => handleClick(link.name)}
               >
@@ -101,7 +104,10 @@ export default function Header() {
             ) : (
               <StyledLink
                 key={link.name}
-                to={link.url}
+                to={`${link.url}/#${category}-${competency.replaceAll(
+                  ' ',
+                  '-'
+                )}`.toLowerCase()}
                 onClick={() => handleClick(link.name)}
               >
                 {link.name}

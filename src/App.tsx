@@ -20,10 +20,10 @@ function App() {
           <EngineeringContextProvider>
             <Header />
             <Route exact path='/' render={() => <Redirect to='/software' />} />
-            <Route exact path='/software'>
+            <Route path='/software'>
               <Content title={'Software Engineer'} />
             </Route>
-            <Route exact path={'/quality'}>
+            <Route path={'/quality'}>
               <Content title={'Quality Engineer'} />
             </Route>
           </EngineeringContextProvider>

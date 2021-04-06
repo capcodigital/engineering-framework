@@ -5,8 +5,6 @@ import List from '@material-ui/core/List';
 import { ListItem } from '@material-ui/core';
 import ListItemText from '@material-ui/core/ListItemText';
 import Collapse from '@material-ui/core/Collapse';
-import ExpandLess from '@material-ui/icons/ExpandLess';
-import ExpandMore from '@material-ui/icons/ExpandMore';
 import { sideBarData, levels } from './data/data';
 import styled from 'styled-components/macro';
 
@@ -19,10 +17,6 @@ const SideNav = styled.div`
   && .list {
     min-width: 250px;
     color: grey;
-    position: sticky;
-    .MuiSvgIcon-root {
-      display: none;
-    }
     a {
       text-decoration: none;
     }
@@ -147,11 +141,6 @@ const SideBar = () => {
                     >
                       {data.category}
                     </Link>
-                    {category === data.category ? (
-                      <ExpandLess />
-                    ) : (
-                      <ExpandMore />
-                    )}
                   </ListItem>
                   <Collapse
                     in={category === data.category}
