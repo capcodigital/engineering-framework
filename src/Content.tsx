@@ -1,13 +1,13 @@
 import React, { useContext, useEffect, FC } from 'react';
 import SideBar from './SideBar';
+import Divider from '@material-ui/core/Divider';
 import List from '@material-ui/core/List';
 import { ListItem } from '@material-ui/core';
 import { EngineeringContext } from './EngineeringContext';
-import Divider from '@material-ui/core/Divider';
-import styled from 'styled-components/macro';
 import { titles } from './data/data';
 import contentData from './data/content';
 import images from './img/';
+import styled from 'styled-components/macro';
 
 type ContentType = {
   title: 'Software Engineer' | 'Quality Engineer';

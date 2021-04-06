@@ -22,7 +22,7 @@ const StyledAppBar = styled(AppBar)`
   && {
     background: black;
     padding-top: 20px;
-    padding-bottom: 4rem;
+    padding-bottom: 2.5rem;
   }
 `;
 
