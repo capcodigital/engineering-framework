@@ -19,7 +19,7 @@ type ContentHeaderProps = {
 
 const Main = styled.main`
   display: flex;
-  height:600px
+  height:80vh;
 `;
 
 const ContentContainer = styled.div`
@@ -53,7 +53,7 @@ const ContentHeader = styled.div<ContentHeaderProps>`
 `;
 
 const ContentDiv = styled.div`
-height: 480px;
+height: calc(100% - 120px);
 overflow: auto;
   padding: 25px 100px 25px 100px;
   ::-webkit-scrollbar {
@@ -88,6 +88,7 @@ const StyledDescription = styled.p`
     margin-bottom: 16px;
   }
 `;
+
 const Content: FC<ContentType> = ({ title }) => {
   const { specialism, level, category, setSpecialism } = useContext(
     EngineeringContext

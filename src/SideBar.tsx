@@ -12,7 +12,7 @@ import styled from 'styled-components/macro';
 
 const SideNav = styled.div`
   min-width: 300px;
-  height: 600px;
+  height:80vh;
   overflow-y: auto;
   overflow-x: hidden;
 
