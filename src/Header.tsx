@@ -22,6 +22,7 @@ const StyledAppBar = styled(AppBar)`
   && {
     background: black;
     padding-top: 20px;
+    padding-bottom: 4rem;
   }
 `;
 
@@ -76,7 +77,7 @@ export default function Header() {
 
   return (
     <>
-      <StyledAppBar position='static' id="header">
+      <StyledAppBar position='sticky' id="header">
         <Toolbar>
           <StyledIconButton
             onClick={toggleDrawer(true)}

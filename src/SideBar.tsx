@@ -11,12 +11,13 @@ import { sideBarData, levels } from './data/data';
 import styled from 'styled-components/macro';
 
 const SideNav = styled.div`
-  @media screen and (max-width: 600px) {
-    display: none;
-  }
-  padding-right: 20px;
+  min-width: 300px;
+  height: 600px;
+  overflow-y: auto;
+  overflow-x: hidden;
+
   && .list {
-    width: 325px;
+    min-width: 250px;
     color: grey;
     position: sticky;
     .MuiSvgIcon-root {
@@ -64,6 +65,9 @@ const SideNav = styled.div`
       }
     }
   }
+  @media screen and (max-width: 600px) {
+    display: none;
+  }
 `;
 
 const SideBar = () => {
@@ -101,10 +105,8 @@ const SideBar = () => {
     categoryName: string,
     firstCompetency: string
   ) => {
-
     setCategory(categoryName);
     setCompetency(firstCompetency);
-  
   };
   const handleClickCompetency = (competencyName: string) => {
     setCompetency(competencyName);
@@ -123,7 +125,6 @@ const SideBar = () => {
             onClick={() => handleClickLevel(levelName)}
           >
             {levelName}
-            {level === levelName ? <ExpandLess /> : <ExpandMore />}
           </ListItem>
           <Collapse in={level === levelName} timeout='auto' unmountOnExit>
             <List component='nav' className={'nested'}>
@@ -169,9 +170,10 @@ const SideBar = () => {
                         >
                           <Link
                             smooth
-                            to={`#${data.category.toLowerCase()}-${competencyName
-                              .replaceAll(' ', '-')
-                              .toLowerCase()}`}
+                            to={`#${data.category}-${competencyName.replaceAll(
+                              ' ',
+                              '-'
+                            )}`.toLowerCase()}
                           >
                             <ListItemText primary={competencyName} />
                           </Link>

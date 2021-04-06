@@ -18,20 +18,16 @@ type ContentHeaderProps = {
 };
 
 const Main = styled.main`
-  margin-top: 4rem;
   display: flex;
+  height:600px
 `;
 
 const ContentContainer = styled.div`
   width: 100%;
-  height: 100vh;
+  height: 100%;
   background-color: #1f1f1f;
   color: white;
   text-align: left;
-  overflow: auto;
-  ::-webkit-scrollbar {
-    display: none;
-  }
 `;
 
 const ContentHeader = styled.div<ContentHeaderProps>`
@@ -57,7 +53,12 @@ const ContentHeader = styled.div<ContentHeaderProps>`
 `;
 
 const ContentDiv = styled.div`
+height: 480px;
+overflow: auto;
   padding: 25px 100px 25px 100px;
+  ::-webkit-scrollbar {
+    display: none;
+  }
   li {
     display: block;
   }
