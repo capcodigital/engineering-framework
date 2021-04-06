@@ -76,7 +76,7 @@ export default function Header() {
 
   return (
     <>
-      <StyledAppBar position='static'>
+      <StyledAppBar position='static' id="header">
         <Toolbar>
           <StyledIconButton
             onClick={toggleDrawer(true)}

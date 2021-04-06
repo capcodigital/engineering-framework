@@ -16,7 +16,6 @@ export const EngineeringContextProvider: FC = ({ children }) => {
   const [level, setLevel] = useState('Associate');
   const [category, setCategory] = useState('Overview');
   const [competency, setCompetency] = useState('Job Description');
-
   const initialValue = {
     specialism,
     level,

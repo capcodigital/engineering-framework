@@ -27,20 +27,20 @@ export const titles = {
 export const sideBarData = [
   {
     category: 'Overview',
-    competencies: ['Job Description', 'Framework Criteria', 'Performance'],
+    competencies: ['Job Description', 'You Have', 'You Will'],
   },
   {
     category: 'Delivery',
     competencies: [
+      'Technical Leadership',
       'Creating and understanding code',
       'Testing',
       'Debugging',
       'Observability',
       'Architecture',
       'Cloud',
-      'Data Design & Handling',
+      'Data Design and Handling',
       'Security Awareness and Best Practise Implementation',
-      'Technical Leadership',
     ],
   },
   {
@@ -59,7 +59,7 @@ export const sideBarData = [
   {
     category: 'Stakeholder',
     competencies: [
-      'Dealing with Ambiguity & Risk',
+      'Dealing with Ambiguity and Risk',
       'Economic Thinking',
       'Decision Making',
       'Driving Alignment',

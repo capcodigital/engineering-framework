@@ -67,6 +67,7 @@ const ContentDiv = styled.div`
     padding-bottom: 16px;
   }
   .description {
+    line-height: 24px;
     font-size: 16px;
   }
   hr {
@@ -78,18 +79,18 @@ const ContentDiv = styled.div`
   }
 `;
 
-const StyledBulletedList = styled.div`
-font-size: 16px;
+const StyledDescription = styled.p`
+  font-size: 16px;
+  line-height: 24px;
   li {
     display: list-item;
     margin-bottom: 16px;
   }
 `;
 const Content: FC<ContentType> = ({ title }) => {
-  const { specialism, level, category, competency, setSpecialism } = useContext(
+  const { specialism, level, category, setSpecialism } = useContext(
     EngineeringContext
   );
-
   useEffect(() => {
     setSpecialism(title);
   }, [title, setSpecialism]);
@@ -98,7 +99,7 @@ const Content: FC<ContentType> = ({ title }) => {
     <Main>
       <SideBar />
       <ContentContainer>
-        <ContentHeader level={level}>
+        <ContentHeader level={level} id='content-header'>
           <div className='level-title'>
             <span className='level'>{level}</span> •{' '}
             {(titles as any)[specialism][level]}
@@ -108,21 +109,23 @@ const Content: FC<ContentType> = ({ title }) => {
         <ContentDiv>
           <List component='div' className={'competency-list'}>
             {(contentData as any)[level][category].map(
-              (comp: any) =>
+              (comp: any, idx:number) =>
                 [specialism, 'All'].includes(comp.specialism) && (
                   <ListItem
+                    id={`${category.toLowerCase()}-${comp.name
+                      .replaceAll(' ', '-')
+                      .toLowerCase()}`}
                     key={`content-${comp.name}`}
                     alignItems='flex-start'
                   >
                     <div className='title'>{comp.name}</div>
                     {category === 'Overview' ? (
-                      <StyledBulletedList
+                      <StyledDescription
                         dangerouslySetInnerHTML={{ __html: comp.description }}
                       />
                     ) : (
-                      <div className='description'>{comp.description}</div>
+                      <p className='description'>{comp.description}</p>
                     )}
-
                     <Divider />
                   </ListItem>
                 )

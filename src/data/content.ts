@@ -22,6 +22,11 @@ const contentData = {
     ],
     Delivery: [
       {
+        name: 'Technical Leadership',
+        specialism: 'All',
+        description: 'Not applicable at this level.',
+      },
+      {
         name: 'Creating and Understanding Code',
         specialism: 'Software Engineer',
         description:
@@ -68,21 +73,16 @@ const contentData = {
           'Is aware of the overall landscape of cloud providers and how the organisation uses them.  Is aware of the importance of learning and understanding cloud technologies.',
       },
       {
-        name: 'Data Design & Handling',
+        name: 'Data Design and Handling',
         specialism: 'All',
         description:
           'Understands the role that data plays and has worked with data in systems',
       },
       {
-        name: 'Security Awereness & Best Practise Implementation',
+        name: 'Security Awereness and Best Practise Implementation',
         specialism: 'All',
         description:
           'Understands the importance and language of security concepts.',
-      },
-      {
-        name: 'Technical Leadership',
-        specialism: 'All',
-        description: 'Not applicable at this level.',
       },
     ],
     People: [
@@ -116,7 +116,7 @@ const contentData = {
           'Works to build strong relationships with their teammates and manager.',
       },
       {
-        name: 'Incllusion',
+        name: 'Inclusion',
         specialism: 'All',
         description:
           "Openly shares their opinions and contributes to discussions in a respectful manner. Works with teammates to resolve disagreement in a healthy manner. Is open to changing their perspective and plans based on others' input. ",
@@ -135,7 +135,7 @@ const contentData = {
     ],
     Stakeholder: [
       {
-        name: 'Dealing with AMbiguity & Risk',
+        name: 'Dealing with Ambiguity and Risk',
         specialism: 'All',
         description: 'Not applicable at this level.',
       },
@@ -191,6 +191,11 @@ const contentData = {
     ],
     Delivery: [
       {
+        name: 'Technical Leadership',
+        specialism: 'All',
+        description: 'Not applicable at this level.',
+      },
+      {
         name: 'Creating and Understanding Code',
         specialism: 'Software Engineer',
         description:
@@ -245,21 +250,16 @@ const contentData = {
           'Is aware of the overall landscape of cloud providers and how the organisation uses them.  Has gained some knowledge or experience with at least one provider.',
       },
       {
-        name: 'Data Design & Handling',
+        name: 'Data Design and Handling',
         specialism: 'All',
         description:
           'Understands the importance of data handling and design; Is able to design and build systems which manage data.',
       },
       {
-        name: 'Security Awereness & Best Practise Implementation',
+        name: 'Security Awereness and Best Practise Implementation',
         specialism: 'All',
         description:
           'Understands the importance and language of security concepts. Utilises this knowledge to ask more senior engineers for help on making decisions that may have security implications.',
-      },
-      {
-        name: 'Technical Leadership',
-        specialism: 'All',
-        description: 'Not applicable at this level.',
       },
     ],
     People: [
@@ -293,7 +293,7 @@ const contentData = {
           'Works to build strong relationships with their teammates, manager, and product counterpart.',
       },
       {
-        name: 'Incllusion',
+        name: 'Inclusion',
         specialism: 'All',
         description:
           "Openly shares their opinions and contributes to discussions in a respectful manner. Approaches disagreement with their teammates non-defensively with inquisitiveness. Uses contradictory opinions as a basis for constructive, productive conversations. Is open to changing their perspective and plans based on others' input.",
@@ -313,7 +313,7 @@ const contentData = {
     ],
     Stakeholder: [
       {
-        name: 'Dealing with AMbiguity & Risk',
+        name: 'Dealing with AMbiguity AND Risk',
         specialism: 'All',
         description:
           'Usually handles risk, change, and uncertainty within their personal scope of work effectively. Clarifies expectations with their teammates.  Escalates any blockers, delays, and cost ballooning to their team daily. Usually decides and acts responsibly without having the total picture during routine business, and when in high pressure situations.',
@@ -378,6 +378,11 @@ const contentData = {
     ],
     Delivery: [
       {
+        name: 'Technical Leadership',
+        specialism: 'All',
+        description: 'Not applicable at this level.',
+      },
+      {
         name: 'Creating and Understanding Code',
         specialism: 'Software Engineer',
         description:
@@ -429,24 +434,19 @@ const contentData = {
         name: 'Cloud',
         specialism: 'All',
         description:
-          'Is aware of the overall landscape of cloud providers and how the organisation uses them;  Is aware of the organisational management and strategy for cloud providers.  Has an understanding of how projects are managed within the cloud and the design & setup considerations;  has gained some experience with at least one provider.  Has defined and progressed a plan to gain training or certification in at least one cloud provider.',
+          'Is aware of the overall landscape of cloud providers and how the organisation uses them;  Is aware of the organisational management and strategy for cloud providers.  Has an understanding of how projects are managed within the cloud and the design AND setup considerations;  has gained some experience with at least one provider.  Has defined and progressed a plan to gain training or certification in at least one cloud provider.',
       },
       {
-        name: 'Data Design & Handling',
+        name: 'Data Design and Handling',
         specialism: 'All',
         description:
           'Understands the importance of data handling and design; Is able to design and build systems which manage data, including knowledge and implementation of data security best practise.',
       },
       {
-        name: 'Security Awereness & Best Practise Implementation',
+        name: 'Security Awereness and Best Practise Implementation',
         specialism: 'All',
         description:
-          'Approaches all engineering work with a security lens. Actively looks for security vulnerabilities both in the code and when providing peer reviews.  Has a general understanding of some key security technologies, protocols & techniques (e.g. TLS, OAuth, Encryption, Networks)',
-      },
-      {
-        name: 'Technical Leadership',
-        specialism: 'All',
-        description: 'Not applicable at this level.',
+          'Approaches all engineering work with a security lens. Actively looks for security vulnerabilities both in the code and when providing peer reviews.  Has a general understanding of some key security technologies, protocols AND techniques (e.g. TLS, OAuth, Encryption, Networks)',
       },
     ],
     People: [
@@ -480,7 +480,7 @@ const contentData = {
           "Works to build strong relationships with their teammates, client peers, manager, as well as their teams' relevant business and client stakeholders.",
       },
       {
-        name: 'Incllusion',
+        name: 'Inclusion',
         specialism: 'All',
         description:
           "Encourages their teammates to openly share their opinions and contribute to discussions in a respectful manner. Approaches disagreement non-defensively with inquisitiveness. Uses contradictory opinions as a basis for constructive, productive conversations. Is open to changing their perspective and plans based on others' input. ",
@@ -500,7 +500,7 @@ const contentData = {
     ],
     Stakeholder: [
       {
-        name: 'Dealing with AMbiguity & Risk',
+        name: 'Dealing with AMbiguity AND Risk',
         specialism: 'All',
         description:
           'Effectively handles risk, change, and uncertainty within their team. Ensures expectations within their team are clarified between all parties involved.  Decides and acts responsibly in their work with their team without having the total picture during routine business, as well as when in high pressure situations.  Anticipates and communicates blockers, delays, and cost ballooning for their work before they require escalation. ',
@@ -593,7 +593,7 @@ const contentData = {
         name: 'Testing',
         specialism: 'Quality Engineer',
         description:
-          'Understands organisational testing approaches, and uses quality metrics to identify gaps. Works individually or with teams and draws on experience to recommend tooling & solutions aligning with organisational strategies.  Drives organisation wide testing strategy. ',
+          'Understands organisational testing approaches, and uses quality metrics to identify gaps. Works individually or with teams and draws on experience to recommend tooling AND solutions aligning with organisational strategies.  Drives organisation wide testing strategy. ',
       },
       {
         name: 'Debugging',
@@ -623,19 +623,19 @@ const contentData = {
         name: 'Cloud',
         specialism: 'All',
         description:
-          'Has advanced knowledge of cloud concepts, capabilities and design considerations. Works closely with teams to deliver solutions in alignment with the organisational cloud strategy.  Has detailed knowledge of how projects are managed within the cloud and the design & setup considerations;  has gained knowledge/experience or certification with more than one provider; Is aware of industry trends/advancements in cloud technologies.',
+          'Has advanced knowledge of cloud concepts, capabilities and design considerations. Works closely with teams to deliver solutions in alignment with the organisational cloud strategy.  Has detailed knowledge of how projects are managed within the cloud and the design AND setup considerations;  has gained knowledge/experience or certification with more than one provider; Is aware of industry trends/advancements in cloud technologies.',
       },
       {
-        name: 'Data Design & Handling',
+        name: 'Data Design and Handling',
         specialism: 'All',
         description:
           'Understands advanced data handling concepts / designs.  Designs and builds systems which manage data securely.  Actively promotes secure data management across teams, clients and the organisation.',
       },
       {
-        name: 'Security Awereness & Best Practise Implementation',
+        name: 'Security Awereness and Best Practise Implementation',
         specialism: 'All',
         description:
-          "Actively contributes to security designs based on the organisation's security strategy. Fosters a security first mindset across teams, and leads by example. Has advanced knowledge  of key security technologies, protocols & techniques (e.g. TLS, OAuth, Encryption, Networks)",
+          "Actively contributes to security designs based on the organisation's security strategy. Fosters a security first mindset across teams, and leads by example. Has advanced knowledge  of key security technologies, protocols AND techniques (e.g. TLS, OAuth, Encryption, Networks)",
       },
     ],
     People: [
@@ -670,7 +670,7 @@ const contentData = {
           "Works to build and improve strong relationships with their teammates, client peers, manager, their teams' relevant business and client stakeholders, and senior engineers across the organisation. Leverages relationships to better plan for and position their team.",
       },
       {
-        name: 'Incllusion',
+        name: 'Inclusion',
         specialism: 'All',
         description:
           'Fosters a culture within their teams where people are encouraged to share their opinions and contribute to discussions in a respectful manner, approach disagreement non-defensively with inquisitiveness, and use contradictory opinions as a basis for constructive, productive conversations. Works through surface-level disagreements to expose the concerns of disagreeing voices and integrates these concerns into their perspective and plans.',
@@ -690,7 +690,7 @@ const contentData = {
     ],
     Stakeholder: [
       {
-        name: 'Dealing with AMbiguity & Risk',
+        name: 'Dealing with AMbiguity AND Risk',
         specialism: 'All',
         description:
           'Effectively handles risk, change, and uncertainty across several teams. Ensures expectations with their team and external stakeholders are clarified between all parties involved.  Decides and acts responsibly in their work across teams without having the total picture during routine business, as well as when in high pressure situations.  Anticipates and communicates blockers, delays, and cost ballooning within their team’s projects, before they require escalation. ',
@@ -752,13 +752,13 @@ const contentData = {
         name: 'Testing',
         specialism: 'Software Engineer',
         description:
-          'Understands organisational testing approaches, and uses quality metrics to identify gaps. Works individually or with teams and draws on experience to recommend tooling & solutions aligning with organisational strategies.  Drives organisation wide testing strategy.',
+          'Understands organisational testing approaches, and uses quality metrics to identify gaps. Works individually or with teams and draws on experience to recommend tooling AND solutions aligning with organisational strategies.  Drives organisation wide testing strategy.',
       },
       {
         name: 'Testing',
         specialism: 'Quality Engineer',
         description:
-          'Understands organisational testing approaches, and uses quality metrics to identify gaps. Works individually or with teams and draws on experience to recommend tooling & solutions aligning with organisational strategies.  Drives organisation wide testing strategy. ',
+          'Understands organisational testing approaches, and uses quality metrics to identify gaps. Works individually or with teams and draws on experience to recommend tooling AND solutions aligning with organisational strategies.  Drives organisation wide testing strategy. ',
       },
       {
         name: 'Debugging',
@@ -791,16 +791,16 @@ const contentData = {
           'Has advanced knowledge of cloud concepts, capabilities and design considerations.  Contributes to the organisational cloud strategy or management.  Proactively supports or is leading project alignment with the strategy across the organisation.  Contributes to ongoing assessment of organisational skills gaps within the cloud domain and contributes to the improvement of knowledge/skills required for the cloud; Is aware of wide industry trends/advancements in cloud technologies.',
       },
       {
-        name: 'Data Design & Handling',
+        name: 'Data Design and Handling',
         specialism: 'All',
         description:
           'Understands advanced data handling concepts, designs and legislation.  Designs and builds systems which manage data securely.  Actively promotes secure data management across teams, clients and the organisation.',
       },
       {
-        name: 'Security Awereness & Best Practise Implementation',
+        name: 'Security Awereness and Best Practise Implementation',
         specialism: 'All',
         description:
-          'Actively contributes to setting and refining organisation wide security strategy. Fosters a security first mindset across the organisation. Can recognize obscure security threats that go unnoticed to others.  Has advanced knowledge of key security technologies, protocols & techniques (e.g. TLS, OAuth, Encryption, Networks) and the wider security domain.',
+          'Actively contributes to setting and refining organisation wide security strategy. Fosters a security first mindset across the organisation. Can recognize obscure security threats that go unnoticed to others.  Has advanced knowledge of key security technologies, protocols AND techniques (e.g. TLS, OAuth, Encryption, Networks) and the wider security domain.',
       },
     ],
     People: [
@@ -832,10 +832,10 @@ const contentData = {
         name: 'Relationship Building',
         specialism: 'All',
         description:
-          'Works to build and improve strong relationships with engineers, managers and capability leaders across the organisation as well as relevant client stakeholders and account managers. Leverages those relationships to better plan for and position the engineering organisation.  Actively seeks out the development of partnerships with relevant third parties to advance the capabilities & offerings of the engineering organisation.',
+          'Works to build and improve strong relationships with engineers, managers and capability leaders across the organisation as well as relevant client stakeholders and account managers. Leverages those relationships to better plan for and position the engineering organisation.  Actively seeks out the development of partnerships with relevant third parties to advance the capabilities AND offerings of the engineering organisation.',
       },
       {
-        name: 'Incllusion',
+        name: 'Inclusion',
         specialism: 'All',
         description:
           'Fosters a culture across the organisation where people are encouraged to share their opinions and contribute to discussions in a respectful manner, approach disagreement non-defensively with inquisitiveness, and use contradictory opinion as a basis for constructive, productive conversations. Integrates disagreeing perspectives from the whole company into their perspective and plans.',
@@ -855,7 +855,7 @@ const contentData = {
     ],
     Stakeholder: [
       {
-        name: 'Dealing with AMbiguity & Risk',
+        name: 'Dealing with AMbiguity AND Risk',
         specialism: 'All',
         description:
           'Effectively handles risk, change, and uncertainty across the organisation. Ensures expectations across the organisation and external stakeholders are clarified between all parties involved.   Decides and acts responsibly in their work across the organisation without having the total picture during routine business, as well as when in high pressure situations.',

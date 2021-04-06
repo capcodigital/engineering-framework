@@ -1,13 +1,14 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect } from 'react';
+import { NavHashLink as Link } from 'react-router-hash-link';
 import { EngineeringContext } from './EngineeringContext';
 import List from '@material-ui/core/List';
 import { ListItem } from '@material-ui/core';
-import styled from 'styled-components/macro';
 import ListItemText from '@material-ui/core/ListItemText';
 import Collapse from '@material-ui/core/Collapse';
 import ExpandLess from '@material-ui/icons/ExpandLess';
 import ExpandMore from '@material-ui/icons/ExpandMore';
 import { sideBarData, levels } from './data/data';
+import styled from 'styled-components/macro';
 
 const SideNav = styled.div`
   @media screen and (max-width: 600px) {
@@ -21,7 +22,9 @@ const SideNav = styled.div`
     .MuiSvgIcon-root {
       display: none;
     }
-
+    a {
+      text-decoration: none;
+    }
     .active {
       color: white;
     }
@@ -32,7 +35,6 @@ const SideNav = styled.div`
       height: 32px;
       margin-bottom: 8px;
     }
-
     .level.list-item {
       font-size: 20px;
       font-weight: bold;
@@ -40,12 +42,26 @@ const SideNav = styled.div`
     .category.list-item {
       font-size: 16px;
       font-weight: bold;
+      a {
+        color: grey;
+      }
     }
     .category.list-item.active {
       border-left: 3px solid #e72871;
+      a {
+        color: white;
+      }
     }
     .competency.list-item {
       font-size: 16px;
+      a {
+        color: grey;
+      }
+    }
+    .competency.list-item.active {
+      a {
+        color: white;
+      }
     }
   }
 `;
@@ -60,12 +76,35 @@ const SideBar = () => {
     setCompetency,
   } = useContext(EngineeringContext);
 
+  useEffect(() => {
+    if (window.location.hash) {
+      const temp = window.location.hash.split('#')[1].split('-')[0];
+      const categoryfromUrl = temp.charAt(0).toUpperCase() + temp.slice(1);
+      setCategory(categoryfromUrl);
+    }
+  }, [setCategory]);
+
+  useEffect(() => {
+    setTimeout(() => {
+      const { hash } = window.location;
+      if (hash) {
+        const id = hash.replace('#', '');
+        const element = document.getElementById(id);
+        if (element) {
+          element.scrollIntoView({ block: 'start', behavior: 'smooth' });
+        }
+      }
+    }, 100);
+  }, []);
+
   const handleClickCategory = (
     categoryName: string,
     firstCompetency: string
   ) => {
+
     setCategory(categoryName);
     setCompetency(firstCompetency);
+  
   };
   const handleClickCompetency = (competencyName: string) => {
     setCompetency(competencyName);
@@ -99,7 +138,14 @@ const SideBar = () => {
                       handleClickCategory(data.category, data.competencies[0])
                     }
                   >
-                    {data.category}
+                    <Link
+                      smooth
+                      to={`#${data.category.toLowerCase()}-${data.competencies[0]
+                        .replaceAll(' ', '-')
+                        .toLowerCase()}`}
+                    >
+                      {data.category}
+                    </Link>
                     {category === data.category ? (
                       <ExpandLess />
                     ) : (
@@ -118,10 +164,17 @@ const SideBar = () => {
                           button
                           className={`nested competency list-item ${
                             competency === competencyName ? 'active' : ''
-                          }`}
+                          } `}
                           onClick={() => handleClickCompetency(competencyName)}
                         >
-                          <ListItemText primary={competencyName} />
+                          <Link
+                            smooth
+                            to={`#${data.category.toLowerCase()}-${competencyName
+                              .replaceAll(' ', '-')
+                              .toLowerCase()}`}
+                          >
+                            <ListItemText primary={competencyName} />
+                          </Link>
                         </ListItem>
                       ))}
                     </List>
