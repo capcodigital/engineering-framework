@@ -22,6 +22,18 @@ const contentData = {
     ],
     Delivery: [
       {
+        name: 'Framework Criteria',
+        name2: 'Expected Performance',
+        name3: 'High Performance',
+        specialism: 'All',
+        description:
+          '<ul><li>Completes tasks with some guidance, and produces deliverables with infrequent/minor corrections</li> <li>Delivers in a timely manner and demonstrates adequate knowledge of content and processes</li><li>Ability to handle increasingly complex tasks with minimal direction while maintaining quality</li></ul>',
+        description2:
+          'Bob’s code is of reasonable quality.  Closer attention could be made to his coding style as it is inconsistent at times. He sometimes forgets to actually run the code before committing. This had led to a few broken builds, but nothing serious.',
+        description3:
+          'Alice has a consistent and readable coding style.  She has good attention to detail especially around handling edge cases.  Even though she has limited experience, she has successfully executed minor refactoring to improve the codebase.',
+      },
+      {
         name: 'Technical Leadership',
         specialism: 'All',
         description: 'Not applicable at this level.',
@@ -87,6 +99,18 @@ const contentData = {
     ],
     People: [
       {
+        name: 'Framework Criteria',
+        name2: 'Expected Performance',
+        name3: 'High Performance',
+        specialism: 'All',
+        description:
+          '<ul><li>Interact with all team members in a professional and collaborative manner</li> <li>Maintain effectiveness during changing circumstances and successfully fulfills responsibilities</li> <li>Positive impact to the working environment</li><li>Proactively seeks development opportunities, pre-empting the skills or content required for delivery</li></ul>',
+        description2:
+          'Alice gets along well with her teammates. She reaches out for help when she needs it, and offers assistance to those who ask. For her current project, a new testing framework was introduced that Alice wasn’t familiar with. She spent time reading the documentation, and is now able to produce high quality unit tests using the framework.',
+        description3:
+          'Bob joined the project during the early phases of development.  As the project ramped up, Bob proactively welcomed each new member, and helped facilitate onboarding activities.  During one of the grooming sessions,  Bob observed that the team had little experience around one of the features. Bob took the initiative to read about various implementations of that feature, which helped the team significantly during technical design sessions.',
+      },
+      {
         name: 'Management',
         specialism: 'All',
         description: 'Not applicable at this level.',
@@ -134,6 +158,18 @@ const contentData = {
       },
     ],
     Stakeholder: [
+      {
+        name: 'Framework Criteria',
+        name2: 'Expected Performance',
+        name3: 'High Performance',
+        specialism: 'All',
+        description:
+          '<ul><li>Aware of project stakeholders and conscious of the need to build relationships with them </li> <li>Highly professional and responsive</li> <li>Actively seeks alignment and understanding with stakeholders’ needs</li></ul>',
+        description2:
+          'Alice often researches comparable frameworks for her projects and spends time understanding how more advanced features might work. Using this knowledge, she provides valuable feedback in order to better meet the project requirements.',
+        description3:
+          'Alice often researches comparable frameworks for her projects and spends time understanding how more advanced features might work. Using this knowledge, she provides valuable feedback in order to better meet the project requirements.',
+      },
       {
         name: 'Dealing with Ambiguity and Risk',
         specialism: 'All',
@@ -190,6 +226,18 @@ const contentData = {
       },
     ],
     Delivery: [
+      {
+        name: 'Framework Criteria',
+        name2: 'Expected Performance',
+        name3: 'High Performance',
+        specialism: 'All',
+        description:
+          '<ul><li>Ability to handle increasingly complex tasks with minimal direction</li><li>Produce high quality deliverables</li><li>Deliver in a timely manner and demonstrate intermediate knowledge of content and processes</li><li>Considered a SME of at least part of an application</li></ul>',
+        description2:
+          'Alice is a very consistent performer on the team.  She almost always finishes on time with very few bugs.  Her coding style is clean, consistent and uses a lot of best practices like non repeating code and favouring simplicity.',
+        description3:
+          'Bob is extremely productive on the team.  His code is clean and thorough. Bob is also beginning to have a multi-faceted approach to building solutions.  His code considers: threading, memory management, separation of concerns, performance etc.',
+      },
       {
         name: 'Technical Leadership',
         specialism: 'All',
@@ -264,6 +312,18 @@ const contentData = {
     ],
     People: [
       {
+        name: 'Framework Criteria',
+        name2: 'Expected Performance',
+        name3: 'High Performance',
+        specialism: 'All',
+        description:
+          '<ul><li>Actively seeking out leadership opportunities</li><li>Maintain effectiveness during changing circumstances and successfully fulfill their responsibilities</li><li>Uses knowledge and experience to help other team members</li><li>Proactively seeks development opportunities, pre-empting the skills or contents required for delivery</li></ul>',
+        description2:
+          'Alice took the initiative to streamline interactions between developers and a vendor UX team.  By listening carefully to both teams she worked with BAs and UX designers to define several templates that the teams used to request artifacts/information from each other.',
+        description3:
+          'Bob worked on a POC that had tight deadlines.  During meetings with the client, Bob asked a lot of question to help understand the scope and intent of the POC.  Based on Bob’s findings he recommended that we build the POC using a prototyping tool instead of actually developing the POC in order to cut cost and save time.',
+      },
+      {
         name: 'Management',
         specialism: 'All',
         description: 'Not applicable at this level.',
@@ -313,7 +373,19 @@ const contentData = {
     ],
     Stakeholder: [
       {
-        name: 'Dealing with AMbiguity AND Risk',
+        name: 'Framework Criteria',
+        name2: 'Expected Performance',
+        name3: 'High Performance',
+        specialism: 'All',
+        description:
+          '<ul><li>Proactively cultivates relationships with stakeholders</li><li>Keeps stakeholders informed, raises risks/issues, anticipates stakeholder needs</li><li>Awareness of and/or participate in the design of processes to effectively manage stakeholders</li></ul>',
+        description2:
+          'Alice took the initiative to streamline interactions between developers and a vendor UX team.  By listening carefully to both teams she worked with BAs and UX designers to define several templates that the teams used to request artifacts/information from each other.',
+        description3:
+          'Bob worked on a POC that had tight deadlines.  During meetings with the client, Bob asked a lot of question to help understand the scope and intent of the POC.  Based on Bob’s findings he recommended that we build the POC using a prototyping tool instead of actually developing the POC in order to cut cost and save time.',
+      },
+      {
+        name: 'Dealing with Ambiguity and Risk',
         specialism: 'All',
         description:
           'Usually handles risk, change, and uncertainty within their personal scope of work effectively. Clarifies expectations with their teammates.  Escalates any blockers, delays, and cost ballooning to their team daily. Usually decides and acts responsibly without having the total picture during routine business, and when in high pressure situations.',
@@ -377,6 +449,18 @@ const contentData = {
       },
     ],
     Delivery: [
+      {
+        name: 'Framework Criteria',
+        name2: 'Expected Performance',
+        name3: 'High Performance',
+        specialism: 'All',
+        description:
+          '<ul><li> Define solutions for moderate/complex problems</li><li>Manage delivery of the solution </li> <li> Produce high quality deliverables</li><li> Deliver in a timely manner and demonstrate specialist skills and experience, proven through project delivery </li><li> Demonstrate multiple areas of expertise</li></ul>',
+        description2:
+          'Bob cares about the quality of the code he delivers. His code is clean, thorough, and is always accompanied by tests.  Bob is adept with his language of choice and is aware of software design principles such as SOLID, KISS, etc.',
+        description3:
+          'Alice is recognized within Capco as a go-to person for frontend application development. Alice was tasked to define a generic framework to generate web forms for an existing client onboarding application, which already has a number of existing forms in place. She successfully led the team in creating the framework and integrated it into the application and replaced the existing forms.',
+      },
       {
         name: 'Technical Leadership',
         specialism: 'All',
@@ -451,6 +535,18 @@ const contentData = {
     ],
     People: [
       {
+        name: 'Framework Criteria',
+        name2: 'Expected Performance',
+        name3: 'High Performance',
+        specialism: 'All',
+        description:
+          '<ul><li> Lead small/medium size teams and manage projects with little guidance</li><li>Proactive in navigating uncertainty in their role and adapts communication style for different audiences</li>  <li> Proactive in developing junior resources</li><li> Contributes valuable SME knowledge to the practice</li><li> Demonstrates a desire for continuous learning</li></ul>',
+        description2:
+          'Alice is the lead on a project where the client is constantly changing their requirements.  Aware of potential scope creep, Alice proactively puts processes in place to prioritize and clarify requirements with the client.  Alice also promotes knowledge sharing within her team and often pairs with other team members to minimize knowledge silos.',
+        description3:
+          'Bob was assigned as the lead of a small team to build a new front end application for a client.  There was some uncertainty around the technologies chosen by the client with respect to performance. Aware of the potential risks, Bob explained the risks to the client and recommended that they first prove out the technology with a POC of all the critical features. After the project, Bob hosted a lunch and learn and shared his findings with others in the practice.',
+      },
+      {
         name: 'Management',
         specialism: 'All',
         description: 'Not applicable at this level.',
@@ -500,7 +596,19 @@ const contentData = {
     ],
     Stakeholder: [
       {
-        name: 'Dealing with AMbiguity AND Risk',
+        name: 'Framework Criteria',
+        name2: 'Expected Performance',
+        name3: 'High Performance',
+        specialism: 'All',
+        description:
+          '<ul><li>Effective at managing expectations and anticipating needs, risks and potential issues without direct instruction</li> <li>Always keeps stakeholders informed, frequently raises risks/issues</li> <li>Regularly anticipates stakeholder needs and proposes ways to address them</li> <li>Regarded as a trusted advisor to stakeholders</li></ul>',
+        description2:
+          'Bob regularly prepares for and performs relevant research before story grooming and technical design sessions. This enables him to lead and facilitate the sessions and bring valuable insights and questions to the table.',
+        description3:
+          'Alice was put on a difficult project where she had to report to multiple stakeholders, some with contradicting interests.  Over several meetings Alice was able to design a solution that satisfied the requirements and gain concurrence amongst all the stakeholders. Alice is highly regarded because of her efforts.',
+      },
+      {
+        name: 'Dealing with Ambiguity and Risk',
         specialism: 'All',
         description:
           'Effectively handles risk, change, and uncertainty within their team. Ensures expectations within their team are clarified between all parties involved.  Decides and acts responsibly in their work with their team without having the total picture during routine business, as well as when in high pressure situations.  Anticipates and communicates blockers, delays, and cost ballooning for their work before they require escalation. ',
@@ -565,6 +673,18 @@ const contentData = {
       },
     ],
     Delivery: [
+      {
+        name: 'Framework Criteria',
+        name2: 'Expected Performance',
+        name3: 'High Performance',
+        specialism: 'All',
+        description:
+          '<ul><li> Define solutions for complex problems</li> <li> Delivers consistently to a high standard and ensures quality work from their team</li><li> Recognized within Capco as having proven skills and experience through project delivery</li><li> Uses specialist knowledge and skills to provide insight and guidance to juniors, peers and stakeholders </li> </ul>',
+        description2:
+          ' Bob defined the solution for how the users would access partner web applications via SSO.  Bob is highly experienced in the realm of security so his team was able to deliver the solution even though scope and complexity were added during development.',
+        description3:
+          'Alice defined the project scope and delivery plan for an upcoming project.  During execution, Alice continuously fine tunes the delivery process to increase quality and reduce development time.  Alice is known within Capco as a thought leader on software development practices and is brought in by program stakeholders to consult on development matters. ',
+      },
       {
         name: 'Technical Leadership',
         specialism: 'All',
@@ -640,6 +760,18 @@ const contentData = {
     ],
     People: [
       {
+        name: 'Framework Criteria',
+        name2: 'Expected Performance',
+        name3: 'High Performance',
+        specialism: 'All',
+        description:
+          '<ul><li> Leads a program team through periods of uncertainty and challenging circumstances </li> <li> Plays a supporting role in the leadership of the account or program</li><li> Proactive in developing junior resources and providing coaching/feedback </li><li> Contributes significantly to developing capabilities / practices.</li> </ul>',
+        description2:
+          'Bob leads a medium size team of 10 people to deliver a project structured within a larger program.  The team is working effectively and is delivering to client requirements even though client expectations are high.  Bob is an excellent mentor to junior developers within Capco and contributes as a member of the agile working group, helping to improve delivery capability. ',
+        description3:
+          'Alice leads a development group composed of 23 developers working in small streams.  The development group is a major component of the client program and requires coordination with the program stakeholders and the other development groups.  Alice hosts a recurring lunch and learn for developers to connect and improve their development skill.  Alice also works to recruit and/or retain talented individuals with Capco.',
+      },
+      {
         name: 'Management',
         specialism: 'All',
         description:
@@ -690,7 +822,19 @@ const contentData = {
     ],
     Stakeholder: [
       {
-        name: 'Dealing with AMbiguity AND Risk',
+        name: 'Framework Criteria',
+        name2: 'Expected Performance',
+        name3: 'High Performance',
+        specialism: 'All',
+        description:
+          '<ul><li>Effective at managing expectations and anticipating needs, risks and potential issues without direct instructions</li> <li>Trusted by project leaders and seeks to develop strong relationships with senior stakeholders </li><li> Provides guidance to the stakeholder on addressing business needs and leads projects to meet these needs </li><li> Demonstrates an understanding of stakeholder business drivers </li> </ul>',
+        description2:
+          'Bob is working with client project managers in planning for deploying into production.  Requirements from the business and technology units will drive how the process will be executed and coordinated with other groups.  The plan will need approval by senior stakeholders (on both Capco and client side) before it can go ahead. ',
+        description3:
+          'Alice’s project needs a new contract as the client stakeholder has lost partial funding to deliver the full solution.  Alice has been asked to decide on what can be delivered with the limited funding they have.  She works with the senior stakeholders to trim scope and manages the development teams to deliver a viable MVP into production.',
+      },
+      {
+        name: 'Dealing with Ambiguity and Risk',
         specialism: 'All',
         description:
           'Effectively handles risk, change, and uncertainty across several teams. Ensures expectations with their team and external stakeholders are clarified between all parties involved.  Decides and acts responsibly in their work across teams without having the total picture during routine business, as well as when in high pressure situations.  Anticipates and communicates blockers, delays, and cost ballooning within their team’s projects, before they require escalation. ',

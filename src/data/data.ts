@@ -62,6 +62,7 @@ export const sideBarData = [
   {
     category: 'Delivery',
     competencies: [
+      'Framework Criteria',
       'Technical Leadership',
       'Creating and understanding code',
       'Testing',
@@ -76,6 +77,7 @@ export const sideBarData = [
   {
     category: 'People',
     competencies: [
+      'Framework Criteria',
       'Management',
       'Feedback',
       'Effective Communication',
@@ -89,6 +91,7 @@ export const sideBarData = [
   {
     category: 'Stakeholder',
     competencies: [
+      'Framework Criteria',
       'Dealing with Ambiguity and Risk',
       'Economic Thinking',
       'Decision Making',

@@ -57,12 +57,17 @@ const ContentHeader = styled.div<ContentHeaderProps>`
 const ContentDiv = styled.div`
   height: calc(100% - 120px);
   overflow: auto;
-  padding: 25px 100px 25px 100px;
   ::-webkit-scrollbar {
     display: none;
   }
+  .competency-list {
+    padding: 0;
+  }
   li {
     display: block;
+  }
+  li.list-item {
+    padding: 24px 100px 24px 100px;
   }
   .title {
     font-size: 24px;
@@ -74,7 +79,7 @@ const ContentDiv = styled.div`
     font-size: 16px;
   }
   hr {
-    margin: 48px 0 48px 0;
+    margin: 48px 0px 24px 0px;
     background-color: white;
   }
   @media screen and (max-width: 600px) {
@@ -131,8 +136,13 @@ const Content: FC<ContentType> = ({ title }) => {
                     id={`${category.toLowerCase()}-${comp.name
                       .replaceAll(' ', '-')
                       .toLowerCase()}`}
+                    className='list-item'
                     key={`content-${comp.name}`}
                     alignItems='flex-start'
+                    style={{
+                      background:
+                        comp.name === 'Framework Criteria' ? '#161616' : '',
+                    }}
                   >
                     <div className='title'>
                       {comp.name}
@@ -149,14 +159,32 @@ const Content: FC<ContentType> = ({ title }) => {
                           </StyledTag>
                         )}
                     </div>
+
                     {category === 'Overview' ? (
-                      <StyledDescription
-                        dangerouslySetInnerHTML={{ __html: comp.description }}
-                      />
+                      <>
+                        <StyledDescription
+                          dangerouslySetInnerHTML={{ __html: comp.description }}
+                        />
+                        <Divider />
+                      </>
+                    ) : comp.name === 'Framework Criteria' ? (
+                      <>
+                        <StyledDescription
+                          dangerouslySetInnerHTML={{ __html: comp.description }}
+                        />
+                        <Divider />
+                        <div className='title'>{comp.name2}</div>
+                        <p className='description'>{comp.description2}</p>
+                        <Divider />
+                        <div className='title'>{comp.name3}</div>
+                        <p className='description'>{comp.description3}</p>
+                      </>
                     ) : (
-                      <p className='description'>{comp.description}</p>
+                      <>
+                        <p className='description'>{comp.description}</p>
+                        <Divider />
+                      </>
                     )}
-                    <Divider />
                   </ListItem>
                 )
             )}

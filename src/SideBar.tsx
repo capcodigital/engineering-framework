@@ -3,7 +3,6 @@ import { NavHashLink as Link } from 'react-router-hash-link';
 import { EngineeringContext } from './EngineeringContext';
 import List from '@material-ui/core/List';
 import { ListItem } from '@material-ui/core';
-import ListItemText from '@material-ui/core/ListItemText';
 import Collapse from '@material-ui/core/Collapse';
 import { sideBarData, levels, tags } from './data/data';
 import styled from 'styled-components/macro';
@@ -12,13 +11,13 @@ type TagProps = {
   color: string;
 };
 const SideNav = styled.div`
-  min-width: 300px;
+  min-width: 360px;
   height: 80vh;
   overflow-y: auto;
   overflow-x: hidden;
 
   && .list {
-    min-width: 250px;
+    min-width: 300px;
     color: grey;
     a {
       text-decoration: none;
@@ -180,6 +179,7 @@ const SideBar = () => {
                             )}`.toLowerCase()}
                           >
                             {competencyName}
+
                             {[
                               'Principal Consultant',
                               'Managing Principal',
