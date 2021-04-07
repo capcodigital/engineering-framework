@@ -162,46 +162,59 @@ const SideBar = () => {
                     unmountOnExit
                   >
                     <List component='div' disablePadding>
-                      {data.competencies.map((competencyName: string) => (
-                        <ListItem
-                          key={competencyName}
-                          button
-                          className={`nested competency list-item ${
-                            competency === competencyName ? 'active' : ''
-                          } `}
-                          onClick={() => handleClickCompetency(competencyName)}
-                        >
-                          <Link
-                            smooth
-                            to={`#${data.category}-${competencyName.replaceAll(
-                              ' ',
-                              '-'
-                            )}`.toLowerCase()}
-                          >
-                            {competencyName}
+                      {data.competencies.map((competencyName: string) => {
+                        // Don't have Framework Criteria at MP level
+                        if (
+                          level !== 'Managing Principal' ||
+                          competencyName !== 'Framework Criteria'
+                        )
+                          return (
+                            <ListItem
+                              key={competencyName}
+                              button
+                              className={`nested competency list-item ${
+                                competency === competencyName ? 'active' : ''
+                              } `}
+                              onClick={() =>
+                                handleClickCompetency(competencyName)
+                              }
+                            >
+                              <Link
+                                smooth
+                                to={`#${
+                                  data.category
+                                }-${competencyName.replaceAll(
+                                  ' ',
+                                  '-'
+                                )}`.toLowerCase()}
+                              >
+                                {competencyName}
 
-                            {[
-                              'Principal Consultant',
-                              'Managing Principal',
-                            ].includes(level) &&
-                              ['Technical Leadership', 'Management'].includes(
-                                competencyName
-                              ) && (
-                                <StyledTagShort
-                                  color={
-                                    (tags as any)[competencyName][level].color
-                                  }
-                                >
-                                  {
-                                    (tags as any)[competencyName][level][
-                                      specialism
-                                    ].short
-                                  }
-                                </StyledTagShort>
-                              )}
-                          </Link>
-                        </ListItem>
-                      ))}
+                                {[
+                                  'Principal Consultant',
+                                  'Managing Principal',
+                                ].includes(level) &&
+                                  [
+                                    'Technical Leadership',
+                                    'Management',
+                                  ].includes(competencyName) && (
+                                    <StyledTagShort
+                                      color={
+                                        (tags as any)[competencyName][level]
+                                          .color
+                                      }
+                                    >
+                                      {
+                                        (tags as any)[competencyName][level][
+                                          specialism
+                                        ].short
+                                      }
+                                    </StyledTagShort>
+                                  )}
+                              </Link>
+                            </ListItem>
+                          );
+                      })}
                     </List>
                   </Collapse>
                 </span>
