@@ -6,6 +6,36 @@ export const levels = [
   'Managing Principal',
 ];
 
+export const tags = {
+  'Technical Leadership': {
+    'Principal Consultant': {
+      'Software Engineer': { name: 'Principal Engineer', short: 'PE' },
+      'Quality Engineer': { name: 'Principal Test Engineer', short: 'PTE' },
+      color: '#E36756',
+    },
+    'Managing Principal': {
+      'Software Engineer': { name: 'Distinguished Engineer', short: 'DE' },
+      'Quality Engineer': { name: 'Distinguished Test Engineer', short: 'DTE' },
+      color: '#ED4664',
+    },
+  },
+  Management: {
+    'Principal Consultant': {
+      'Software Engineer': { name: 'Engineering Lead', short: 'EL' },
+      'Quality Engineer': { name: 'Test Engineering Lead', short: 'TEL' },
+      color: '#5686E3',
+    },
+    'Managing Principal': {
+      'Software Engineer': { name: 'Senior Engineering Lead', short: 'SEL' },
+      'Quality Engineer': {
+        name: 'Senior Test Engineering Lead',
+        short: 'STEL',
+      },
+      color: '#8356E3',
+    },
+  },
+};
+
 export const titles = {
   'Software Engineer': {
     Associate: 'Associate Engineer',

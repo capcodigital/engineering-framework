@@ -855,7 +855,7 @@ const contentData = {
     ],
     Stakeholder: [
       {
-        name: 'Dealing with AMbiguity AND Risk',
+        name: 'Dealing with Ambiguity and Risk',
         specialism: 'All',
         description:
           'Effectively handles risk, change, and uncertainty across the organisation. Ensures expectations across the organisation and external stakeholders are clarified between all parties involved.   Decides and acts responsibly in their work across the organisation without having the total picture during routine business, as well as when in high pressure situations.',

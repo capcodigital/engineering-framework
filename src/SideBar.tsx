@@ -5,12 +5,15 @@ import List from '@material-ui/core/List';
 import { ListItem } from '@material-ui/core';
 import ListItemText from '@material-ui/core/ListItemText';
 import Collapse from '@material-ui/core/Collapse';
-import { sideBarData, levels } from './data/data';
+import { sideBarData, levels, tags } from './data/data';
 import styled from 'styled-components/macro';
 
+type TagProps = {
+  color: string;
+};
 const SideNav = styled.div`
   min-width: 300px;
-  height:80vh;
+  height: 80vh;
   overflow-y: auto;
   overflow-x: hidden;
 
@@ -64,11 +67,23 @@ const SideNav = styled.div`
   }
 `;
 
+const StyledTagShort = styled.span<TagProps>`
+  height: 16px;
+  background-color: ${(props) => props.color};
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 4px 8px 4px 8px;
+  border-radius: 4px;
+  margin-left: 10px;
+`;
+
 const SideBar = () => {
   const {
     level,
     category,
     competency,
+    specialism,
     setLevel,
     setCategory,
     setCompetency,
@@ -164,7 +179,26 @@ const SideBar = () => {
                               '-'
                             )}`.toLowerCase()}
                           >
-                            <ListItemText primary={competencyName} />
+                            {competencyName}
+                            {[
+                              'Principal Consultant',
+                              'Managing Principal',
+                            ].includes(level) &&
+                              ['Technical Leadership', 'Management'].includes(
+                                competencyName
+                              ) && (
+                                <StyledTagShort
+                                  color={
+                                    (tags as any)[competencyName][level].color
+                                  }
+                                >
+                                  {
+                                    (tags as any)[competencyName][level][
+                                      specialism
+                                    ].short
+                                  }
+                                </StyledTagShort>
+                              )}
                           </Link>
                         </ListItem>
                       ))}
