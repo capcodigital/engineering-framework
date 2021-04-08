@@ -1,33 +1,35 @@
-import React, { useState } from 'react';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import styled from 'styled-components/macro';
-import EngineeringContext from './EngineeringContext';
-import FrameworkPage from './FrameworkPage';
-import Home from './Home';
+import React from 'react';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Redirect,
+} from 'react-router-dom';
+import { EngineeringContextProvider } from './EngineeringContext';
+import Content from './Content';
 import Header from './Header';
 import PageWrapper from './PageWrapper';
 import CssBaseline from '@material-ui/core/CssBaseline';
 
 function App() {
-  const [name, setName] = useState('');
-  const value = { name, setName };
   return (
     <PageWrapper>
-    <CssBaseline />
-    <Router>
-      <Switch>
-        <EngineeringContext.Provider value={value}>
-          <Header/>
-          <Route exact path='/'>
-            <Home />
-          </Route>
-          <Route exact path={'/framework'}>
-            <FrameworkPage />
-          </Route>
-        </EngineeringContext.Provider>
-      </Switch>
-    </Router>
-  </PageWrapper>
+      <CssBaseline />
+      <Router>
+        <Switch>
+          <EngineeringContextProvider>
+            <Header />
+            <Route exact path='/' render={() => <Redirect to='/software' />} />
+            <Route path='/software'>
+              <Content title={'Software Engineer'} />
+            </Route>
+            <Route path={'/quality'}>
+              <Content title={'Quality Engineer'} />
+            </Route>
+          </EngineeringContextProvider>
+        </Switch>
+      </Router>
+    </PageWrapper>
   );
 }
 

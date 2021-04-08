@@ -2,12 +2,17 @@ import React, { FC } from 'react';
 import styled from 'styled-components/macro';
 
 const StyledPageWrapper = styled.div`
-  background-repeat: no-repeat;
+  max-width: 100rem;
+  margin-right: auto;
+  margin-left: auto;
   background-color: black;
-  background-size: cover;
-  width: 100vw;
+  display: block;
   height: 100vh;
+  padding: 0px 40px 0px 40px;
   text-align: center;
+  @media screen and (max-width: 600px) {
+    padding: 0;
+  }
 `;
 
 const PageWrapper: FC = ({ children }) => {
