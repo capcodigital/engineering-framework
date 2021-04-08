@@ -6,7 +6,7 @@ export const levels = [
   'Managing Principal',
 ];
 
-export const tags = {
+export const tagText = {
   'Technical Leadership': {
     'Principal Consultant': {
       'Software Engineer': { name: 'Principal Engineer', short: 'PE' },

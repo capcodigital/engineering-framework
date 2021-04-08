@@ -2,6 +2,9 @@ import React, { FC } from 'react';
 import styled from 'styled-components/macro';
 
 const StyledPageWrapper = styled.div`
+  max-width: 100rem;
+  margin-right: auto;
+  margin-left: auto;
   background-color: black;
   display: block;
   height: 100vh;

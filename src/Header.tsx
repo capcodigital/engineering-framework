@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import styled from 'styled-components/macro';
-import {EngineeringContext} from './EngineeringContext';
+import { EngineeringContext } from './EngineeringContext';
 import logo from './img/logo.png';
 import Drawer from '@material-ui/core/Drawer';
 import List from '@material-ui/core/List';
@@ -52,13 +52,19 @@ const StyledLink = styled(Link)`
   }
 `;
 
+const StyledDrawer = styled(Drawer)`
+  background: #161616;
+`;
+
 const titleData = [
   { name: 'Software Engineer', url: '/software' },
   { name: 'Quality Engineer', url: '/quality' },
 ];
 
 export default function Header() {
-  const { specialism,category, competency, setSpecialism } = useContext(EngineeringContext);
+  const { specialism, category, competency, setSpecialism } = useContext(
+    EngineeringContext
+  );
   const [open, setOpen] = useState(false);
 
   const handleClick = (activeTitle: string) => {
@@ -88,35 +94,35 @@ export default function Header() {
             <MenuIcon fontSize='large' />
           </StyledIconButton>
           <img height={30} src={logo} alt='Logo' />
-          {titleData.map((link: any) =>
-            link.name === specialism ? (
+          {titleData.map((titleOption: any) =>
+            titleOption.name === specialism ? (
               <StyledLink
-                key={link.name}
-                to={`${link.url}/#${category}-${competency.replaceAll(
+                key={titleOption.name}
+                to={`${titleOption.url}/#${category}-${competency.replaceAll(
                   ' ',
                   '-'
                 )}`.toLowerCase()}
                 className={'active'}
-                onClick={() => handleClick(link.name)}
+                onClick={() => handleClick(titleOption.name)}
               >
-                {link.name}
+                {titleOption.name}
               </StyledLink>
             ) : (
               <StyledLink
-                key={link.name}
-                to={`${link.url}/#${category}-${competency.replaceAll(
+                key={titleOption.name}
+                to={`${titleOption.url}/#${category}-${competency.replaceAll(
                   ' ',
                   '-'
                 )}`.toLowerCase()}
-                onClick={() => handleClick(link.name)}
+                onClick={() => handleClick(titleOption.name)}
               >
-                {link.name}
+                {titleOption.name}
               </StyledLink>
             )
           )}
         </Toolbar>
       </StyledAppBar>
-      <Drawer anchor={'left'} open={open} onClose={toggleDrawer(false)}>
+      <StyledDrawer anchor={'left'} open={open} onClose={toggleDrawer(false)}>
         <ListWrapper
           role='presentation'
           onClick={toggleDrawer(false)}
@@ -131,20 +137,20 @@ export default function Header() {
             <ClearIcon fontSize='large' />
           </IconButton>
           <List>
-            {titleData.map((link: any) => (
+            {titleData.map((titleOption: any) => (
               <ListItem
-                key={link.name}
+                key={titleOption.name}
                 button
                 component={Link}
-                to={link.url}
-                onClick={() => handleClick(link.name)}
+                to={titleOption.url}
+                onClick={() => handleClick(titleOption.name)}
               >
-                {link.name}
+                {titleOption.name}
               </ListItem>
             ))}
           </List>
         </ListWrapper>
-      </Drawer>
+      </StyledDrawer>
     </>
   );
 }

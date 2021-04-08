@@ -4,7 +4,8 @@ import Divider from '@material-ui/core/Divider';
 import List from '@material-ui/core/List';
 import { ListItem } from '@material-ui/core';
 import { EngineeringContext } from './EngineeringContext';
-import { titles, tags } from './data/data';
+import { Tag } from './Tag';
+import { titles } from './data/data';
 import contentData from './data/content';
 import images from './img/';
 import styled from 'styled-components/macro';
@@ -16,9 +17,7 @@ type ContentType = {
 type ContentHeaderProps = {
   level: string;
 };
-type TagProps = {
-  color: string;
-};
+
 const Main = styled.main`
   display: flex;
   height: 80vh;
@@ -96,19 +95,6 @@ const StyledDescription = styled.p`
   }
 `;
 
-const StyledTag = styled.span<TagProps>`
-  height: 16px;
-  background-color: ${(props) => props.color};
-  color: white;
-  font-size: 12px;
-  font-weight: bold;
-  text-align: center;
-  line-height: 16px;
-  padding: 4px 8px 4px 8px;
-  border-radius: 4px;
-  margin-left: 20px;
-`;
-
 const Content: FC<ContentType> = ({ title }) => {
   const { specialism, level, category, setSpecialism } = useContext(
     EngineeringContext
@@ -146,18 +132,11 @@ const Content: FC<ContentType> = ({ title }) => {
                   >
                     <div className='title'>
                       {comp.name}
-                      {['Principal Consultant', 'Managing Principal'].includes(
-                        level
-                      ) &&
-                        ['Technical Leadership', 'Management'].includes(
-                          comp.name
-                        ) && (
-                          <StyledTag
-                            color={(tags as any)[comp.name][level].color}
-                          >
-                            {(tags as any)[comp.name][level][specialism].name}
-                          </StyledTag>
-                        )}
+                      <Tag
+                        level={level}
+                        competency={comp.name}
+                        specialism={specialism}
+                      />
                     </div>
 
                     {category === 'Overview' ? (

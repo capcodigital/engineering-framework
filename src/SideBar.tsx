@@ -4,12 +4,10 @@ import { EngineeringContext } from './EngineeringContext';
 import List from '@material-ui/core/List';
 import { ListItem } from '@material-ui/core';
 import Collapse from '@material-ui/core/Collapse';
-import { sideBarData, levels, tags } from './data/data';
+import { sideBarData, levels } from './data/data';
 import styled from 'styled-components/macro';
+import { SmallTag } from './Tag';
 
-type TagProps = {
-  color: string;
-};
 const SideNav = styled.div`
   min-width: 360px;
   height: 80vh;
@@ -64,17 +62,6 @@ const SideNav = styled.div`
   @media screen and (max-width: 600px) {
     display: none;
   }
-`;
-
-const StyledTagShort = styled.span<TagProps>`
-  height: 16px;
-  background-color: ${(props) => props.color};
-  color: white;
-  font-size: 12px;
-  font-weight: bold;
-  padding: 4px 8px 4px 8px;
-  border-radius: 4px;
-  margin-left: 10px;
 `;
 
 const SideBar = () => {
@@ -190,27 +177,11 @@ const SideBar = () => {
                               >
                                 {competencyName}
 
-                                {[
-                                  'Principal Consultant',
-                                  'Managing Principal',
-                                ].includes(level) &&
-                                  [
-                                    'Technical Leadership',
-                                    'Management',
-                                  ].includes(competencyName) && (
-                                    <StyledTagShort
-                                      color={
-                                        (tags as any)[competencyName][level]
-                                          .color
-                                      }
-                                    >
-                                      {
-                                        (tags as any)[competencyName][level][
-                                          specialism
-                                        ].short
-                                      }
-                                    </StyledTagShort>
-                                  )}
+                                <SmallTag
+                                  level={level}
+                                  competency={competencyName}
+                                  specialism={specialism}
+                                />
                               </Link>
                             </ListItem>
                           );
