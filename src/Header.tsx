@@ -1,34 +1,57 @@
 import React, { useState, useContext } from 'react';
 import { Link } from 'react-router-dom';
-import AppBar from '@material-ui/core/AppBar';
-import Toolbar from '@material-ui/core/Toolbar';
-import styled from 'styled-components/macro';
 import { EngineeringContext } from './EngineeringContext';
-import logo from './img/logo.png';
-import Drawer from '@material-ui/core/Drawer';
-import List from '@material-ui/core/List';
-import IconButton from '@material-ui/core/IconButton';
+import {
+  AppBar,
+  Toolbar,
+  Drawer,
+  List,
+  ListItem,
+  IconButton,
+} from '@material-ui/core/';
 import MenuIcon from '@material-ui/icons/Menu';
 import ClearIcon from '@material-ui/icons/Clear';
-import { ListItem } from '@material-ui/core';
+import logo from './img/logo.png';
+import styled from 'styled-components/macro';
 
 const ListWrapper = styled.div`
-  width: 200px;
-  margin: 20px;
-  font-size: 20px;
+  width: 292px;
+  height: 100%;
+  background: #161616;
+  font-size: 16px;
+  font-weight: bold;
+  padding-top: 88px;
+  padding-left: 16px;
+  color: grey;
+  .active {
+    color: white;
+  }
+  button {
+    color: white;
+  }
 `;
 
 const StyledAppBar = styled(AppBar)`
   && {
     background: black;
-    padding-top: 20px;
+    padding-top: 24px;
     padding-bottom: 2.5rem;
+    @media screen and (max-width: 1000px) {
+      padding-bottom: 16px;
+      padding-top: 16px;
+      position: relative;
+      z-index: 1400;
+      img {
+        margin-right: auto;
+        margin-left: auto;
+      }
+    }
   }
 `;
 
 const StyledIconButton = styled(IconButton)`
   && {
-    @media screen and (min-width: 600px) {
+    @media screen and (min-width: 1000px) {
       display: none;
     }
   }
@@ -47,13 +70,15 @@ const StyledLink = styled(Link)`
   :hover {
     color: lightgrey;
   }
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 1000px) {
     display: none;
   }
 `;
 
 const StyledDrawer = styled(Drawer)`
-  background: #161616;
+  && {
+    
+  }
 `;
 
 const titleData = [
@@ -85,15 +110,27 @@ export default function Header() {
     <>
       <StyledAppBar position='sticky'>
         <Toolbar>
-          <StyledIconButton
-            onClick={toggleDrawer(true)}
-            edge='start'
-            color='inherit'
-            aria-label='menu'
-          >
-            <MenuIcon fontSize='large' />
-          </StyledIconButton>
-          <img height={30} src={logo} alt='Logo' />
+          {open ? (
+            <IconButton
+              onClick={toggleDrawer(false)}
+              edge='end'
+              color='inherit'
+              aria-label='clear'
+            >
+              <ClearIcon fontSize='large' />
+            </IconButton>
+          ) : (
+            <StyledIconButton
+              onClick={toggleDrawer(true)}
+              edge='start'
+              color='inherit'
+              aria-label='menu'
+            >
+              <MenuIcon fontSize='large' />
+            </StyledIconButton>
+          )}
+
+          <img height={32} src={logo} alt='Logo' />
           {titleData.map((titleOption: any) =>
             titleOption.name === specialism ? (
               <StyledLink
@@ -122,32 +159,46 @@ export default function Header() {
           )}
         </Toolbar>
       </StyledAppBar>
-      <StyledDrawer anchor={'left'} open={open} onClose={toggleDrawer(false)}>
+      <StyledDrawer
+        anchor={'left'}
+        open={open}
+        onClose={toggleDrawer(false)}
+        ModalProps={{
+          BackdropProps: {
+            invisible: true,
+          },
+        }}
+      >
         <ListWrapper
           role='presentation'
           onClick={toggleDrawer(false)}
           onKeyDown={toggleDrawer(false)}
         >
-          <IconButton
-            onClick={toggleDrawer(false)}
-            edge='end'
-            color='inherit'
-            aria-label='clear'
-          >
-            <ClearIcon fontSize='large' />
-          </IconButton>
           <List>
-            {titleData.map((titleOption: any) => (
-              <ListItem
-                key={titleOption.name}
-                button
-                component={Link}
-                to={titleOption.url}
-                onClick={() => handleClick(titleOption.name)}
-              >
-                {titleOption.name}
-              </ListItem>
-            ))}
+            {titleData.map((titleOption: any) =>
+              titleOption.name === specialism ? (
+                <ListItem
+                  key={titleOption.name}
+                  button
+                  component={Link}
+                  to={titleOption.url}
+                  className={'active'}
+                  onClick={() => handleClick(titleOption.name)}
+                >
+                  {titleOption.name}
+                </ListItem>
+              ) : (
+                <ListItem
+                  key={titleOption.name}
+                  button
+                  component={Link}
+                  to={titleOption.url}
+                  onClick={() => handleClick(titleOption.name)}
+                >
+                  {titleOption.name}
+                </ListItem>
+              )
+            )}
           </List>
         </ListWrapper>
       </StyledDrawer>

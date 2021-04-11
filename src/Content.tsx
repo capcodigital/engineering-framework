@@ -1,9 +1,7 @@
 import React, { useContext, useEffect, FC } from 'react';
-import SideBar from './SideBar';
-import Divider from '@material-ui/core/Divider';
-import List from '@material-ui/core/List';
-import { ListItem } from '@material-ui/core';
 import { EngineeringContext } from './EngineeringContext';
+import { Divider, List, ListItem } from '@material-ui/core';
+import SideBar from './SideBar';
 import { Tag } from './Tag';
 import { titles } from './data/data';
 import contentData from './data/content';
@@ -35,11 +33,12 @@ const ContentHeader = styled.div<ContentHeaderProps>`
   width: 100%;
   height: 120px;
   padding: 25px 25px 25px 100px;
-  background-size: cover;
+  background-size: 1280px;
   background-image: url(${(props) => (images as any)[props.level]});
 
   .level-title {
     font-size: 16px;
+    line-height: 24px;
     .level {
       font-weight: bold;
     }
@@ -48,8 +47,17 @@ const ContentHeader = styled.div<ContentHeaderProps>`
     font-size: 36px;
     font-weight: bold;
   }
+
   @media screen and (max-width: 600px) {
+    height: 96px;
     padding: 25px 100px 25px 25px;
+    .level-title {
+      font-size: 14px;
+      line-height: 16px;
+    }
+    .category {
+      font-size: 32px;
+    }
   }
 `;
 
@@ -83,6 +91,9 @@ const ContentDiv = styled.div`
   }
   @media screen and (max-width: 600px) {
     padding: 0;
+    li.list-item {
+      padding: 24px 28px 24px 28px;
+    }
   }
 `;
 
@@ -99,9 +110,11 @@ const Content: FC<ContentType> = ({ title }) => {
   const { specialism, level, category, setSpecialism } = useContext(
     EngineeringContext
   );
+
   useEffect(() => {
     setSpecialism(title);
   }, [title, setSpecialism]);
+
   return (
     <Main>
       <SideBar />

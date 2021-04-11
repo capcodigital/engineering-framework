@@ -1,15 +1,13 @@
 import React, { useContext, useEffect } from 'react';
 import { NavHashLink as Link } from 'react-router-hash-link';
 import { EngineeringContext } from './EngineeringContext';
-import List from '@material-ui/core/List';
-import { ListItem } from '@material-ui/core';
-import Collapse from '@material-ui/core/Collapse';
-import { sideBarData, levels } from './data/data';
+import { Collapse, List, ListItem } from '@material-ui/core';
 import styled from 'styled-components/macro';
 import { SmallTag } from './Tag';
+import { sideBarData, levels } from './data/data';
 
 const SideNav = styled.div`
-  min-width: 360px;
+  min-width: 300px;
   height: 80vh;
   overflow-y: auto;
   overflow-x: hidden;
@@ -59,7 +57,7 @@ const SideNav = styled.div`
       }
     }
   }
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 1000px) {
     display: none;
   }
 `;
