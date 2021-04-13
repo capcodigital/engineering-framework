@@ -1,10 +1,7 @@
 import React, { useContext, useEffect } from 'react';
-import { NavHashLink as Link } from 'react-router-hash-link';
 import { EngineeringContext } from './EngineeringContext';
-import { Collapse, List, ListItem } from '@material-ui/core';
 import styled from 'styled-components/macro';
-import { SmallTag } from './Tag';
-import { sideBarData, levels } from './data/data';
+import SideBarList from './SideBarList';
 
 const SideNav = styled.div`
   min-width: 300px;
@@ -64,13 +61,7 @@ const SideNav = styled.div`
 
 const SideBar = () => {
   const {
-    level,
-    category,
-    competency,
-    specialism,
-    setLevel,
     setCategory,
-    setCompetency,
   } = useContext(EngineeringContext);
 
   useEffect(() => {
@@ -94,104 +85,9 @@ const SideBar = () => {
     }, 100);
   }, []);
 
-  const handleClickCategory = (
-    categoryName: string,
-    firstCompetency: string
-  ) => {
-    setCategory(categoryName);
-    setCompetency(firstCompetency);
-  };
-  const handleClickCompetency = (competencyName: string) => {
-    setCompetency(competencyName);
-  };
-  const handleClickLevel = (levelName: string) => {
-    setLevel(levelName);
-  };
-
   return (
     <SideNav>
-      {levels.map((levelName: string) => (
-        <List className='list' key={levelName}>
-          <ListItem
-            button
-            className={`level list-item ${levelName === level ? 'active' : ''}`}
-            onClick={() => handleClickLevel(levelName)}
-          >
-            {levelName}
-          </ListItem>
-          <Collapse in={level === levelName} timeout='auto' unmountOnExit>
-            <List component='nav' className={'nested'}>
-              {sideBarData.map((data: any) => (
-                <span key={data.category}>
-                  <ListItem
-                    button
-                    className={`category list-item ${
-                      category === data.category ? 'active' : ''
-                    }`}
-                    onClick={() =>
-                      handleClickCategory(data.category, data.competencies[0])
-                    }
-                  >
-                    <Link
-                      smooth
-                      to={`#${data.category.toLowerCase()}-${data.competencies[0]
-                        .replaceAll(' ', '-')
-                        .toLowerCase()}`}
-                    >
-                      {data.category}
-                    </Link>
-                  </ListItem>
-                  <Collapse
-                    in={category === data.category}
-                    timeout='auto'
-                    unmountOnExit
-                  >
-                    <List component='div' disablePadding>
-                      {data.competencies.map((competencyName: string) => {
-                        // Don't have Framework Criteria at MP level
-                        if (
-                          level !== 'Managing Principal' ||
-                          competencyName !== 'Framework Criteria'
-                        )
-                          return (
-                            <ListItem
-                              key={competencyName}
-                              button
-                              className={`nested competency list-item ${
-                                competency === competencyName ? 'active' : ''
-                              } `}
-                              onClick={() =>
-                                handleClickCompetency(competencyName)
-                              }
-                            >
-                              <Link
-                                smooth
-                                to={`#${
-                                  data.category
-                                }-${competencyName.replaceAll(
-                                  ' ',
-                                  '-'
-                                )}`.toLowerCase()}
-                              >
-                                {competencyName}
-
-                                <SmallTag
-                                  level={level}
-                                  competency={competencyName}
-                                  specialism={specialism}
-                                />
-                              </Link>
-                            </ListItem>
-                          );
-                      })}
-                    </List>
-                  </Collapse>
-                </span>
-              ))}
-            </List>
-          </Collapse>
-        </List>
-      ))}
+      <SideBarList/>
     </SideNav>
   );
 };

@@ -7,7 +7,7 @@ import { titles } from './data/data';
 import contentData from './data/content';
 import images from './img/';
 import styled from 'styled-components/macro';
-
+import BreadcrumbsNav from './BreadcrumbsNav';
 type ContentType = {
   title: 'Software Engineer' | 'Quality Engineer';
 };
@@ -19,6 +19,9 @@ type ContentHeaderProps = {
 const Main = styled.main`
   display: flex;
   height: 80vh;
+  @media screen and (max-width: 600px) {
+    display: block;
+  }
 `;
 
 const ContentContainer = styled.div`
@@ -27,6 +30,12 @@ const ContentContainer = styled.div`
   background-color: #1f1f1f;
   color: white;
   text-align: left;
+  @media screen and (max-width: 600px) {
+    overflow: auto;
+    ::-webkit-scrollbar {
+      display: none;
+    }
+  }
 `;
 
 const ContentHeader = styled.div<ContentHeaderProps>`
@@ -90,6 +99,10 @@ const ContentDiv = styled.div`
     background-color: white;
   }
   @media screen and (max-width: 600px) {
+    overflow: unset;
+    ::-webkit-scrollbar {
+      display: block;
+    }
     padding: 0;
     li.list-item {
       padding: 24px 28px 24px 28px;
@@ -118,6 +131,7 @@ const Content: FC<ContentType> = ({ title }) => {
   return (
     <Main>
       <SideBar />
+      <BreadcrumbsNav />
       <ContentContainer>
         <ContentHeader level={level}>
           <div className='level-title'>

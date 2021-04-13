@@ -3,33 +3,18 @@ import { Link } from 'react-router-dom';
 import { EngineeringContext } from './EngineeringContext';
 import {
   AppBar,
-  Toolbar,
+  Breadcrumbs,
   Drawer,
+  IconButton,
   List,
   ListItem,
-  IconButton,
+  Toolbar,
 } from '@material-ui/core/';
 import MenuIcon from '@material-ui/icons/Menu';
 import ClearIcon from '@material-ui/icons/Clear';
+import NavigateNextIcon from '@material-ui/icons/NavigateNext';
 import logo from './img/logo.png';
 import styled from 'styled-components/macro';
-
-const ListWrapper = styled.div`
-  width: 292px;
-  height: 100%;
-  background: #161616;
-  font-size: 16px;
-  font-weight: bold;
-  padding-top: 88px;
-  padding-left: 16px;
-  color: grey;
-  .active {
-    color: white;
-  }
-  button {
-    color: white;
-  }
-`;
 
 const StyledAppBar = styled(AppBar)`
   && {
@@ -37,8 +22,8 @@ const StyledAppBar = styled(AppBar)`
     padding-top: 24px;
     padding-bottom: 2.5rem;
     @media screen and (max-width: 1000px) {
-      padding-bottom: 16px;
       padding-top: 16px;
+      padding-bottom: 16px;
       position: relative;
       z-index: 1400;
       img {
@@ -77,7 +62,26 @@ const StyledLink = styled(Link)`
 
 const StyledDrawer = styled(Drawer)`
   && {
-    
+    div.MuiPaper-root {
+      width: 292px;
+      background: #161616;
+      font-size: 16px;
+      font-weight: bold;
+      color: grey;
+      .active {
+        color: white;
+      }
+      button {
+        color: white;
+      }
+      ul {
+        padding-top: 110px;
+        padding-left: 16px;
+      }
+      a {
+        padding-bottom: 24px;
+      }
+    }
   }
 `;
 
@@ -169,38 +173,36 @@ export default function Header() {
           },
         }}
       >
-        <ListWrapper
+        <List
           role='presentation'
           onClick={toggleDrawer(false)}
           onKeyDown={toggleDrawer(false)}
         >
-          <List>
-            {titleData.map((titleOption: any) =>
-              titleOption.name === specialism ? (
-                <ListItem
-                  key={titleOption.name}
-                  button
-                  component={Link}
-                  to={titleOption.url}
-                  className={'active'}
-                  onClick={() => handleClick(titleOption.name)}
-                >
-                  {titleOption.name}
-                </ListItem>
-              ) : (
-                <ListItem
-                  key={titleOption.name}
-                  button
-                  component={Link}
-                  to={titleOption.url}
-                  onClick={() => handleClick(titleOption.name)}
-                >
-                  {titleOption.name}
-                </ListItem>
-              )
-            )}
-          </List>
-        </ListWrapper>
+          {titleData.map((titleOption: any) =>
+            titleOption.name === specialism ? (
+              <ListItem
+                key={titleOption.name}
+                button
+                component={Link}
+                to={titleOption.url}
+                className={'active'}
+                onClick={() => handleClick(titleOption.name)}
+              >
+                {titleOption.name}
+              </ListItem>
+            ) : (
+              <ListItem
+                key={titleOption.name}
+                button
+                component={Link}
+                to={titleOption.url}
+                onClick={() => handleClick(titleOption.name)}
+              >
+                {titleOption.name}
+              </ListItem>
+            )
+          )}
+        </List>
       </StyledDrawer>
     </>
   );
