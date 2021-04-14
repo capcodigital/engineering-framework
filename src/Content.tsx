@@ -63,7 +63,7 @@ const ContentHeader = styled.div<ContentHeaderProps>`
     font-weight: bold;
   }
 
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 1000px) {
     height: 96px;
     padding: 25px 100px 25px 25px;
     .level-title {
@@ -104,7 +104,7 @@ const ContentDiv = styled.div`
     margin: 48px 0px 24px 0px;
     background-color: white;
   }
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 1000px) {
     overflow: unset;
 
     padding: 0;
