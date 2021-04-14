@@ -1,12 +1,15 @@
-import React, { useContext, useEffect, useState } from 'react';
+import React, { FC, useContext } from 'react';
 import { EngineeringContext } from './EngineeringContext';
-import { Collapse } from '@material-ui/core';
-import styled from 'styled-components/macro';
 import Breadcrumbs from '@material-ui/core/Breadcrumbs';
 import NavigateNextIcon from '@material-ui/icons/NavigateNext';
 import ExpandLess from '@material-ui/icons/ExpandLess';
 import ExpandMore from '@material-ui/icons/ExpandMore';
-import SideBarList from './SideBarList';
+import styled from 'styled-components/macro';
+
+type BreadcrumbsNavProps = {
+  open: boolean;
+  onClick: any
+};
 
 const Wrapper = styled.div`
   color: white;
@@ -14,16 +17,20 @@ const Wrapper = styled.div`
   font-weight: bold;
   background: #161616;
   .breadcrumbs-wrapper {
-    padding: 8px 28px 8px 28px;
+    padding: 8px 24px 8px 24px;
     .title {
       text-align: left;
     }
   }
-  && ol > li {
-    color: grey;
-    margin: 0;
-    :last-child {
-      color: white;
+
+  ol {
+    display: contents;
+    li {
+      color: grey;
+      margin: 0;
+      :last-child {
+        color: white;
+      }
     }
   }
   nav.MuiBreadcrumbs-root {
@@ -34,6 +41,9 @@ const Wrapper = styled.div`
   .MuiSvgIcon-root {
     float: right;
   }
+  .MuiCollapse-container {
+    background: black;
+  }
 
   display: none;
   @media only screen and (max-width: 1000px) {
@@ -41,40 +51,16 @@ const Wrapper = styled.div`
   }
 `;
 
-const BreadcrumbsNav = () => {
-  const [open, setOpen] = useState(false);
-  const { level, category, competency, setCategory } = useContext(
-    EngineeringContext
-  );
-
-  useEffect(() => {
-    if (window.location.hash) {
-      const temp = window.location.hash.split('#')[1].split('-')[0];
-      const categoryfromUrl = temp.charAt(0).toUpperCase() + temp.slice(1);
-      setCategory(categoryfromUrl);
-    }
-  }, [setCategory]);
-
-  useEffect(() => {
-    setTimeout(() => {
-      const { hash } = window.location;
-      if (hash) {
-        const id = hash.replace('#', '');
-        const element = document.getElementById(id);
-        if (element) {
-          element.scrollIntoView({ block: 'start', behavior: 'smooth' });
-        }
-      }
-    }, 100);
-  }, []);
-
-  const handleClickOpen = () => {
-    setOpen(!open);
-  };
+const BreadcrumbsNav: FC<BreadcrumbsNavProps> = ({
+  children,
+  open,
+  onClick,
+}) => {
+  const { level, category, competency } = useContext(EngineeringContext);
 
   return (
-    <Wrapper>
-      <div className='breadcrumbs-wrapper' onClick={() => handleClickOpen()}>
+    <Wrapper onClick={onClick}>
+      <div className='breadcrumbs-wrapper'>
         <div className='title'>Digital Engineering</div>
         <Breadcrumbs
           separator={<NavigateNextIcon fontSize='small' />}
@@ -86,9 +72,7 @@ const BreadcrumbsNav = () => {
         </Breadcrumbs>
         {open ? <ExpandLess /> : <ExpandMore />}
       </div>
-      <Collapse in={open} timeout='auto' unmountOnExit>
-        <SideBarList onClick={() => handleClickOpen()} />
-      </Collapse>
+      {children}
     </Wrapper>
   );
 };

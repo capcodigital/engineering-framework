@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import { EngineeringContext } from './EngineeringContext';
 import {
   AppBar,
-  Breadcrumbs,
   Drawer,
   IconButton,
   List,
@@ -12,7 +11,6 @@ import {
 } from '@material-ui/core/';
 import MenuIcon from '@material-ui/icons/Menu';
 import ClearIcon from '@material-ui/icons/Clear';
-import NavigateNextIcon from '@material-ui/icons/NavigateNext';
 import logo from './img/logo.png';
 import styled from 'styled-components/macro';
 

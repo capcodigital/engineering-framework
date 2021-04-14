@@ -1,14 +1,10 @@
-import React, { FC, useContext, useEffect } from 'react';
+import React, { useContext } from 'react';
 import { NavHashLink as Link } from 'react-router-hash-link';
 import { EngineeringContext } from './EngineeringContext';
 import { Collapse, List, ListItem } from '@material-ui/core';
 import styled from 'styled-components/macro';
 import { SmallTag } from './Tag';
 import { sideBarData, levels } from './data/data';
-
-type SideBarListProps = {
-  onClick?: any;
-};
 
 const StyledList = styled(List)`
   && {
@@ -58,7 +54,7 @@ const StyledList = styled(List)`
   }
 `;
 
-const SideBarList: FC<SideBarListProps> = ({ onClick }) => {
+const SideBarList = () => {
   const {
     level,
     category,
@@ -68,27 +64,6 @@ const SideBarList: FC<SideBarListProps> = ({ onClick }) => {
     setCategory,
     setCompetency,
   } = useContext(EngineeringContext);
-
-  useEffect(() => {
-    if (window.location.hash) {
-      const temp = window.location.hash.split('#')[1].split('-')[0];
-      const categoryfromUrl = temp.charAt(0).toUpperCase() + temp.slice(1);
-      setCategory(categoryfromUrl);
-    }
-  }, [setCategory]);
-
-  useEffect(() => {
-    setTimeout(() => {
-      const { hash } = window.location;
-      if (hash) {
-        const id = hash.replace('#', '');
-        const element = document.getElementById(id);
-        if (element) {
-          element.scrollIntoView({ block: 'start', behavior: 'smooth' });
-        }
-      }
-    }, 100);
-  }, []);
 
   const handleClickCategory = (
     categoryName: string,
@@ -105,7 +80,7 @@ const SideBarList: FC<SideBarListProps> = ({ onClick }) => {
   };
 
   return (
-    <div onClick={onClick}>
+    <div >
       {levels.map((levelName: string) => (
         <StyledList className='list' key={levelName}>
           <ListItem
