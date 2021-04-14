@@ -1,8 +1,8 @@
-import associate from './associate.jpg';
-import consultant from './consultant.jpg';
-import senior from './senior.jpg';
-import principal from './principal.jpg';
-import managingPrincipal from './managingPrincipal.jpg';
+import associate from './associate.png';
+import consultant from './consultant.png';
+import senior from './senior.png';
+import principal from './principal.png';
+import managingPrincipal from './managingPrincipal.png';
 
 const images = {
   Associate: associate,

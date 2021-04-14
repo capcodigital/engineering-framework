@@ -10,6 +10,7 @@ const StyledPageWrapper = styled.div`
   height: 100vh;
   padding: 0px 40px 0px 40px;
   text-align: center;
+  overflow-x: hidden;
   @media screen and (max-width: 1000px) {
     padding: 0;
   }

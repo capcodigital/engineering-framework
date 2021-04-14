@@ -35,7 +35,7 @@ const Wrapper = styled.div`
   }
   nav.MuiBreadcrumbs-root {
     display: -webkit-inline-box;
-    width: calc(100% - 30px);
+    width: calc(100% - 24px);
     overflow-x: hidden;
   }
   .MuiSvgIcon-root {
