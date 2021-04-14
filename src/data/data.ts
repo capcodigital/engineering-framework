@@ -64,14 +64,14 @@ export const sideBarData = [
     competencies: [
       'Framework Criteria',
       'Technical Leadership',
-      'Creating and understanding code',
+      'Coding',
       'Testing',
       'Debugging',
       'Observability',
       'Architecture',
       'Cloud',
-      'Data Design and Handling',
-      'Security Awareness and Best Practise Implementation',
+      'Data Design & Handling',
+      'Security',
     ],
   },
   {
@@ -92,7 +92,7 @@ export const sideBarData = [
     category: 'Stakeholder',
     competencies: [
       'Framework Criteria',
-      'Dealing with Ambiguity and Risk',
+      'Dealing with Ambiguity & Risk',
       'Economic Thinking',
       'Decision Making',
       'Driving Alignment',

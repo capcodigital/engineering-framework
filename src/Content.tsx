@@ -1,14 +1,14 @@
-import React, { useContext, useEffect, FC } from 'react';
-import SideBar from './SideBar';
-import Divider from '@material-ui/core/Divider';
-import List from '@material-ui/core/List';
-import { ListItem } from '@material-ui/core';
+import React, { useContext, useState, useEffect, FC } from 'react';
 import { EngineeringContext } from './EngineeringContext';
+import { Collapse, Divider, List, ListItem } from '@material-ui/core';
+import SideBar from './SideBar';
 import { Tag } from './Tag';
 import { titles } from './data/data';
 import contentData from './data/content';
 import images from './img/';
 import styled from 'styled-components/macro';
+import BreadcrumbsNav from './BreadcrumbsNav';
+import SideBarList from './SideBarList';
 
 type ContentType = {
   title: 'Software Engineer' | 'Quality Engineer';
@@ -18,28 +18,42 @@ type ContentHeaderProps = {
   level: string;
 };
 
+type ContentContainerProps = {
+  menuOpen: boolean;
+};
+
 const Main = styled.main`
   display: flex;
   height: 80vh;
+  @media screen and (max-width: 1000px) {
+    display: block;
+  }
 `;
 
-const ContentContainer = styled.div`
+const ContentContainer = styled.div<ContentContainerProps>`
   width: 100%;
-  height: 100%;
+
   background-color: #1f1f1f;
   color: white;
   text-align: left;
+  display: ${({ menuOpen }) => menuOpen && 'none'};
+  @media screen and (max-width: 1000px) {
+    ::-webkit-scrollbar {
+      display: none;
+    }
+  }
 `;
 
 const ContentHeader = styled.div<ContentHeaderProps>`
   width: 100%;
   height: 120px;
   padding: 25px 25px 25px 100px;
-  background-size: cover;
-  background-image: url(${(props) => (images as any)[props.level]});
+  background-size: 1280px;
+  background-image: url(${({ level }) => (images as any)[level]});
 
   .level-title {
     font-size: 16px;
+    line-height: 24px;
     .level {
       font-weight: bold;
     }
@@ -48,8 +62,17 @@ const ContentHeader = styled.div<ContentHeaderProps>`
     font-size: 36px;
     font-weight: bold;
   }
-  @media screen and (max-width: 600px) {
+
+  @media screen and (max-width: 1000px) {
+    height: 96px;
     padding: 25px 100px 25px 25px;
+    .level-title {
+      font-size: 14px;
+      line-height: 16px;
+    }
+    .category {
+      font-size: 32px;
+    }
   }
 `;
 
@@ -81,12 +104,17 @@ const ContentDiv = styled.div`
     margin: 48px 0px 24px 0px;
     background-color: white;
   }
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 1000px) {
+    overflow: unset;
+
     padding: 0;
+    li.list-item {
+      padding: 24px 28px 24px 28px;
+    }
   }
 `;
 
-const StyledDescription = styled.p`
+const Description = styled.p`
   font-size: 16px;
   line-height: 24px;
   li {
@@ -96,16 +124,62 @@ const StyledDescription = styled.p`
 `;
 
 const Content: FC<ContentType> = ({ title }) => {
-  const { specialism, level, category, setSpecialism } = useContext(
-    EngineeringContext
-  );
+  const [open, setOpen] = useState(false);
+  const {
+    specialism,
+    level,
+    category,
+    setSpecialism,
+    setCategory,
+    setCompetency,
+  } = useContext(EngineeringContext);
+
   useEffect(() => {
     setSpecialism(title);
   }, [title, setSpecialism]);
+
+  useEffect(() => {
+    if (window.location.hash) {
+      const [cat, ...comp] = window.location.hash.split('#')[1].split('-');
+      const categoryfromUrl = cat.charAt(0).toUpperCase() + cat.slice(1);
+      const competencyFromUrl = comp
+        .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+        .join(' ');
+      setCategory(categoryfromUrl);
+      setCompetency(competencyFromUrl);
+    }
+  }, []);
+
+  useEffect(() => {
+    setTimeout(() => {
+      const { hash } = window.location;
+      if (hash) {
+        const id = hash.replace('#', '');
+        const element = document.getElementById(id);
+        if (element) {
+          element.scrollIntoView({ block: 'start', behavior: 'smooth' });
+        }
+      }
+    }, 100);
+  }, []);
+
+  const handleClickOpen = () => {
+    setOpen(!open);
+  };
+
   return (
     <Main>
-      <SideBar />
-      <ContentContainer>
+      <SideBar>
+        <SideBarList />
+      </SideBar>
+
+      <BreadcrumbsNav open={open} onClick={() => handleClickOpen()}>
+        <Collapse in={open} timeout='auto' unmountOnExit>
+          <SideBarList />
+        </Collapse>
+      </BreadcrumbsNav>
+
+      <ContentContainer menuOpen={open}>
         <ContentHeader level={level}>
           <div className='level-title'>
             <span className='level'>{level}</span> •{' '}
@@ -141,14 +215,14 @@ const Content: FC<ContentType> = ({ title }) => {
 
                     {category === 'Overview' ? (
                       <>
-                        <StyledDescription
+                        <Description
                           dangerouslySetInnerHTML={{ __html: comp.description }}
                         />
                         <Divider />
                       </>
                     ) : comp.name === 'Framework Criteria' ? (
                       <>
-                        <StyledDescription
+                        <Description
                           dangerouslySetInnerHTML={{ __html: comp.description }}
                         />
                         <Divider />

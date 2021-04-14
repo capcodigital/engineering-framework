@@ -25,7 +25,7 @@ const contentData = {
         name: 'Framework Criteria',
         name2: 'Expected Performance',
         name3: 'High Performance',
-        specialism: 'All',
+        specialism: 'Software Engineer',
         description:
           '<ul><li>Completes tasks with some guidance, and produces deliverables with infrequent/minor corrections</li> <li>Delivers in a timely manner and demonstrates adequate knowledge of content and processes</li><li>Ability to handle increasingly complex tasks with minimal direction while maintaining quality</li></ul>',
         description2:
@@ -39,13 +39,13 @@ const contentData = {
         description: 'Not applicable at this level.',
       },
       {
-        name: 'Creating and Understanding Code',
+        name: 'Coding',
         specialism: 'Software Engineer',
         description:
           "Is able to gain context within the team's domain; Writes code with testability, readability, edge cases, and errors in mind.",
       },
       {
-        name: 'Creating and Understanding Code',
+        name: 'Coding',
         specialism: 'Quality Engineer',
         description:
           "Able to gain context within the team's domain; Writes test code with readability, edge cases, and errors in mind.",
@@ -85,13 +85,13 @@ const contentData = {
           'Is aware of the overall landscape of cloud providers and how the organisation uses them.  Is aware of the importance of learning and understanding cloud technologies.',
       },
       {
-        name: 'Data Design and Handling',
+        name: 'Data Design & Handling',
         specialism: 'All',
         description:
           'Understands the role that data plays and has worked with data in systems',
       },
       {
-        name: 'Security Awereness and Best Practise Implementation',
+        name: 'Security',
         specialism: 'All',
         description:
           'Understands the importance and language of security concepts.',
@@ -102,7 +102,7 @@ const contentData = {
         name: 'Framework Criteria',
         name2: 'Expected Performance',
         name3: 'High Performance',
-        specialism: 'All',
+        specialism: 'Software Engineer',
         description:
           '<ul><li>Interact with all team members in a professional and collaborative manner</li> <li>Maintain effectiveness during changing circumstances and successfully fulfills responsibilities</li> <li>Positive impact to the working environment</li><li>Proactively seeks development opportunities, pre-empting the skills or content required for delivery</li></ul>',
         description2:
@@ -162,7 +162,7 @@ const contentData = {
         name: 'Framework Criteria',
         name2: 'Expected Performance',
         name3: 'High Performance',
-        specialism: 'All',
+        specialism: 'Software Engineer',
         description:
           '<ul><li>Aware of project stakeholders and conscious of the need to build relationships with them </li> <li>Highly professional and responsive</li> <li>Actively seeks alignment and understanding with stakeholders’ needs</li></ul>',
         description2:
@@ -171,7 +171,7 @@ const contentData = {
           'Alice often researches comparable frameworks for her projects and spends time understanding how more advanced features might work. Using this knowledge, she provides valuable feedback in order to better meet the project requirements.',
       },
       {
-        name: 'Dealing with Ambiguity and Risk',
+        name: 'Dealing with Ambiguity & Risk',
         specialism: 'All',
         description: 'Not applicable at this level.',
       },
@@ -230,7 +230,7 @@ const contentData = {
         name: 'Framework Criteria',
         name2: 'Expected Performance',
         name3: 'High Performance',
-        specialism: 'All',
+        specialism: 'Software Engineer',
         description:
           '<ul><li>Ability to handle increasingly complex tasks with minimal direction</li><li>Produce high quality deliverables</li><li>Deliver in a timely manner and demonstrate intermediate knowledge of content and processes</li><li>Considered a SME of at least part of an application</li></ul>',
         description2:
@@ -244,13 +244,13 @@ const contentData = {
         description: 'Not applicable at this level.',
       },
       {
-        name: 'Creating and Understanding Code',
+        name: 'Coding',
         specialism: 'Software Engineer',
         description:
           "Understands a portion of the team's domain within which, they consistently write functions that are easily testable, easily understood by other engineers, and accounts for edge cases and errors. Uses code comments effectively.",
       },
       {
-        name: 'Creating and Understanding Code',
+        name: 'Coding',
         specialism: 'Quality Engineer',
         description:
           "Understands a portion of the team's domain within which, they consistently write test fixtures that are easily understood by other engineers, accounting for edge cases and errors. Uses comments or documentation effectively.",
@@ -298,13 +298,13 @@ const contentData = {
           'Is aware of the overall landscape of cloud providers and how the organisation uses them.  Has gained some knowledge or experience with at least one provider.',
       },
       {
-        name: 'Data Design and Handling',
+        name: 'Data Design & Handling',
         specialism: 'All',
         description:
           'Understands the importance of data handling and design; Is able to design and build systems which manage data.',
       },
       {
-        name: 'Security Awereness and Best Practise Implementation',
+        name: 'Security',
         specialism: 'All',
         description:
           'Understands the importance and language of security concepts. Utilises this knowledge to ask more senior engineers for help on making decisions that may have security implications.',
@@ -315,7 +315,7 @@ const contentData = {
         name: 'Framework Criteria',
         name2: 'Expected Performance',
         name3: 'High Performance',
-        specialism: 'All',
+        specialism: 'Software Engineer',
         description:
           '<ul><li>Actively seeking out leadership opportunities</li><li>Maintain effectiveness during changing circumstances and successfully fulfill their responsibilities</li><li>Uses knowledge and experience to help other team members</li><li>Proactively seeks development opportunities, pre-empting the skills or contents required for delivery</li></ul>',
         description2:
@@ -376,7 +376,7 @@ const contentData = {
         name: 'Framework Criteria',
         name2: 'Expected Performance',
         name3: 'High Performance',
-        specialism: 'All',
+        specialism: 'Software Engineer',
         description:
           '<ul><li>Proactively cultivates relationships with stakeholders</li><li>Keeps stakeholders informed, raises risks/issues, anticipates stakeholder needs</li><li>Awareness of and/or participate in the design of processes to effectively manage stakeholders</li></ul>',
         description2:
@@ -385,7 +385,7 @@ const contentData = {
           'Bob worked on a POC that had tight deadlines.  During meetings with the client, Bob asked a lot of question to help understand the scope and intent of the POC.  Based on Bob’s findings he recommended that we build the POC using a prototyping tool instead of actually developing the POC in order to cut cost and save time.',
       },
       {
-        name: 'Dealing with Ambiguity and Risk',
+        name: 'Dealing with Ambiguity & Risk',
         specialism: 'All',
         description:
           'Usually handles risk, change, and uncertainty within their personal scope of work effectively. Clarifies expectations with their teammates.  Escalates any blockers, delays, and cost ballooning to their team daily. Usually decides and acts responsibly without having the total picture during routine business, and when in high pressure situations.',
@@ -453,7 +453,7 @@ const contentData = {
         name: 'Framework Criteria',
         name2: 'Expected Performance',
         name3: 'High Performance',
-        specialism: 'All',
+        specialism: 'Software Engineer',
         description:
           '<ul><li> Define solutions for moderate/complex problems</li><li>Manage delivery of the solution </li> <li> Produce high quality deliverables</li><li> Deliver in a timely manner and demonstrate specialist skills and experience, proven through project delivery </li><li> Demonstrate multiple areas of expertise</li></ul>',
         description2:
@@ -467,13 +467,13 @@ const contentData = {
         description: 'Not applicable at this level.',
       },
       {
-        name: 'Creating and Understanding Code',
+        name: 'Coding',
         specialism: 'Software Engineer',
         description:
           "Understands their team's domain at a high level and can gather sufficient context to work productively within it. Consistently writes production-ready code that is easily testable and understood by other engineers while accounting for edge cases and errors. Understands when it is appropriate to leave comments, but biases towards self-documenting code.  Understands different techniques for refactoring and when it is appropriate to use them.",
       },
       {
-        name: 'Creating and Understanding Code',
+        name: 'Coding',
         specialism: 'Quality Engineer',
         description:
           "Understands their team's domain at a high level and can gather sufficient context to work productively within it. Consistently writes test automation for production-ready services that is easily understood by other engineers, and accounts for edge cases and errors. Understands when it is appropriate to create documentation, but biases towards demonstratable automation results. Understands wider non-functional test automation concepts and has gained experience in at least one area.",
@@ -521,13 +521,13 @@ const contentData = {
           'Is aware of the overall landscape of cloud providers and how the organisation uses them;  Is aware of the organisational management and strategy for cloud providers.  Has an understanding of how projects are managed within the cloud and the design AND setup considerations;  has gained some experience with at least one provider.  Has defined and progressed a plan to gain training or certification in at least one cloud provider.',
       },
       {
-        name: 'Data Design and Handling',
+        name: 'Data Design & Handling',
         specialism: 'All',
         description:
           'Understands the importance of data handling and design; Is able to design and build systems which manage data, including knowledge and implementation of data security best practise.',
       },
       {
-        name: 'Security Awereness and Best Practise Implementation',
+        name: 'Security',
         specialism: 'All',
         description:
           'Approaches all engineering work with a security lens. Actively looks for security vulnerabilities both in the code and when providing peer reviews.  Has a general understanding of some key security technologies, protocols AND techniques (e.g. TLS, OAuth, Encryption, Networks)',
@@ -538,7 +538,7 @@ const contentData = {
         name: 'Framework Criteria',
         name2: 'Expected Performance',
         name3: 'High Performance',
-        specialism: 'All',
+        specialism: 'Software Engineer',
         description:
           '<ul><li> Lead small/medium size teams and manage projects with little guidance</li><li>Proactive in navigating uncertainty in their role and adapts communication style for different audiences</li>  <li> Proactive in developing junior resources</li><li> Contributes valuable SME knowledge to the practice</li><li> Demonstrates a desire for continuous learning</li></ul>',
         description2:
@@ -599,7 +599,7 @@ const contentData = {
         name: 'Framework Criteria',
         name2: 'Expected Performance',
         name3: 'High Performance',
-        specialism: 'All',
+        specialism: 'Software Engineer',
         description:
           '<ul><li>Effective at managing expectations and anticipating needs, risks and potential issues without direct instruction</li> <li>Always keeps stakeholders informed, frequently raises risks/issues</li> <li>Regularly anticipates stakeholder needs and proposes ways to address them</li> <li>Regarded as a trusted advisor to stakeholders</li></ul>',
         description2:
@@ -608,7 +608,7 @@ const contentData = {
           'Alice was put on a difficult project where she had to report to multiple stakeholders, some with contradicting interests.  Over several meetings Alice was able to design a solution that satisfied the requirements and gain concurrence amongst all the stakeholders. Alice is highly regarded because of her efforts.',
       },
       {
-        name: 'Dealing with Ambiguity and Risk',
+        name: 'Dealing with Ambiguity & Risk',
         specialism: 'All',
         description:
           'Effectively handles risk, change, and uncertainty within their team. Ensures expectations within their team are clarified between all parties involved.  Decides and acts responsibly in their work with their team without having the total picture during routine business, as well as when in high pressure situations.  Anticipates and communicates blockers, delays, and cost ballooning for their work before they require escalation. ',
@@ -677,7 +677,7 @@ const contentData = {
         name: 'Framework Criteria',
         name2: 'Expected Performance',
         name3: 'High Performance',
-        specialism: 'All',
+        specialism: 'Software Engineer',
         description:
           '<ul><li> Define solutions for complex problems</li> <li> Delivers consistently to a high standard and ensures quality work from their team</li><li> Recognized within Capco as having proven skills and experience through project delivery</li><li> Uses specialist knowledge and skills to provide insight and guidance to juniors, peers and stakeholders </li> </ul>',
         description2:
@@ -692,13 +692,13 @@ const contentData = {
           'The Principal Engineer provides considerable high-level technical guidance across the engineering organisation and project teams. They can usually anticipate and plan for technical problems. They are highly knowledgeable in major parts of our technology stack and are the technical owner of significant components within client accounts or internal engineering projects. They act in a very hands-on role, and as such, they are a prolific contributor to both core projects at Capco as well as side and experimental work. When presented with a complex problem, process or existing system they are able to reduce the complexity in order to get more done with less work. They provide guidance, direction and help colleagues build and produce better outcomes. They are capable of driving groups of disparate interests to decisions, and clearly communicating and seeing those decisions through to impact. They are capable of setting short to medium term strategic direction for part of technology stacks, identifying areas of critical need based on future growth and developing roadmaps to attack those problems.',
       },
       {
-        name: 'Creating and Understanding Code',
+        name: 'Coding',
         specialism: 'Software Engineer',
         description:
           "Has expertise in a set of the team's domains, including the breadth of services, how they interact, and data flows between systems. Consistently writes production-ready code that is easily testable and understood by other engineers while accounting for edge cases and errors. Understands when it is appropriate to leave comments, but biases towards self-documenting code.  Understands different techniques for refactoring, when it is appropriate to use them and helps teams refactor appropriately.",
       },
       {
-        name: 'Creating and Understanding Code',
+        name: 'Coding',
         specialism: 'Quality Engineer',
         description:
           "Has expertise in a set of the team's domains, including the breadth of services, how they interact, and data flows between systems. Consistently writes test automation for production-ready services that is easily understood by other engineers, and accounts for edge cases and errors. Understands when it is appropriate to create documentation, but biases towards demonstratable automation results.  Understands wider non-functional test automation concepts and has gained experience in at least one area.",
@@ -746,13 +746,13 @@ const contentData = {
           'Has advanced knowledge of cloud concepts, capabilities and design considerations. Works closely with teams to deliver solutions in alignment with the organisational cloud strategy.  Has detailed knowledge of how projects are managed within the cloud and the design AND setup considerations;  has gained knowledge/experience or certification with more than one provider; Is aware of industry trends/advancements in cloud technologies.',
       },
       {
-        name: 'Data Design and Handling',
+        name: 'Data Design & Handling',
         specialism: 'All',
         description:
           'Understands advanced data handling concepts / designs.  Designs and builds systems which manage data securely.  Actively promotes secure data management across teams, clients and the organisation.',
       },
       {
-        name: 'Security Awereness and Best Practise Implementation',
+        name: 'Security',
         specialism: 'All',
         description:
           "Actively contributes to security designs based on the organisation's security strategy. Fosters a security first mindset across teams, and leads by example. Has advanced knowledge  of key security technologies, protocols AND techniques (e.g. TLS, OAuth, Encryption, Networks)",
@@ -763,7 +763,7 @@ const contentData = {
         name: 'Framework Criteria',
         name2: 'Expected Performance',
         name3: 'High Performance',
-        specialism: 'All',
+        specialism: 'Software Engineer',
         description:
           '<ul><li> Leads a program team through periods of uncertainty and challenging circumstances </li> <li> Plays a supporting role in the leadership of the account or program</li><li> Proactive in developing junior resources and providing coaching/feedback </li><li> Contributes significantly to developing capabilities / practices.</li> </ul>',
         description2:
@@ -825,7 +825,7 @@ const contentData = {
         name: 'Framework Criteria',
         name2: 'Expected Performance',
         name3: 'High Performance',
-        specialism: 'All',
+        specialism: 'Software Engineer',
         description:
           '<ul><li>Effective at managing expectations and anticipating needs, risks and potential issues without direct instructions</li> <li>Trusted by project leaders and seeks to develop strong relationships with senior stakeholders </li><li> Provides guidance to the stakeholder on addressing business needs and leads projects to meet these needs </li><li> Demonstrates an understanding of stakeholder business drivers </li> </ul>',
         description2:
@@ -834,7 +834,7 @@ const contentData = {
           'Alice’s project needs a new contract as the client stakeholder has lost partial funding to deliver the full solution.  Alice has been asked to decide on what can be delivered with the limited funding they have.  She works with the senior stakeholders to trim scope and manages the development teams to deliver a viable MVP into production.',
       },
       {
-        name: 'Dealing with Ambiguity and Risk',
+        name: 'Dealing with Ambiguity & Risk',
         specialism: 'All',
         description:
           'Effectively handles risk, change, and uncertainty across several teams. Ensures expectations with their team and external stakeholders are clarified between all parties involved.  Decides and acts responsibly in their work across teams without having the total picture during routine business, as well as when in high pressure situations.  Anticipates and communicates blockers, delays, and cost ballooning within their team’s projects, before they require escalation. ',
@@ -881,13 +881,13 @@ const contentData = {
           "The Distinguished Engineer has significant strategic vision and can take a high-level 3-5 year plan for growth at a business level and translate that into a strategic technology roadmap. They are deeply technically savvy and their primary job is focusing on the architectural and technology needs to grow the engineering organisation over the longer-term horizon; they deal with very deep technical problems and a long time horizon. A Distinguished Engineer is still acting in a very hands-on role, and as such, they are a prolific contributor to both core projects at Capco as well as side and experimental work. When presented with a complex problem, process or existing system they are consistently able to reduce the complexity in order to get more done with less work. The ability to manage and simplify complexity is the hallmark of the Distinguished Engineer; by working with the Distinguished Engineer, engineers across the internal and client organisations gain more insight into dealing with complex technology problems and delivering robust solutions. The Distinguished Engineer has broad impact across Capco tech and client accounts. They create architecture that shapes large parts of our business and our client's business, and ship complex projects including many systems or major pieces of infrastructure. The impact of their work is felt across the team in the quality of the engineering that we produce, the ways we write code, the core libraries that we use, and the underlying design of systems. There are multiple obvious large technical contributions that can be pointed to as originating from this team member.",
       },
       {
-        name: 'Creating and Understanding Code',
+        name: 'Coding',
         specialism: 'Software Engineer',
         description:
           "Has expertise in a set of the team's domains, including the breadth of services, how they interact, and data flows between systems. Consistently writes production-ready code that is easily testable and understood by other engineers while accounting for edge cases and errors. Understands when it is appropriate to leave comments, but biases towards self-documenting code.  Understands different techniques for refactoring, when it is appropriate to use them and helps teams refactor appropriately.",
       },
       {
-        name: 'Creating and Understanding Code',
+        name: 'Coding',
         specialism: 'Quality Engineer',
         description:
           "Has expertise in a set of the team's domains, including the breadth of services, how they interact, and data flows between systems. Consistently writes test automation for production-ready services that is easily understood by other engineers, and accounts for edge cases and errors. Understands when it is appropriate to create documentation, but biases towards demonstratable automation results.  Understands wider non-functional test automation concepts and has gained experience in at least one area.",
@@ -935,13 +935,13 @@ const contentData = {
           'Has advanced knowledge of cloud concepts, capabilities and design considerations.  Contributes to the organisational cloud strategy or management.  Proactively supports or is leading project alignment with the strategy across the organisation.  Contributes to ongoing assessment of organisational skills gaps within the cloud domain and contributes to the improvement of knowledge/skills required for the cloud; Is aware of wide industry trends/advancements in cloud technologies.',
       },
       {
-        name: 'Data Design and Handling',
+        name: 'Data Design & Handling',
         specialism: 'All',
         description:
           'Understands advanced data handling concepts, designs and legislation.  Designs and builds systems which manage data securely.  Actively promotes secure data management across teams, clients and the organisation.',
       },
       {
-        name: 'Security Awereness and Best Practise Implementation',
+        name: 'Security',
         specialism: 'All',
         description:
           'Actively contributes to setting and refining organisation wide security strategy. Fosters a security first mindset across the organisation. Can recognize obscure security threats that go unnoticed to others.  Has advanced knowledge of key security technologies, protocols AND techniques (e.g. TLS, OAuth, Encryption, Networks) and the wider security domain.',
@@ -999,7 +999,7 @@ const contentData = {
     ],
     Stakeholder: [
       {
-        name: 'Dealing with Ambiguity and Risk',
+        name: 'Dealing with Ambiguity & Risk',
         specialism: 'All',
         description:
           'Effectively handles risk, change, and uncertainty across the organisation. Ensures expectations across the organisation and external stakeholders are clarified between all parties involved.   Decides and acts responsibly in their work across the organisation without having the total picture during routine business, as well as when in high pressure situations.',
