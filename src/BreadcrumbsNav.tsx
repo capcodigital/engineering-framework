@@ -20,7 +20,7 @@ const Wrapper = styled.div`
     padding: 12px 24px 12px 24px;
     .title {
       text-align: left;
-      padding-bottom: 8px;
+      padding-bottom: 4px;
     }
   }
 

@@ -65,7 +65,7 @@ const ContentHeader = styled.div<ContentHeaderProps>`
 
   @media screen and (max-width: 1000px) {
     height: 96px;
-    padding: 25px 100px 25px 25px;
+    padding: 16px 25px 25px 25px;
     .level-title {
       font-size: 14px;
       line-height: 16px;
@@ -92,9 +92,13 @@ const ContentDiv = styled.div`
     padding: 24px 100px 24px 100px;
   }
   .title {
+    width:100%;
     font-size: 24px;
     font-weight: bold;
     padding-bottom: 16px;
+    span {
+      margin-right:20px;
+    }
   }
   .description {
     line-height: 24px;
@@ -205,7 +209,8 @@ const Content: FC<ContentType> = ({ title }) => {
                     }}
                   >
                     <div className='title'>
-                      {comp.name}
+                      <span>{comp.name}</span>
+                      
                       <Tag
                         level={level}
                         competency={comp.name}
