@@ -25,8 +25,9 @@ const StyledAppBar = styled(AppBar)`
       position: relative;
       z-index: 1400;
       img {
-        margin-right: auto;
-        margin-left: auto;
+        margin: auto;
+        position: relative;
+        left: -24px;
       }
     }
   }

@@ -8,7 +8,7 @@ import styled from 'styled-components/macro';
 
 type BreadcrumbsNavProps = {
   open: boolean;
-  onClick: any
+  onClick: any;
 };
 
 const Wrapper = styled.div`
@@ -17,9 +17,10 @@ const Wrapper = styled.div`
   font-weight: bold;
   background: #161616;
   .breadcrumbs-wrapper {
-    padding: 8px 24px 8px 24px;
+    padding: 12px 24px 12px 24px;
     .title {
       text-align: left;
+      padding-bottom: 8px;
     }
   }
 
