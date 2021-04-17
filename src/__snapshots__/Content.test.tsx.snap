@@ -1,0 +1,861 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Content should render Content component 1`] = `
+<div>
+  <main
+    class="Content__Main-dq2n3w-0 hXOTys"
+  >
+    <div
+      class="SideBar__StyledSideBar-sc-16bum1j-0 gVleIT"
+    >
+      <div>
+        <ul
+          class="MuiList-root SideBarList__StyledList-sc-1egehub-0 gLBXYT list MuiList-padding"
+        >
+          <div
+            aria-disabled="false"
+            class="MuiButtonBase-root MuiListItem-root level list-item active MuiListItem-gutters MuiListItem-button"
+            role="button"
+            tabindex="0"
+          >
+            Associate
+            <span
+              class="MuiTouchRipple-root"
+            />
+          </div>
+          <div
+            class="MuiCollapse-container MuiCollapse-entered"
+            style="min-height: 0px;"
+          >
+            <div
+              class="MuiCollapse-wrapper"
+            >
+              <div
+                class="MuiCollapse-wrapperInner"
+              >
+                <nav
+                  class="MuiList-root nested MuiList-padding"
+                >
+                  <span>
+                    <div
+                      aria-disabled="false"
+                      class="MuiButtonBase-root MuiListItem-root category list-item active MuiListItem-gutters MuiListItem-button"
+                      role="button"
+                      tabindex="0"
+                    >
+                      <a
+                        href="/#overview-job-description"
+                      >
+                        Overview
+                      </a>
+                      <span
+                        class="MuiTouchRipple-root"
+                      />
+                    </div>
+                    <div
+                      class="MuiCollapse-container MuiCollapse-entered"
+                      style="min-height: 0px;"
+                    >
+                      <div
+                        class="MuiCollapse-wrapper"
+                      >
+                        <div
+                          class="MuiCollapse-wrapperInner"
+                        >
+                          <div
+                            class="MuiList-root"
+                          >
+                            <div
+                              aria-disabled="false"
+                              class="MuiButtonBase-root MuiListItem-root nested competency list-item active  MuiListItem-gutters MuiListItem-button"
+                              role="button"
+                              tabindex="0"
+                            >
+                              <a
+                                href="/#overview-job-description"
+                              >
+                                Job Description
+                              </a>
+                              <span
+                                class="MuiTouchRipple-root"
+                              />
+                            </div>
+                            <div
+                              aria-disabled="false"
+                              class="MuiButtonBase-root MuiListItem-root nested competency list-item   MuiListItem-gutters MuiListItem-button"
+                              role="button"
+                              tabindex="0"
+                            >
+                              <a
+                                href="/#overview-you-have"
+                              >
+                                You Have
+                              </a>
+                              <span
+                                class="MuiTouchRipple-root"
+                              />
+                            </div>
+                            <div
+                              aria-disabled="false"
+                              class="MuiButtonBase-root MuiListItem-root nested competency list-item   MuiListItem-gutters MuiListItem-button"
+                              role="button"
+                              tabindex="0"
+                            >
+                              <a
+                                href="/#overview-you-will"
+                              >
+                                You Will
+                              </a>
+                              <span
+                                class="MuiTouchRipple-root"
+                              />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </span>
+                  <span>
+                    <div
+                      aria-disabled="false"
+                      class="MuiButtonBase-root MuiListItem-root category list-item  MuiListItem-gutters MuiListItem-button"
+                      role="button"
+                      tabindex="0"
+                    >
+                      <a
+                        href="/#delivery-framework-criteria"
+                      >
+                        Delivery
+                      </a>
+                      <span
+                        class="MuiTouchRipple-root"
+                      />
+                    </div>
+                  </span>
+                  <span>
+                    <div
+                      aria-disabled="false"
+                      class="MuiButtonBase-root MuiListItem-root category list-item  MuiListItem-gutters MuiListItem-button"
+                      role="button"
+                      tabindex="0"
+                    >
+                      <a
+                        href="/#people-framework-criteria"
+                      >
+                        People
+                      </a>
+                      <span
+                        class="MuiTouchRipple-root"
+                      />
+                    </div>
+                  </span>
+                  <span>
+                    <div
+                      aria-disabled="false"
+                      class="MuiButtonBase-root MuiListItem-root category list-item  MuiListItem-gutters MuiListItem-button"
+                      role="button"
+                      tabindex="0"
+                    >
+                      <a
+                        href="/#stakeholder-framework-criteria"
+                      >
+                        Stakeholder
+                      </a>
+                      <span
+                        class="MuiTouchRipple-root"
+                      />
+                    </div>
+                  </span>
+                </nav>
+              </div>
+            </div>
+          </div>
+        </ul>
+        <ul
+          class="MuiList-root SideBarList__StyledList-sc-1egehub-0 gLBXYT list MuiList-padding"
+        >
+          <div
+            aria-disabled="false"
+            class="MuiButtonBase-root MuiListItem-root level list-item  MuiListItem-gutters MuiListItem-button"
+            role="button"
+            tabindex="0"
+          >
+            Consultant
+            <span
+              class="MuiTouchRipple-root"
+            />
+          </div>
+        </ul>
+        <ul
+          class="MuiList-root SideBarList__StyledList-sc-1egehub-0 gLBXYT list MuiList-padding"
+        >
+          <div
+            aria-disabled="false"
+            class="MuiButtonBase-root MuiListItem-root level list-item  MuiListItem-gutters MuiListItem-button"
+            role="button"
+            tabindex="0"
+          >
+            Senior Consultant
+            <span
+              class="MuiTouchRipple-root"
+            />
+          </div>
+        </ul>
+        <ul
+          class="MuiList-root SideBarList__StyledList-sc-1egehub-0 gLBXYT list MuiList-padding"
+        >
+          <div
+            aria-disabled="false"
+            class="MuiButtonBase-root MuiListItem-root level list-item  MuiListItem-gutters MuiListItem-button"
+            role="button"
+            tabindex="0"
+          >
+            Principal Consultant
+            <span
+              class="MuiTouchRipple-root"
+            />
+          </div>
+        </ul>
+        <ul
+          class="MuiList-root SideBarList__StyledList-sc-1egehub-0 gLBXYT list MuiList-padding"
+        >
+          <div
+            aria-disabled="false"
+            class="MuiButtonBase-root MuiListItem-root level list-item  MuiListItem-gutters MuiListItem-button"
+            role="button"
+            tabindex="0"
+          >
+            Managing Principal
+            <span
+              class="MuiTouchRipple-root"
+            />
+          </div>
+        </ul>
+      </div>
+    </div>
+    <div
+      class="BreadcrumbsNav__Wrapper-sc-146cviq-0 gbeLud"
+    >
+      <div
+        class="breadcrumbs-wrapper"
+      >
+        <div
+          class="title"
+        >
+          Digital Engineering
+        </div>
+        <nav
+          aria-label="breadcrumb"
+          class="MuiTypography-root MuiBreadcrumbs-root MuiTypography-body1 MuiTypography-colorTextSecondary"
+        >
+          <ol
+            class="MuiBreadcrumbs-ol"
+          >
+            <li
+              class="MuiBreadcrumbs-li"
+            >
+              <div>
+                Associate
+              </div>
+            </li>
+            <li
+              aria-hidden="true"
+              class="MuiBreadcrumbs-separator"
+            >
+              <svg
+                aria-hidden="true"
+                class="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall"
+                focusable="false"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"
+                />
+              </svg>
+            </li>
+            <li
+              class="MuiBreadcrumbs-li"
+            >
+              <div>
+                Overview
+              </div>
+            </li>
+            <li
+              aria-hidden="true"
+              class="MuiBreadcrumbs-separator"
+            >
+              <svg
+                aria-hidden="true"
+                class="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall"
+                focusable="false"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"
+                />
+              </svg>
+            </li>
+            <li
+              class="MuiBreadcrumbs-li"
+            >
+              <div>
+                Job Description
+              </div>
+            </li>
+          </ol>
+        </nav>
+        <svg
+          aria-hidden="true"
+          class="MuiSvgIcon-root"
+          focusable="false"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"
+          />
+        </svg>
+      </div>
+    </div>
+    <div
+      class="Content__ContentContainer-dq2n3w-1 eqntqX"
+    >
+      <div
+        class="Content__ContentHeader-dq2n3w-2 nNpiq"
+      >
+        <div
+          class="level-title"
+        >
+          <span
+            class="level"
+          >
+            Associate
+          </span>
+           •
+           
+          Associate Engineer
+        </div>
+        <div
+          class="category"
+        >
+          Overview
+        </div>
+      </div>
+      <div
+        class="Content__ContentDiv-dq2n3w-3 lhIFjD"
+      >
+        <div
+          class="MuiList-root competency-list MuiList-padding"
+        >
+          <li
+            class="MuiListItem-root list-item MuiListItem-gutters MuiListItem-alignItemsFlexStart"
+            id="overview-job-description"
+          >
+            <div
+              class="title"
+            >
+              <span>
+                Job Description
+              </span>
+            </div>
+            <p
+              class="Content__Description-dq2n3w-4 jMEZjF"
+            >
+              An associate developer has limited experience and is relatively new to the practice of software development.  Their focus should be on acquiring skills and improving their capabilities.  On the consulting side they should be focused on improving their communication and team work skills as these will be important for future leadership opportunities.
+            </p>
+            <hr
+              class="MuiDivider-root"
+            />
+          </li>
+          <li
+            class="MuiListItem-root list-item MuiListItem-gutters MuiListItem-alignItemsFlexStart"
+            id="overview-you-have"
+          >
+            <div
+              class="title"
+            >
+              <span>
+                You Have
+              </span>
+            </div>
+            <p
+              class="Content__Description-dq2n3w-4 jMEZjF"
+            >
+              <ul>
+                <li>
+                  Theoretical background such as a university or college program in Computer Science (Technology)
+                </li>
+                <li>
+                  Coop / internship or equivalent work experience
+                </li>
+                <li>
+                  Desire / drive to scale your business and technology knowledge
+                </li>
+              </ul>
+            </p>
+            <hr
+              class="MuiDivider-root"
+            />
+          </li>
+          <li
+            class="MuiListItem-root list-item MuiListItem-gutters MuiListItem-alignItemsFlexStart"
+            id="overview-you-will"
+          >
+            <div
+              class="title"
+            >
+              <span>
+                You Will
+              </span>
+            </div>
+            <p
+              class="Content__Description-dq2n3w-4 jMEZjF"
+            >
+              <ul>
+                <li>
+                  Focus on increasing competencies in Software Development
+                </li>
+                <li>
+                  Enhance communication and relationship management skills with stakeholders.
+                </li>
+              </ul>
+            </p>
+            <hr
+              class="MuiDivider-root"
+            />
+          </li>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
+`;
+
+exports[`should render Content component 1`] = `
+<div>
+  <main
+    class="Content__Main-dq2n3w-0 hXOTys"
+  >
+    <div
+      class="SideBar__StyledSideBar-sc-16bum1j-0 gVleIT"
+    >
+      <div>
+        <ul
+          class="MuiList-root SideBarList__StyledList-sc-1egehub-0 gLBXYT list MuiList-padding"
+        >
+          <div
+            aria-disabled="false"
+            class="MuiButtonBase-root MuiListItem-root level list-item active MuiListItem-gutters MuiListItem-button"
+            role="button"
+            tabindex="0"
+          >
+            Associate
+            <span
+              class="MuiTouchRipple-root"
+            />
+          </div>
+          <div
+            class="MuiCollapse-container MuiCollapse-entered"
+            style="min-height: 0px;"
+          >
+            <div
+              class="MuiCollapse-wrapper"
+            >
+              <div
+                class="MuiCollapse-wrapperInner"
+              >
+                <nav
+                  class="MuiList-root nested MuiList-padding"
+                >
+                  <span>
+                    <div
+                      aria-disabled="false"
+                      class="MuiButtonBase-root MuiListItem-root category list-item active MuiListItem-gutters MuiListItem-button"
+                      role="button"
+                      tabindex="0"
+                    >
+                      <a
+                        href="/#overview-job-description"
+                      >
+                        Overview
+                      </a>
+                      <span
+                        class="MuiTouchRipple-root"
+                      />
+                    </div>
+                    <div
+                      class="MuiCollapse-container MuiCollapse-entered"
+                      style="min-height: 0px;"
+                    >
+                      <div
+                        class="MuiCollapse-wrapper"
+                      >
+                        <div
+                          class="MuiCollapse-wrapperInner"
+                        >
+                          <div
+                            class="MuiList-root"
+                          >
+                            <div
+                              aria-disabled="false"
+                              class="MuiButtonBase-root MuiListItem-root nested competency list-item active  MuiListItem-gutters MuiListItem-button"
+                              role="button"
+                              tabindex="0"
+                            >
+                              <a
+                                href="/#overview-job-description"
+                              >
+                                Job Description
+                              </a>
+                              <span
+                                class="MuiTouchRipple-root"
+                              />
+                            </div>
+                            <div
+                              aria-disabled="false"
+                              class="MuiButtonBase-root MuiListItem-root nested competency list-item   MuiListItem-gutters MuiListItem-button"
+                              role="button"
+                              tabindex="0"
+                            >
+                              <a
+                                href="/#overview-you-have"
+                              >
+                                You Have
+                              </a>
+                              <span
+                                class="MuiTouchRipple-root"
+                              />
+                            </div>
+                            <div
+                              aria-disabled="false"
+                              class="MuiButtonBase-root MuiListItem-root nested competency list-item   MuiListItem-gutters MuiListItem-button"
+                              role="button"
+                              tabindex="0"
+                            >
+                              <a
+                                href="/#overview-you-will"
+                              >
+                                You Will
+                              </a>
+                              <span
+                                class="MuiTouchRipple-root"
+                              />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </span>
+                  <span>
+                    <div
+                      aria-disabled="false"
+                      class="MuiButtonBase-root MuiListItem-root category list-item  MuiListItem-gutters MuiListItem-button"
+                      role="button"
+                      tabindex="0"
+                    >
+                      <a
+                        href="/#delivery-framework-criteria"
+                      >
+                        Delivery
+                      </a>
+                      <span
+                        class="MuiTouchRipple-root"
+                      />
+                    </div>
+                  </span>
+                  <span>
+                    <div
+                      aria-disabled="false"
+                      class="MuiButtonBase-root MuiListItem-root category list-item  MuiListItem-gutters MuiListItem-button"
+                      role="button"
+                      tabindex="0"
+                    >
+                      <a
+                        href="/#people-framework-criteria"
+                      >
+                        People
+                      </a>
+                      <span
+                        class="MuiTouchRipple-root"
+                      />
+                    </div>
+                  </span>
+                  <span>
+                    <div
+                      aria-disabled="false"
+                      class="MuiButtonBase-root MuiListItem-root category list-item  MuiListItem-gutters MuiListItem-button"
+                      role="button"
+                      tabindex="0"
+                    >
+                      <a
+                        href="/#stakeholder-framework-criteria"
+                      >
+                        Stakeholder
+                      </a>
+                      <span
+                        class="MuiTouchRipple-root"
+                      />
+                    </div>
+                  </span>
+                </nav>
+              </div>
+            </div>
+          </div>
+        </ul>
+        <ul
+          class="MuiList-root SideBarList__StyledList-sc-1egehub-0 gLBXYT list MuiList-padding"
+        >
+          <div
+            aria-disabled="false"
+            class="MuiButtonBase-root MuiListItem-root level list-item  MuiListItem-gutters MuiListItem-button"
+            role="button"
+            tabindex="0"
+          >
+            Consultant
+            <span
+              class="MuiTouchRipple-root"
+            />
+          </div>
+        </ul>
+        <ul
+          class="MuiList-root SideBarList__StyledList-sc-1egehub-0 gLBXYT list MuiList-padding"
+        >
+          <div
+            aria-disabled="false"
+            class="MuiButtonBase-root MuiListItem-root level list-item  MuiListItem-gutters MuiListItem-button"
+            role="button"
+            tabindex="0"
+          >
+            Senior Consultant
+            <span
+              class="MuiTouchRipple-root"
+            />
+          </div>
+        </ul>
+        <ul
+          class="MuiList-root SideBarList__StyledList-sc-1egehub-0 gLBXYT list MuiList-padding"
+        >
+          <div
+            aria-disabled="false"
+            class="MuiButtonBase-root MuiListItem-root level list-item  MuiListItem-gutters MuiListItem-button"
+            role="button"
+            tabindex="0"
+          >
+            Principal Consultant
+            <span
+              class="MuiTouchRipple-root"
+            />
+          </div>
+        </ul>
+        <ul
+          class="MuiList-root SideBarList__StyledList-sc-1egehub-0 gLBXYT list MuiList-padding"
+        >
+          <div
+            aria-disabled="false"
+            class="MuiButtonBase-root MuiListItem-root level list-item  MuiListItem-gutters MuiListItem-button"
+            role="button"
+            tabindex="0"
+          >
+            Managing Principal
+            <span
+              class="MuiTouchRipple-root"
+            />
+          </div>
+        </ul>
+      </div>
+    </div>
+    <div
+      class="BreadcrumbsNav__Wrapper-sc-146cviq-0 gbeLud"
+    >
+      <div
+        class="breadcrumbs-wrapper"
+      >
+        <div
+          class="title"
+        >
+          Digital Engineering
+        </div>
+        <nav
+          aria-label="breadcrumb"
+          class="MuiTypography-root MuiBreadcrumbs-root MuiTypography-body1 MuiTypography-colorTextSecondary"
+        >
+          <ol
+            class="MuiBreadcrumbs-ol"
+          >
+            <li
+              class="MuiBreadcrumbs-li"
+            >
+              <div>
+                Associate
+              </div>
+            </li>
+            <li
+              aria-hidden="true"
+              class="MuiBreadcrumbs-separator"
+            >
+              <svg
+                aria-hidden="true"
+                class="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall"
+                focusable="false"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"
+                />
+              </svg>
+            </li>
+            <li
+              class="MuiBreadcrumbs-li"
+            >
+              <div>
+                Overview
+              </div>
+            </li>
+            <li
+              aria-hidden="true"
+              class="MuiBreadcrumbs-separator"
+            >
+              <svg
+                aria-hidden="true"
+                class="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall"
+                focusable="false"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"
+                />
+              </svg>
+            </li>
+            <li
+              class="MuiBreadcrumbs-li"
+            >
+              <div>
+                Job Description
+              </div>
+            </li>
+          </ol>
+        </nav>
+        <svg
+          aria-hidden="true"
+          class="MuiSvgIcon-root"
+          focusable="false"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"
+          />
+        </svg>
+      </div>
+    </div>
+    <div
+      class="Content__ContentContainer-dq2n3w-1 eqntqX"
+    >
+      <div
+        class="Content__ContentHeader-dq2n3w-2 nNpiq"
+      >
+        <div
+          class="level-title"
+        >
+          <span
+            class="level"
+          >
+            Associate
+          </span>
+           •
+           
+          Associate Engineer
+        </div>
+        <div
+          class="category"
+        >
+          Overview
+        </div>
+      </div>
+      <div
+        class="Content__ContentDiv-dq2n3w-3 lhIFjD"
+      >
+        <div
+          class="MuiList-root competency-list MuiList-padding"
+        >
+          <li
+            class="MuiListItem-root list-item MuiListItem-gutters MuiListItem-alignItemsFlexStart"
+            id="overview-job-description"
+          >
+            <div
+              class="title"
+            >
+              <span>
+                Job Description
+              </span>
+            </div>
+            <p
+              class="Content__Description-dq2n3w-4 jMEZjF"
+            >
+              An associate developer has limited experience and is relatively new to the practice of software development.  Their focus should be on acquiring skills and improving their capabilities.  On the consulting side they should be focused on improving their communication and team work skills as these will be important for future leadership opportunities.
+            </p>
+            <hr
+              class="MuiDivider-root"
+            />
+          </li>
+          <li
+            class="MuiListItem-root list-item MuiListItem-gutters MuiListItem-alignItemsFlexStart"
+            id="overview-you-have"
+          >
+            <div
+              class="title"
+            >
+              <span>
+                You Have
+              </span>
+            </div>
+            <p
+              class="Content__Description-dq2n3w-4 jMEZjF"
+            >
+              <ul>
+                <li>
+                  Theoretical background such as a university or college program in Computer Science (Technology)
+                </li>
+                <li>
+                  Coop / internship or equivalent work experience
+                </li>
+                <li>
+                  Desire / drive to scale your business and technology knowledge
+                </li>
+              </ul>
+            </p>
+            <hr
+              class="MuiDivider-root"
+            />
+          </li>
+          <li
+            class="MuiListItem-root list-item MuiListItem-gutters MuiListItem-alignItemsFlexStart"
+            id="overview-you-will"
+          >
+            <div
+              class="title"
+            >
+              <span>
+                You Will
+              </span>
+            </div>
+            <p
+              class="Content__Description-dq2n3w-4 jMEZjF"
+            >
+              <ul>
+                <li>
+                  Focus on increasing competencies in Software Development
+                </li>
+                <li>
+                  Enhance communication and relationship management skills with stakeholders.
+                </li>
+              </ul>
+            </p>
+            <hr
+              class="MuiDivider-root"
+            />
+          </li>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
+`;

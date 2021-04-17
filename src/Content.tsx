@@ -30,9 +30,8 @@ const Main = styled.main`
   }
 `;
 
-const ContentContainer = styled.div<ContentContainerProps>`
+export const ContentContainer = styled.div<ContentContainerProps>`
   width: 100%;
-
   background-color: #1f1f1f;
   color: white;
   text-align: left;
@@ -44,7 +43,7 @@ const ContentContainer = styled.div<ContentContainerProps>`
   }
 `;
 
-const ContentHeader = styled.div<ContentHeaderProps>`
+export const ContentHeader = styled.div<ContentHeaderProps>`
   width: 100%;
   height: 120px;
   padding: 25px 25px 25px 100px;
@@ -198,7 +197,7 @@ const Content: FC<ContentType> = ({ title }) => {
                 [specialism, 'All'].includes(comp.specialism) && (
                   <ListItem
                     id={`${category.toLowerCase()}-${comp.name
-                      .replaceAll(' ', '-')
+                      .replace(/\s/g,'-')
                       .toLowerCase()}`}
                     className='list-item'
                     key={`content-${comp.name}`}

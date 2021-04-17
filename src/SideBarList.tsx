@@ -80,7 +80,7 @@ const SideBarList = () => {
   };
 
   return (
-    <div >
+    <div>
       {levels.map((levelName: string) => (
         <StyledList className='list' key={levelName}>
           <ListItem
@@ -106,7 +106,7 @@ const SideBarList = () => {
                     <Link
                       smooth
                       to={`#${data.category.toLowerCase()}-${data.competencies[0]
-                        .replaceAll(' ', '-')
+                        .replace(/\s/g, '-')
                         .toLowerCase()}`}
                     >
                       {data.category}
@@ -137,10 +137,8 @@ const SideBarList = () => {
                             >
                               <Link
                                 smooth
-                                to={`#${
-                                  data.category
-                                }-${competencyName.replaceAll(
-                                  ' ',
+                                to={`#${data.category}-${competencyName.replace(
+                                  /\s/g,
                                   '-'
                                 )}`.toLowerCase()}
                               >
