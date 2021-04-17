@@ -1,0 +1,53 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render Header component 1`] = `
+<header
+  class="MuiPaper-root MuiAppBar-root MuiAppBar-positionSticky MuiAppBar-colorPrimary Header__StyledAppBar-u4z9pp-0 jpyxtR MuiPaper-elevation4"
+>
+  <div
+    class="MuiToolbar-root MuiToolbar-regular MuiToolbar-gutters"
+  >
+    <button
+      aria-label="menu"
+      class="MuiButtonBase-root MuiIconButton-root Header__StyledIconButton-u4z9pp-1 iRuLqq MuiIconButton-colorInherit MuiIconButton-edgeStart"
+      tabindex="0"
+      type="button"
+    >
+      <span
+        class="MuiIconButton-label"
+      >
+        <svg
+          aria-hidden="true"
+          class="MuiSvgIcon-root MuiSvgIcon-fontSizeLarge"
+          focusable="false"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"
+          />
+        </svg>
+      </span>
+      <span
+        class="MuiTouchRipple-root"
+      />
+    </button>
+    <img
+      alt="Logo"
+      height="32"
+      src="logo.png"
+    />
+    <a
+      class="Header__StyledLink-u4z9pp-2 cMYGaa"
+      href="/software#-"
+    >
+      Software Engineer
+    </a>
+    <a
+      class="Header__StyledLink-u4z9pp-2 cMYGaa"
+      href="/quality#-"
+    >
+      Quality Engineer
+    </a>
+  </div>
+</header>
+`;
