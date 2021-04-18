@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`should render Header component 1`] = `
+exports[`Header should render Header component 1`] = `
 <header
   class="MuiPaper-root MuiAppBar-root MuiAppBar-positionSticky MuiAppBar-colorPrimary Header__StyledAppBar-u4z9pp-0 jpyxtR MuiPaper-elevation4"
 >

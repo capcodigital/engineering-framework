@@ -7,6 +7,7 @@ exports[`Content should render Content component 1`] = `
   >
     <div
       class="SideBar__StyledSideBar-sc-16bum1j-0 gVleIT"
+      data-testid="sidebar"
     >
       <div>
         <ul
@@ -40,6 +41,7 @@ exports[`Content should render Content component 1`] = `
                     <div
                       aria-disabled="false"
                       class="MuiButtonBase-root MuiListItem-root category list-item active MuiListItem-gutters MuiListItem-button"
+                      data-testid="associate-overview"
                       role="button"
                       tabindex="0"
                     >
@@ -119,6 +121,7 @@ exports[`Content should render Content component 1`] = `
                     <div
                       aria-disabled="false"
                       class="MuiButtonBase-root MuiListItem-root category list-item  MuiListItem-gutters MuiListItem-button"
+                      data-testid="associate-delivery"
                       role="button"
                       tabindex="0"
                     >
@@ -136,6 +139,7 @@ exports[`Content should render Content component 1`] = `
                     <div
                       aria-disabled="false"
                       class="MuiButtonBase-root MuiListItem-root category list-item  MuiListItem-gutters MuiListItem-button"
+                      data-testid="associate-people"
                       role="button"
                       tabindex="0"
                     >
@@ -153,6 +157,7 @@ exports[`Content should render Content component 1`] = `
                     <div
                       aria-disabled="false"
                       class="MuiButtonBase-root MuiListItem-root category list-item  MuiListItem-gutters MuiListItem-button"
+                      data-testid="associate-stakeholder"
                       role="button"
                       tabindex="0"
                     >
@@ -345,6 +350,7 @@ exports[`Content should render Content component 1`] = `
       >
         <div
           class="MuiList-root competency-list MuiList-padding"
+          data-testid="competency-list"
         >
           <li
             class="MuiListItem-root list-item MuiListItem-gutters MuiListItem-alignItemsFlexStart"
@@ -430,13 +436,14 @@ exports[`Content should render Content component 1`] = `
 </div>
 `;
 
-exports[`should render Content component 1`] = `
+exports[`Content should render Content component 2`] = `
 <div>
   <main
     class="Content__Main-dq2n3w-0 hXOTys"
   >
     <div
       class="SideBar__StyledSideBar-sc-16bum1j-0 gVleIT"
+      data-testid="sidebar"
     >
       <div>
         <ul
@@ -470,6 +477,7 @@ exports[`should render Content component 1`] = `
                     <div
                       aria-disabled="false"
                       class="MuiButtonBase-root MuiListItem-root category list-item active MuiListItem-gutters MuiListItem-button"
+                      data-testid="associate-overview"
                       role="button"
                       tabindex="0"
                     >
@@ -549,6 +557,7 @@ exports[`should render Content component 1`] = `
                     <div
                       aria-disabled="false"
                       class="MuiButtonBase-root MuiListItem-root category list-item  MuiListItem-gutters MuiListItem-button"
+                      data-testid="associate-delivery"
                       role="button"
                       tabindex="0"
                     >
@@ -566,6 +575,7 @@ exports[`should render Content component 1`] = `
                     <div
                       aria-disabled="false"
                       class="MuiButtonBase-root MuiListItem-root category list-item  MuiListItem-gutters MuiListItem-button"
+                      data-testid="associate-people"
                       role="button"
                       tabindex="0"
                     >
@@ -583,6 +593,7 @@ exports[`should render Content component 1`] = `
                     <div
                       aria-disabled="false"
                       class="MuiButtonBase-root MuiListItem-root category list-item  MuiListItem-gutters MuiListItem-button"
+                      data-testid="associate-stakeholder"
                       role="button"
                       tabindex="0"
                     >
@@ -775,6 +786,7 @@ exports[`should render Content component 1`] = `
       >
         <div
           class="MuiList-root competency-list MuiList-padding"
+          data-testid="competency-list"
         >
           <li
             class="MuiListItem-root list-item MuiListItem-gutters MuiListItem-alignItemsFlexStart"

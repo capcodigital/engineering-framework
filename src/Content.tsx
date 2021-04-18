@@ -91,12 +91,12 @@ const ContentDiv = styled.div`
     padding: 24px 100px 24px 100px;
   }
   .title {
-    width:100%;
+    width: 100%;
     font-size: 24px;
     font-weight: bold;
     padding-bottom: 16px;
     span {
-      margin-right:20px;
+      margin-right: 20px;
     }
   }
   .description {
@@ -191,13 +191,13 @@ const Content: FC<ContentType> = ({ title }) => {
           <div className='category'>{category}</div>
         </ContentHeader>
         <ContentDiv>
-          <List component='div' className={'competency-list'}>
+          <List component='div' className={'competency-list'} data-testid='competency-list'>
             {(contentData as any)[level][category].map(
               (comp: any) =>
                 [specialism, 'All'].includes(comp.specialism) && (
                   <ListItem
                     id={`${category.toLowerCase()}-${comp.name
-                      .replace(/\s/g,'-')
+                      .replace(/\s/g, '-')
                       .toLowerCase()}`}
                     className='list-item'
                     key={`content-${comp.name}`}
@@ -209,7 +209,7 @@ const Content: FC<ContentType> = ({ title }) => {
                   >
                     <div className='title'>
                       <span>{comp.name}</span>
-                      
+
                       <Tag
                         level={level}
                         competency={comp.name}

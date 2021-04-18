@@ -17,6 +17,39 @@ describe('Content', () => {
     expect(container).toMatchSnapshot();
   });
 
+  it('should render Content component and check SideBar exists', () => {
+    render(
+      <Router>
+        <EngineeringContextProvider>
+          <Content title={'Software Engineer'} />
+        </EngineeringContextProvider>
+      </Router>
+    );
+    expect(screen.getByTestId('sidebar')).toBeTruthy();
+  });
+
+  it('should render Content component and check competency list exists', () => {
+    const { container } = render(
+      <Router>
+        <EngineeringContextProvider>
+          <Content title={'Software Engineer'} />
+        </EngineeringContextProvider>
+      </Router>
+    );
+    expect(container).toContainElement(screen.getByTestId('competency-list'));
+  });
+
+  it('should render Content component', () => {
+    const { container } = render(
+      <Router>
+        <EngineeringContextProvider>
+          <Content title={'Software Engineer'} />
+        </EngineeringContextProvider>
+      </Router>
+    );
+    expect(container).toMatchSnapshot();
+  });
+
   describe('Header', () => {
     it('should check that correct background image renders', () => {
       const { container } = render(
@@ -53,21 +86,53 @@ describe('Content', () => {
         </Router>
       );
 
+      expect(container.querySelector('.level-title')).toHaveTextContent(
+        'Associate • Associate Engineer'
+      );
+
       fireEvent.click(screen.getByText('Consultant'));
+      
       expect(container.querySelector('.level-title')).toHaveTextContent(
         'Consultant • Engineer'
       );
     });
+
+    it('should check that the default category displayed is Overview ', () => {
+      const { container } = render(
+        <Router>
+          <EngineeringContextProvider>
+            <Content title={'Software Engineer'} />
+          </EngineeringContextProvider>
+        </Router>
+      );
+
+      expect(container.querySelector('.category')).toHaveTextContent(
+        'Overview'
+      );
+    });
   });
 
-  it('should check that ContentContainer is hidden when menu is open on mobile', () => {
-    const { container } = render(
-      <Router>
-        <EngineeringContextProvider>
-          <ContentContainer menuOpen={true} />
-        </EngineeringContextProvider>
-      </Router>
-    );
-    expect(container.firstChild).toHaveStyle('display: none');
+  describe('ContentContainer', () => {
+    it('should check that ContentContainer is hidden when menu is open on mobile', () => {
+      const { container } = render(
+        <Router>
+          <EngineeringContextProvider>
+            <ContentContainer menuOpen={true} />
+          </EngineeringContextProvider>
+        </Router>
+      );
+      expect(container.firstChild).not.toBeVisible();
+    });
+
+    it('should check that ContentContainer is visible when menu is closed on mobile', () => {
+      const { container } = render(
+        <Router>
+          <EngineeringContextProvider>
+            <ContentContainer menuOpen={false} />
+          </EngineeringContextProvider>
+        </Router>
+      );
+      expect(container.firstChild).toBeVisible();
+    });
   });
 });

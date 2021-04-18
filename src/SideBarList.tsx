@@ -96,6 +96,7 @@ const SideBarList = () => {
                 <span key={data.category}>
                   <ListItem
                     button
+                    data-testid={`${levelName}-${data.category}`.toLowerCase()}
                     className={`category list-item ${
                       category === data.category ? 'active' : ''
                     }`}

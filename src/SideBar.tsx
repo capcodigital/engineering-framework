@@ -13,7 +13,7 @@ const StyledSideBar = styled.div`
 `;
 
 const SideBar: FC = ({ children }) => {
-  return <StyledSideBar>{children}</StyledSideBar>;
+  return <StyledSideBar data-testid='sidebar'>{children}</StyledSideBar>;
 };
 
 export default SideBar;
