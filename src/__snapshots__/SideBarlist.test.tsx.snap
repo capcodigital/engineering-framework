@@ -1,0 +1,81 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SideBarList should render SideBarList component 1`] = `
+<div>
+  <ul
+    class="MuiList-root SideBarList__StyledList-sc-1egehub-0 gLBXYT list MuiList-padding"
+  >
+    <div
+      aria-disabled="false"
+      class="MuiButtonBase-root MuiListItem-root level list-item  MuiListItem-gutters MuiListItem-button"
+      role="button"
+      tabindex="0"
+    >
+      Associate
+      <span
+        class="MuiTouchRipple-root"
+      />
+    </div>
+  </ul>
+  <ul
+    class="MuiList-root SideBarList__StyledList-sc-1egehub-0 gLBXYT list MuiList-padding"
+  >
+    <div
+      aria-disabled="false"
+      class="MuiButtonBase-root MuiListItem-root level list-item  MuiListItem-gutters MuiListItem-button"
+      role="button"
+      tabindex="0"
+    >
+      Consultant
+      <span
+        class="MuiTouchRipple-root"
+      />
+    </div>
+  </ul>
+  <ul
+    class="MuiList-root SideBarList__StyledList-sc-1egehub-0 gLBXYT list MuiList-padding"
+  >
+    <div
+      aria-disabled="false"
+      class="MuiButtonBase-root MuiListItem-root level list-item  MuiListItem-gutters MuiListItem-button"
+      role="button"
+      tabindex="0"
+    >
+      Senior Consultant
+      <span
+        class="MuiTouchRipple-root"
+      />
+    </div>
+  </ul>
+  <ul
+    class="MuiList-root SideBarList__StyledList-sc-1egehub-0 gLBXYT list MuiList-padding"
+  >
+    <div
+      aria-disabled="false"
+      class="MuiButtonBase-root MuiListItem-root level list-item  MuiListItem-gutters MuiListItem-button"
+      role="button"
+      tabindex="0"
+    >
+      Principal Consultant
+      <span
+        class="MuiTouchRipple-root"
+      />
+    </div>
+  </ul>
+  <ul
+    class="MuiList-root SideBarList__StyledList-sc-1egehub-0 gLBXYT list MuiList-padding"
+  >
+    <div
+      aria-disabled="false"
+      class="MuiButtonBase-root MuiListItem-root level list-item  MuiListItem-gutters MuiListItem-button"
+      role="button"
+      tabindex="0"
+    >
+      Managing Principal
+      <span
+        class="MuiTouchRipple-root"
+      />
+    </div>
+  </ul>
+</div>
+`;
