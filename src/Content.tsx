@@ -160,7 +160,7 @@ const Content: FC<ContentType> = ({ title }) => {
       setCategory(categoryfromUrl);
       setCompetency(competencyFromUrl);
     }
-  }, []);
+  }, [setCategory, setCompetency]);
 
   useEffect(() => {
     setTimeout(() => {

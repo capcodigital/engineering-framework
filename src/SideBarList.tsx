@@ -153,6 +153,9 @@ const SideBarList = () => {
                               </Link>
                             </ListItem>
                           );
+                        else {
+                          return '';
+                        }
                       })}
                     </List>
                   </Collapse>
