@@ -9,6 +9,5 @@ it('should render capco logo', () => {
       <App />
     </Router>
   );
-  const logoElement = screen.getByAltText('Logo');
-  expect(logoElement).toBeInTheDocument();
+  expect(screen.getByAltText('Logo')).toBeInTheDocument();
 });
