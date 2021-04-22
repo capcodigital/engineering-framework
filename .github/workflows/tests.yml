@@ -18,7 +18,6 @@ jobs:
       - name: Test
         run: npm test
 
-  test:
     name: Run Cypress tests
     runs-on: ubuntu-latest
     
