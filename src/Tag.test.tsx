@@ -72,7 +72,7 @@ describe('Tag', () => {
     expect(screen.queryByText('Principal Engineer')).toBeTruthy();
   });
 
-  it('should render Tag component for Principal Software Engineer Technical path', () => {
+  it('should render SmallTag component for Principal Software Engineer Technical path', () => {
     render(
       <Router>
         <EngineeringContextProvider>

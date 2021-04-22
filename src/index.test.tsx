@@ -5,7 +5,7 @@ import App from "./App"
 // mocks react-dom and its render method
 jest.mock("react-dom", () => ({ render: jest.fn() }))
 
-it("renders with App and root div", () => {
+it("should render App component", () => {
   const root = document.createElement("div")
   root.id = "root"
   document.body.appendChild(root)

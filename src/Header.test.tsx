@@ -14,7 +14,7 @@ describe('Header', () => {
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('should check that software engineer menu exists', () => {
+  it('should check that Software Engineer menu exists', () => {
     render(
       <Router>
         <Header />
@@ -23,24 +23,13 @@ describe('Header', () => {
     expect(screen.getByText('Software Engineer')).toBeTruthy();
   });
 
-  it('should check that quality engineer menu exists', () => {
+  it('should check that Quality Engineer menu exists', () => {
     render(
       <Router>
         <Header />
       </Router>
     );
     expect(screen.getByText('Quality Engineer')).toBeTruthy();
-  });
-
-  it('should check that Software Engineer is the active menu option', () => {
-    render(
-      <Router>
-        <EngineeringContextProvider>
-          <Header />
-        </EngineeringContextProvider>
-      </Router>
-    );
-    expect(screen.getByText('Software Engineer').classList).toContain('active');
   });
 
   it('should check that by default Software Engineer is active, Quality Engineer is not', () => {
@@ -51,12 +40,12 @@ describe('Header', () => {
         </EngineeringContextProvider>
       </Router>
     );
-
+    expect(screen.getByText('Software Engineer').classList).toContain('active');
     expect(screen.getByText('Software Engineer')).toHaveStyle('color:white');
     expect(screen.getByText('Quality Engineer')).toHaveStyle('color:grey');
   });
 
-  it('should cicking Quality Engineer and check that colour changes to white', () => {
+  it('should cicking Quality Engineer and check that text colour changes to white', () => {
     render(
       <Router>
         <EngineeringContextProvider>
