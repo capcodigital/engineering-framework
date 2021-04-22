@@ -43,7 +43,7 @@ describe('Header', () => {
     expect(screen.getByText('Software Engineer').classList).toContain('active');
   });
 
-  it('should check that by default Software Engineer is white, Quality Engineer is grey', () => {
+  it('should check that by default Software Engineer is active, Quality Engineer is not', () => {
     render(
       <Router>
         <EngineeringContextProvider>
@@ -56,7 +56,7 @@ describe('Header', () => {
     expect(screen.getByText('Quality Engineer')).toHaveStyle('color:grey');
   });
 
-  it('should check that on cicking Quality Engineer text, colour changes to white', () => {
+  it('should cicking Quality Engineer and check that colour changes to white', () => {
     render(
       <Router>
         <EngineeringContextProvider>

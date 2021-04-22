@@ -126,6 +126,16 @@ const Description = styled.p`
   }
 `;
 
+export const categoryAndCompetencyFromUrl = (hash: string) => {
+  const [cat, ...comp] = hash.split('#')[1].split('-');
+  const categoryfromUrl = cat.charAt(0).toUpperCase() + cat.slice(1);
+  const competencyFromUrl = comp
+    .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+    .join(' ');
+
+  return { categoryfromUrl, competencyFromUrl };
+};
+
 const Content: FC<ContentType> = ({ title }) => {
   const [open, setOpen] = useState(false);
   const {
@@ -143,11 +153,10 @@ const Content: FC<ContentType> = ({ title }) => {
 
   useEffect(() => {
     if (window.location.hash) {
-      const [cat, ...comp] = window.location.hash.split('#')[1].split('-');
-      const categoryfromUrl = cat.charAt(0).toUpperCase() + cat.slice(1);
-      const competencyFromUrl = comp
-        .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
-        .join(' ');
+      const {
+        categoryfromUrl,
+        competencyFromUrl,
+      } = categoryAndCompetencyFromUrl(window.location.hash);
       setCategory(categoryfromUrl);
       setCompetency(competencyFromUrl);
     }
@@ -155,9 +164,8 @@ const Content: FC<ContentType> = ({ title }) => {
 
   useEffect(() => {
     setTimeout(() => {
-      const { hash } = window.location;
-      if (hash) {
-        const id = hash.replace('#', '');
+      if (window.location.hash) {
+        const id = window.location.hash.replace('#', '');
         const element = document.getElementById(id);
         if (element) {
           element.scrollIntoView({ block: 'start', behavior: 'smooth' });
@@ -191,7 +199,11 @@ const Content: FC<ContentType> = ({ title }) => {
           <div className='category'>{category}</div>
         </ContentHeader>
         <ContentDiv>
-          <List component='div' className={'competency-list'} data-testid='competency-list'>
+          <List
+            component='div'
+            className={'competency-list'}
+            data-testid='competency-list'
+          >
             {(contentData as any)[level][category].map(
               (comp: any) =>
                 [specialism, 'All'].includes(comp.specialism) && (
@@ -207,7 +219,7 @@ const Content: FC<ContentType> = ({ title }) => {
                         comp.name === 'Framework Criteria' ? '#161616' : '',
                     }}
                   >
-                    <div className='title'>
+                    <div className={`title ${comp.name.toLowerCase()}`}>
                       <span>{comp.name}</span>
 
                       <Tag

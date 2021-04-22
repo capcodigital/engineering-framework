@@ -7,7 +7,7 @@ exports[`SideBarList should render SideBarList component 1`] = `
   >
     <div
       aria-disabled="false"
-      class="MuiButtonBase-root MuiListItem-root level list-item  MuiListItem-gutters MuiListItem-button"
+      class="MuiButtonBase-root MuiListItem-root level list-item active MuiListItem-gutters MuiListItem-button"
       role="button"
       tabindex="0"
     >
@@ -15,6 +15,157 @@ exports[`SideBarList should render SideBarList component 1`] = `
       <span
         class="MuiTouchRipple-root"
       />
+    </div>
+    <div
+      class="MuiCollapse-container MuiCollapse-entered"
+      style="min-height: 0px;"
+    >
+      <div
+        class="MuiCollapse-wrapper"
+      >
+        <div
+          class="MuiCollapse-wrapperInner"
+        >
+          <nav
+            class="MuiList-root nested MuiList-padding"
+          >
+            <span>
+              <div
+                aria-disabled="false"
+                class="MuiButtonBase-root MuiListItem-root category list-item active MuiListItem-gutters MuiListItem-button"
+                data-testid="associate-overview"
+                role="button"
+                tabindex="0"
+              >
+                <a
+                  href="/#overview-job-description"
+                >
+                  Overview
+                </a>
+                <span
+                  class="MuiTouchRipple-root"
+                />
+              </div>
+              <div
+                class="MuiCollapse-container MuiCollapse-entered"
+                style="min-height: 0px;"
+              >
+                <div
+                  class="MuiCollapse-wrapper"
+                >
+                  <div
+                    class="MuiCollapse-wrapperInner"
+                  >
+                    <div
+                      class="MuiList-root"
+                    >
+                      <div
+                        aria-disabled="false"
+                        class="MuiButtonBase-root MuiListItem-root nested competency list-item active  MuiListItem-gutters MuiListItem-button"
+                        role="button"
+                        tabindex="0"
+                      >
+                        <a
+                          href="/#overview-job-description"
+                        >
+                          Job Description
+                        </a>
+                        <span
+                          class="MuiTouchRipple-root"
+                        />
+                      </div>
+                      <div
+                        aria-disabled="false"
+                        class="MuiButtonBase-root MuiListItem-root nested competency list-item   MuiListItem-gutters MuiListItem-button"
+                        role="button"
+                        tabindex="0"
+                      >
+                        <a
+                          href="/#overview-you-have"
+                        >
+                          You Have
+                        </a>
+                        <span
+                          class="MuiTouchRipple-root"
+                        />
+                      </div>
+                      <div
+                        aria-disabled="false"
+                        class="MuiButtonBase-root MuiListItem-root nested competency list-item   MuiListItem-gutters MuiListItem-button"
+                        role="button"
+                        tabindex="0"
+                      >
+                        <a
+                          href="/#overview-you-will"
+                        >
+                          You Will
+                        </a>
+                        <span
+                          class="MuiTouchRipple-root"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </span>
+            <span>
+              <div
+                aria-disabled="false"
+                class="MuiButtonBase-root MuiListItem-root category list-item  MuiListItem-gutters MuiListItem-button"
+                data-testid="associate-delivery"
+                role="button"
+                tabindex="0"
+              >
+                <a
+                  href="/#delivery-framework-criteria"
+                >
+                  Delivery
+                </a>
+                <span
+                  class="MuiTouchRipple-root"
+                />
+              </div>
+            </span>
+            <span>
+              <div
+                aria-disabled="false"
+                class="MuiButtonBase-root MuiListItem-root category list-item  MuiListItem-gutters MuiListItem-button"
+                data-testid="associate-people"
+                role="button"
+                tabindex="0"
+              >
+                <a
+                  href="/#people-framework-criteria"
+                >
+                  People
+                </a>
+                <span
+                  class="MuiTouchRipple-root"
+                />
+              </div>
+            </span>
+            <span>
+              <div
+                aria-disabled="false"
+                class="MuiButtonBase-root MuiListItem-root category list-item  MuiListItem-gutters MuiListItem-button"
+                data-testid="associate-stakeholder"
+                role="button"
+                tabindex="0"
+              >
+                <a
+                  href="/#stakeholder-framework-criteria"
+                >
+                  Stakeholder
+                </a>
+                <span
+                  class="MuiTouchRipple-root"
+                />
+              </div>
+            </span>
+          </nav>
+        </div>
+      </div>
     </div>
   </ul>
   <ul

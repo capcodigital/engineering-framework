@@ -3,7 +3,7 @@ import { render, screen, fireEvent } from '@testing-library/react';
 import Content from './Content';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { EngineeringContextProvider } from './EngineeringContext';
-import { ContentContainer, ContentHeader } from './Content';
+import { ContentContainer, ContentHeader, categoryAndCompetencyFromUrl } from './Content';
 
 describe('Content', () => {
   it('should render Content component', () => {
@@ -29,28 +29,35 @@ describe('Content', () => {
   });
 
   it('should render Content component and check competency list exists', () => {
-    const { container } = render(
+    render(
       <Router>
         <EngineeringContextProvider>
           <Content title={'Software Engineer'} />
         </EngineeringContextProvider>
       </Router>
     );
-    expect(container).toContainElement(screen.getByTestId('competency-list'));
+    expect(screen.getByTestId('competency-list')).toBeTruthy();
   });
 
-  it('should render Content component', () => {
-    const { container } = render(
+  it('should check that Coding competency is in ContentContainer when opening Delivery category', () => {
+    const {container}=render(
       <Router>
         <EngineeringContextProvider>
-          <Content title={'Software Engineer'} />
+        <Content title={'Software Engineer'} />
         </EngineeringContextProvider>
       </Router>
     );
-    expect(container).toMatchSnapshot();
+    fireEvent.click(screen.getByTestId('associate-delivery'));
+    expect(container.querySelector('.title.coding')).toBeVisible();
   });
 
-  describe('Header', () => {
+  it('should return a category and competency from hash url', () => {
+    const {categoryfromUrl, competencyFromUrl}=categoryAndCompetencyFromUrl('#delivery-technical-leadership')
+    expect(categoryfromUrl).toBe('Delivery');
+    expect(competencyFromUrl).toBe('Technical Leadership');
+  });
+
+  describe('ContentHeader', () => {
     it('should check that correct background image renders', () => {
       const { container } = render(
         <Router>
