@@ -19,14 +19,3 @@ describe('Header', () => {
   });
 });
 
-//Categpries and Competencies
-// should select Delivery and check that the correct competencies are visible
-
-
-// should select Delivery->Coding, choose Quality Engineering and check that content text changed
-
-// SideBar
-// should select Delivery->Coding, choose Quality Engineering and check that the same menu is active in sidebar
-// should select Delivery->Coding, select Consultant and check that the same menu is active in sidebar
-// should select Delivery->Coding, select Consultant and check that the content text has changed
-

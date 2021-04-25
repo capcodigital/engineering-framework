@@ -191,7 +191,7 @@ const Content: FC<ContentType> = ({ title }) => {
       </BreadcrumbsNav>
 
       <ContentContainer menuOpen={open}>
-        <ContentHeader level={level}>
+        <ContentHeader level={level} className='content-header'>
           <div className='level-title'>
             <span className='level'>{level}</span> •{' '}
             {(titles as any)[specialism][level]}
