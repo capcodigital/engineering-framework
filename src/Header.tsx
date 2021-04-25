@@ -138,8 +138,8 @@ export default function Header() {
             titleOption.name === specialism ? (
               <StyledLink
                 key={titleOption.name}
-                to={`${titleOption.url}/#${category}-${competency.replaceAll(
-                  ' ',
+                to={`${titleOption.url}#${category}-${competency.replace(
+                  /\s/g,
                   '-'
                 )}`.toLowerCase()}
                 className={'active'}
@@ -150,8 +150,8 @@ export default function Header() {
             ) : (
               <StyledLink
                 key={titleOption.name}
-                to={`${titleOption.url}/#${category}-${competency.replaceAll(
-                  ' ',
+                to={`${titleOption.url}#${category}-${competency.replace(
+                  /\s/g,
                   '-'
                 )}`.toLowerCase()}
                 onClick={() => handleClick(titleOption.name)}

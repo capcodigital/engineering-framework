@@ -30,9 +30,8 @@ const Main = styled.main`
   }
 `;
 
-const ContentContainer = styled.div<ContentContainerProps>`
+export const ContentContainer = styled.div<ContentContainerProps>`
   width: 100%;
-
   background-color: #1f1f1f;
   color: white;
   text-align: left;
@@ -44,7 +43,7 @@ const ContentContainer = styled.div<ContentContainerProps>`
   }
 `;
 
-const ContentHeader = styled.div<ContentHeaderProps>`
+export const ContentHeader = styled.div<ContentHeaderProps>`
   width: 100%;
   height: 120px;
   padding: 25px 25px 25px 100px;
@@ -92,12 +91,12 @@ const ContentDiv = styled.div`
     padding: 24px 100px 24px 100px;
   }
   .title {
-    width:100%;
+    width: 100%;
     font-size: 24px;
     font-weight: bold;
     padding-bottom: 16px;
     span {
-      margin-right:20px;
+      margin-right: 20px;
     }
   }
   .description {
@@ -127,6 +126,16 @@ const Description = styled.p`
   }
 `;
 
+export const categoryAndCompetencyFromUrl = (hash: string) => {
+  const [cat, ...comp] = hash.split('#')[1].split('-');
+  const categoryfromUrl = cat.charAt(0).toUpperCase() + cat.slice(1);
+  const competencyFromUrl = comp
+    .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+    .join(' ');
+
+  return { categoryfromUrl, competencyFromUrl };
+};
+
 const Content: FC<ContentType> = ({ title }) => {
   const [open, setOpen] = useState(false);
   const {
@@ -144,21 +153,19 @@ const Content: FC<ContentType> = ({ title }) => {
 
   useEffect(() => {
     if (window.location.hash) {
-      const [cat, ...comp] = window.location.hash.split('#')[1].split('-');
-      const categoryfromUrl = cat.charAt(0).toUpperCase() + cat.slice(1);
-      const competencyFromUrl = comp
-        .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
-        .join(' ');
+      const {
+        categoryfromUrl,
+        competencyFromUrl,
+      } = categoryAndCompetencyFromUrl(window.location.hash);
       setCategory(categoryfromUrl);
       setCompetency(competencyFromUrl);
     }
-  }, []);
+  }, [setCategory, setCompetency]);
 
   useEffect(() => {
     setTimeout(() => {
-      const { hash } = window.location;
-      if (hash) {
-        const id = hash.replace('#', '');
+      if (window.location.hash) {
+        const id = window.location.hash.replace('#', '');
         const element = document.getElementById(id);
         if (element) {
           element.scrollIntoView({ block: 'start', behavior: 'smooth' });
@@ -184,7 +191,7 @@ const Content: FC<ContentType> = ({ title }) => {
       </BreadcrumbsNav>
 
       <ContentContainer menuOpen={open}>
-        <ContentHeader level={level}>
+        <ContentHeader level={level} className='content-header'>
           <div className='level-title'>
             <span className='level'>{level}</span> •{' '}
             {(titles as any)[specialism][level]}
@@ -192,13 +199,17 @@ const Content: FC<ContentType> = ({ title }) => {
           <div className='category'>{category}</div>
         </ContentHeader>
         <ContentDiv>
-          <List component='div' className={'competency-list'}>
+          <List
+            component='div'
+            className={'competency-list'}
+            data-testid='competency-list'
+          >
             {(contentData as any)[level][category].map(
               (comp: any) =>
                 [specialism, 'All'].includes(comp.specialism) && (
                   <ListItem
                     id={`${category.toLowerCase()}-${comp.name
-                      .replaceAll(' ', '-')
+                      .replace(/\s/g, '-')
                       .toLowerCase()}`}
                     className='list-item'
                     key={`content-${comp.name}`}
@@ -208,9 +219,9 @@ const Content: FC<ContentType> = ({ title }) => {
                         comp.name === 'Framework Criteria' ? '#161616' : '',
                     }}
                   >
-                    <div className='title'>
+                    <div className={`title ${comp.name.toLowerCase()}`}>
                       <span>{comp.name}</span>
-                      
+
                       <Tag
                         level={level}
                         competency={comp.name}

@@ -80,7 +80,7 @@ const SideBarList = () => {
   };
 
   return (
-    <div >
+    <div>
       {levels.map((levelName: string) => (
         <StyledList className='list' key={levelName}>
           <ListItem
@@ -96,6 +96,7 @@ const SideBarList = () => {
                 <span key={data.category}>
                   <ListItem
                     button
+                    data-testid={`${levelName}-${data.category}`.toLowerCase()}
                     className={`category list-item ${
                       category === data.category ? 'active' : ''
                     }`}
@@ -106,7 +107,7 @@ const SideBarList = () => {
                     <Link
                       smooth
                       to={`#${data.category.toLowerCase()}-${data.competencies[0]
-                        .replaceAll(' ', '-')
+                        .replace(/\s/g, '-')
                         .toLowerCase()}`}
                     >
                       {data.category}
@@ -137,10 +138,8 @@ const SideBarList = () => {
                             >
                               <Link
                                 smooth
-                                to={`#${
-                                  data.category
-                                }-${competencyName.replaceAll(
-                                  ' ',
+                                to={`#${data.category}-${competencyName.replace(
+                                  /\s/g,
                                   '-'
                                 )}`.toLowerCase()}
                               >
@@ -154,6 +153,9 @@ const SideBarList = () => {
                               </Link>
                             </ListItem>
                           );
+                        else {
+                          return '';
+                        }
                       })}
                     </List>
                   </Collapse>
