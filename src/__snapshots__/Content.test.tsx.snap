@@ -325,7 +325,7 @@ exports[`Content should render Content component 1`] = `
       class="Content__ContentContainer-dq2n3w-1 eqntqX"
     >
       <div
-        class="Content__ContentHeader-dq2n3w-2 nNpiq"
+        class="Content__ContentHeader-dq2n3w-2 nNpiq content-header"
       >
         <div
           class="level-title"
