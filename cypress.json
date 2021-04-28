@@ -1,9 +1,5 @@
 
 {
     "baseUrl": "https://master.din0piv439nis.amplifyapp.com/",
-    "viewportWidth":1100,
-    "ignoreTestFiles": [
-        "**/__snapshots__/*",
-        "**/__image_snapshots__/*"
-      ]
+    "viewportWidth":1100
 }
