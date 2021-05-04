@@ -247,7 +247,7 @@ exports[`Content should render Content component 1`] = `
         <div
           class="title"
         >
-          Digital Engineering
+          Software Engineer
         </div>
         <nav
           aria-label="breadcrumb"

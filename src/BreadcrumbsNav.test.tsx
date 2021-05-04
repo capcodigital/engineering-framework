@@ -1,7 +1,6 @@
 import * as React from 'react';
-import { render, screen } from '@testing-library/react';
+import { render } from '@testing-library/react';
 import BreadcrumbsNav from './BreadcrumbsNav';
-import { levels, sideBarData } from './data/data';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { EngineeringContextProvider } from './EngineeringContext';
 
@@ -16,9 +15,6 @@ it('should render BreadcrumbsNav component with default values', () => {
       </Router>
     );
     
-    expect(container.firstChild).toHaveTextContent('Digital Engineering');
-    expect(container.firstChild).toHaveTextContent('Associate');
-    expect(container.firstChild).toHaveTextContent('Overview');
-    expect(container.firstChild).toHaveTextContent('Job Description');
+    expect(container.firstChild).toHaveTextContent('Software EngineerAssociateOverviewJob Description');
   });
 });

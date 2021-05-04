@@ -2,7 +2,7 @@
 
 exports[`Header should render Header component 1`] = `
 <header
-  class="MuiPaper-root MuiAppBar-root MuiAppBar-positionSticky MuiAppBar-colorPrimary Header__StyledAppBar-u4z9pp-0 jpyxtR MuiPaper-elevation4"
+  class="MuiPaper-root MuiAppBar-root MuiAppBar-positionSticky MuiAppBar-colorPrimary Header__StyledAppBar-u4z9pp-0 dEsAkp MuiPaper-elevation4"
 >
   <div
     class="MuiToolbar-root MuiToolbar-regular MuiToolbar-gutters"
