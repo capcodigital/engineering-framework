@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { NavHashLink as Link } from 'react-router-hash-link';
-import { EngineeringContext } from './EngineeringContext';
+import { EngineeringContext, EngineeringContextType } from './EngineeringContext';
 import { Collapse, List, ListItem } from '@material-ui/core';
 import styled from 'styled-components/macro';
 import { SmallTag } from './Tag';
@@ -63,7 +63,7 @@ const SideBarList = () => {
     setLevel,
     setCategory,
     setCompetency,
-  } = useContext(EngineeringContext);
+  } = useContext<EngineeringContextType>(EngineeringContext);
 
   const handleClickCategory = (
     categoryName: string,

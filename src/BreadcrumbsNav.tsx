@@ -8,7 +8,7 @@ import styled from 'styled-components/macro';
 
 type BreadcrumbsNavProps = {
   open: boolean;
-  onClick: any;
+  onClick: React.MouseEventHandler<HTMLDivElement>;
 };
 
 const Wrapper = styled.div`
@@ -53,9 +53,9 @@ const Wrapper = styled.div`
 `;
 
 const BreadcrumbsNav: FC<BreadcrumbsNavProps> = ({
-  children,
   open,
   onClick,
+  children,
 }) => {
   const { level, category, competency } = useContext(EngineeringContext);
 

@@ -1,14 +1,24 @@
 import { createContext, useState, FC } from 'react';
+export type EngineeringContextType = {
+  specialism: string;
+  level: string;
+  category: string;
+  competency: string;
+  setSpecialism: (newSpecialism: string) => void;
+  setLevel: (newLevel: string) => void;
+  setCategory: (newCategory: string) => void;
+  setCompetency: (newComptenecy: string) => void;
+};
 
-export const EngineeringContext = createContext({
+export const EngineeringContext = createContext<EngineeringContextType>({
   specialism: '',
   level: '',
   category: '',
   competency: '',
-  setSpecialism: (newSpecialism: string) => {},
-  setLevel: (newLevel: string) => {},
-  setCategory: (newCategory: string) => {},
-  setCompetency: (newComptenecy: string) => {},
+  setSpecialism: () => {},
+  setLevel: () => {},
+  setCategory: () => {},
+  setCompetency: () => {},
 });
 
 export const EngineeringContextProvider: FC = ({ children }) => {

@@ -1,5 +1,5 @@
 import React, { useContext, useState, useEffect, FC } from 'react';
-import { EngineeringContext } from './EngineeringContext';
+import { EngineeringContext, EngineeringContextType } from './EngineeringContext';
 import { Collapse, Divider, List, ListItem } from '@material-ui/core';
 import SideBar from './SideBar';
 import { Tag } from './Tag';
@@ -137,7 +137,7 @@ export const categoryAndCompetencyFromUrl = (hash: string) => {
 };
 
 const Content: FC<ContentType> = ({ title }) => {
-  const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState<boolean>(false);
   const {
     specialism,
     level,
@@ -145,7 +145,7 @@ const Content: FC<ContentType> = ({ title }) => {
     setSpecialism,
     setCategory,
     setCompetency,
-  } = useContext(EngineeringContext);
+  } = useContext<EngineeringContextType>(EngineeringContext);
 
   useEffect(() => {
     setSpecialism(title);
