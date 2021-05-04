@@ -57,12 +57,12 @@ const BreadcrumbsNav: FC<BreadcrumbsNavProps> = ({
   onClick,
   children,
 }) => {
-  const { level, category, competency } = useContext(EngineeringContext);
+  const { level, category, competency, specialism } = useContext(EngineeringContext);
 
   return (
     <Wrapper onClick={onClick}>
       <div className='breadcrumbs-wrapper'>
-        <div className='title'>Digital Engineering</div>
+        <div className='title'>{specialism}</div>
         <Breadcrumbs
           separator={<NavigateNextIcon fontSize='small' />}
           aria-label='breadcrumb'

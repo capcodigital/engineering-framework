@@ -20,8 +20,8 @@ const StyledAppBar = styled(AppBar)`
     padding-top: 24px;
     padding-bottom: 2.5rem;
     @media screen and (max-width: 1000px) {
-      padding-top: 16px;
-      padding-bottom: 16px;
+      padding-top: 4px;
+      padding-bottom: 4px;
       position: relative;
       z-index: 1400;
       img {
@@ -74,7 +74,7 @@ const StyledDrawer = styled(Drawer)`
         color: white;
       }
       ul {
-        padding-top: 110px;
+        padding-top: 80px;
         padding-left: 16px;
       }
       a {
