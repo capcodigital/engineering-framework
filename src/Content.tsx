@@ -1,5 +1,8 @@
 import React, { useContext, useState, useEffect, FC } from 'react';
-import { EngineeringContext, EngineeringContextType } from './EngineeringContext';
+import {
+  EngineeringContext,
+  EngineeringContextType,
+} from './EngineeringContext';
 import { Collapse, Divider, List, ListItem } from '@material-ui/core';
 import SideBar from './SideBar';
 import { Tag } from './Tag';
@@ -24,7 +27,7 @@ type ContentContainerProps = {
 
 const Main = styled.main`
   display: flex;
-  height: 80vh;
+  height: calc(100% - 128px);
   @media screen and (max-width: 1000px) {
     display: block;
   }
@@ -105,8 +108,13 @@ const ContentDiv = styled.div`
     font-size: 16px;
   }
   hr {
-    margin: 48px 0px 24px 0px;
+    margin: 48px 0px 0px 0px;
     background-color: white;
+  }
+  .framework-criteria {
+    hr {
+      margin: 48px 0px 48px 0px;
+    }
   }
   @media screen and (max-width: 1000px) {
     overflow: unset;
@@ -154,10 +162,8 @@ const Content: FC<ContentType> = ({ title }) => {
 
   useEffect(() => {
     if (window.location.hash) {
-      const {
-        categoryfromUrl,
-        competencyFromUrl,
-      } = categoryAndCompetencyFromUrl(window.location.hash);
+      const { categoryfromUrl, competencyFromUrl } =
+        categoryAndCompetencyFromUrl(window.location.hash);
       setCategory(categoryfromUrl);
       setCompetency(competencyFromUrl);
     }
@@ -171,6 +177,7 @@ const Content: FC<ContentType> = ({ title }) => {
         if (element) {
           element.scrollIntoView({ block: 'start', behavior: 'smooth' });
         }
+        console.log(window.innerWidth)
       }
     }, 100);
   }, []);
@@ -238,17 +245,17 @@ const Content: FC<ContentType> = ({ title }) => {
                         <Divider />
                       </>
                     ) : comp.name === 'Framework Criteria' ? (
-                      <>
+                      <div className='framework-criteria'>
                         <Description
                           dangerouslySetInnerHTML={{ __html: comp.description }}
                         />
-                        <Divider />
+                        <hr />
                         <div className='title'>{comp.name2}</div>
                         <p className='description'>{comp.description2}</p>
-                        <Divider />
+                        <hr />
                         <div className='title'>{comp.name3}</div>
                         <p className='description'>{comp.description3}</p>
-                      </>
+                      </div>
                     ) : (
                       <>
                         <p className='description'>{comp.description}</p>

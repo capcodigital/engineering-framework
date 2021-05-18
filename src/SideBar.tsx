@@ -3,7 +3,7 @@ import styled from 'styled-components/macro';
 
 const StyledSideBar = styled.div`
   min-width: 300px;
-  height: 80vh;
+  height: 100%;
   overflow-y: auto;
   overflow-x: hidden;
 

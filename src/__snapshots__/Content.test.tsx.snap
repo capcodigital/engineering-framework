@@ -3,10 +3,10 @@
 exports[`Content should render Content component 1`] = `
 <div>
   <main
-    class="Content__Main-dq2n3w-0 hXOTys"
+    class="Content__Main-dq2n3w-0 egJoeI"
   >
     <div
-      class="SideBar__StyledSideBar-sc-16bum1j-0 gVleIT"
+      class="SideBar__StyledSideBar-sc-16bum1j-0 cqjOFR"
       data-testid="sidebar"
     >
       <div>
@@ -346,7 +346,7 @@ exports[`Content should render Content component 1`] = `
         </div>
       </div>
       <div
-        class="Content__ContentDiv-dq2n3w-3 lhIFjD"
+        class="Content__ContentDiv-dq2n3w-3 kjLGBI"
       >
         <div
           class="MuiList-root competency-list MuiList-padding"
