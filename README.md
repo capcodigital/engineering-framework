@@ -5,7 +5,7 @@
 ![styled](https://img.shields.io/badge/-Styled_Components-db7092?style=flat-square&logo=styled-components&logoColor=white)
 
 
-A **React - TypeScript** web application that provides a more readable format of the existing [Engineering Competency Framework](https://capcoinc.sharepoint.com/:x:/r/sites/UKDigitalEngineering/_layouts/15/doc2.aspx?sourcedoc=%7BE1C11EB9-AA6D-4EA7-8C01-B4E4842265F2%7D&file=Capco%20Engineering%20Competency%20Matrix.xlsx&action=default&mobileredirect=true&cid=1e0a1d1b-aae6-428e-b0b8-62702919b614) to help explain performance expectations. Visit the deployed app [here](https://master.din0piv439nis.amplifyapp.com/).
+A **React - TypeScript** web application that provides a more readable format of the existing [Engineering Competency Framework](https://capcoinc.sharepoint.com/:x:/r/sites/UKDigitalEngineering/_layouts/15/doc2.aspx?sourcedoc=%7BE1C11EB9-AA6D-4EA7-8C01-B4E4842265F2%7D&file=Capco%20Engineering%20Competency%20Matrix.xlsx&action=default&mobileredirect=true&cid=1e0a1d1b-aae6-428e-b0b8-62702919b614).
 
 <img align="center" width="100%" src="demo.gif" style=""/>
 
