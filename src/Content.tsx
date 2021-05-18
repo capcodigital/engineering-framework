@@ -36,6 +36,7 @@ export const ContentContainer = styled.div<ContentContainerProps>`
   color: white;
   text-align: left;
   display: ${({ menuOpen }) => menuOpen && 'none'};
+
   @media screen and (max-width: 1000px) {
     ::-webkit-scrollbar {
       display: none;
@@ -219,7 +220,7 @@ const Content: FC<ContentType> = ({ title }) => {
                         comp.name === 'Framework Criteria' ? '#161616' : '',
                     }}
                   >
-                    <div className={`title ${comp.name.toLowerCase()}`}>
+                    <div className={'title'}>
                       <span>{comp.name}</span>
 
                       <Tag

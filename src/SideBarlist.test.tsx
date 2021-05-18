@@ -15,7 +15,7 @@ describe('SideBarList', () => {
       </Router>
     );
   });
-  
+
   it('should render SideBarList component', () => {
     const { container } = render(
       <Router>

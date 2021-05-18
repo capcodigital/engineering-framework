@@ -19,8 +19,8 @@ type StyledSmallTagProps = {
 const StyledTag = styled.span<StyledTagProps>`
   height: 24px;
   width: fit-content;
-  display:inline-block;
-  background-color: ${({color}) => color};
+  display: inline-block;
+  background-color: ${({ color }) => color};
   color: white;
   font-size: 12px;
   font-weight: bold;
@@ -28,12 +28,11 @@ const StyledTag = styled.span<StyledTagProps>`
   line-height: 16px;
   padding: 4px 8px 4px 8px;
   border-radius: 4px;
-
 `;
 
 const StyledSmallTag = styled.span<StyledSmallTagProps>`
   height: 16px;
-  background-color: ${({color}) => color};
+  background-color: ${({ color }) => color};
   color: white;
   font-size: 12px;
   font-weight: bold;

@@ -57,7 +57,8 @@ const BreadcrumbsNav: FC<BreadcrumbsNavProps> = ({
   onClick,
   children,
 }) => {
-  const { level, category, competency, specialism } = useContext(EngineeringContext);
+  const { level, category, competency, specialism } =
+    useContext(EngineeringContext);
 
   return (
     <Wrapper onClick={onClick}>

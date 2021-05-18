@@ -23,7 +23,7 @@ describe('Tag', () => {
       expect(screen.queryByText(level)).toBeNull();
     });
   });
- 
+
   it('should render Tag component for Principal Software Engineer Management path', () => {
     render(
       <Router>

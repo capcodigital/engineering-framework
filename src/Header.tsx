@@ -90,9 +90,8 @@ const titleData = [
 ];
 
 export default function Header() {
-  const { specialism, category, competency, setSpecialism } = useContext(
-    EngineeringContext
-  );
+  const { specialism, category, competency, setSpecialism } =
+    useContext(EngineeringContext);
   const [open, setOpen] = useState<boolean>(false);
 
   const handleClick = (activeTitle: string) => {

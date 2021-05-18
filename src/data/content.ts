@@ -5,7 +5,7 @@ const contentData = {
         name: 'Job Description',
         specialism: 'Software Engineer',
         description:
-          'An associate developer has limited experience and is relatively new to the practice of software development.  Their focus should be on acquiring skills and improving their capabilities.  On the consulting side they should be focused on improving their communication and team work skills as these will be important for future leadership opportunities.',
+          'An associate developer has limited experience and is relatively new to the practice of software development. Their focus should be on acquiring skills and improving their capabilities. On the consulting side they should be focused on improving their communication and team work skills as these will be important for future leadership opportunities.',
       },
       {
         name: 'You Have',
@@ -18,6 +18,21 @@ const contentData = {
         specialism: 'Software Engineer',
         description:
           '<ul><li>Focus on increasing competencies in Software Development</li><li>Enhance communication and relationship management skills with stakeholders.</li></ul>',
+      },
+      {
+        name: 'Job Description',
+        specialism: 'Quality Engineer',
+        description: 'Coming soon.',
+      },
+      {
+        name: 'You Have',
+        specialism: 'Quality Engineer',
+        description: 'Coming soon.',
+      },
+      {
+        name: 'You Will',
+        specialism: 'Quality Engineer',
+        description: 'Coming Soon.',
       },
     ],
     Delivery: [
@@ -32,6 +47,15 @@ const contentData = {
           'Bob’s code is of reasonable quality.  Closer attention could be made to his coding style as it is inconsistent at times. He sometimes forgets to actually run the code before committing. This had led to a few broken builds, but nothing serious.',
         description3:
           'Alice has a consistent and readable coding style.  She has good attention to detail especially around handling edge cases.  Even though she has limited experience, she has successfully executed minor refactoring to improve the codebase.',
+      },
+      {
+        name: 'Framework Criteria',
+        name2: 'Expected Performance',
+        name3: 'High Performance',
+        specialism: 'Quality Engineer',
+        description: 'Coming soon.',
+        description2: 'Coming soon.',
+        description3: 'Coming soon.',
       },
       {
         name: 'Technical Leadership',
@@ -111,6 +135,15 @@ const contentData = {
           'Bob joined the project during the early phases of development.  As the project ramped up, Bob proactively welcomed each new member, and helped facilitate onboarding activities.  During one of the grooming sessions,  Bob observed that the team had little experience around one of the features. Bob took the initiative to read about various implementations of that feature, which helped the team significantly during technical design sessions.',
       },
       {
+        name: 'Framework Criteria',
+        name2: 'Expected Performance',
+        name3: 'High Performance',
+        specialism: 'Quality Engineer',
+        description: 'Coming soon.',
+        description2: 'Coming soon.',
+        description3: 'Coming soon.',
+      },
+      {
         name: 'Management',
         specialism: 'All',
         description: 'Not applicable at this level.',
@@ -171,6 +204,15 @@ const contentData = {
           'Alice often researches comparable frameworks for her projects and spends time understanding how more advanced features might work. Using this knowledge, she provides valuable feedback in order to better meet the project requirements.',
       },
       {
+        name: 'Framework Criteria',
+        name2: 'Expected Performance',
+        name3: 'High Performance',
+        specialism: 'Quality Engineer',
+        description: 'Coming soon.',
+        description2: 'Coming soon.',
+        description3: 'Coming soon.',
+      },
+      {
         name: 'Dealing with Ambiguity & Risk',
         specialism: 'All',
         description: 'Not applicable at this level.',
@@ -224,6 +266,21 @@ const contentData = {
         description:
           '<ul><li>Continue to acquire skills but also focus on becoming an expert in a few</li><li>Gain expertise to position yourself as a leader within projects </li><li>Actively seek out leadership opportunities</li><li>Have an excellent understanding of standard processes  used to deliver a project</li></ul>',
       },
+      {
+        name: 'Job Description',
+        specialism: 'Quality Engineer',
+        description: 'Coming soon.',
+      },
+      {
+        name: 'You Have',
+        specialism: 'Quality Engineer',
+        description: 'Coming soon.',
+      },
+      {
+        name: 'You Will',
+        specialism: 'Quality Engineer',
+        description: 'Coming Soon.',
+      },
     ],
     Delivery: [
       {
@@ -237,6 +294,15 @@ const contentData = {
           'Alice is a very consistent performer on the team.  She almost always finishes on time with very few bugs.  Her coding style is clean, consistent and uses a lot of best practices like non repeating code and favouring simplicity.',
         description3:
           'Bob is extremely productive on the team.  His code is clean and thorough. Bob is also beginning to have a multi-faceted approach to building solutions.  His code considers: threading, memory management, separation of concerns, performance etc.',
+      },
+      {
+        name: 'Framework Criteria',
+        name2: 'Expected Performance',
+        name3: 'High Performance',
+        specialism: 'Quality Engineer',
+        description: 'Coming soon.',
+        description2: 'Coming soon.',
+        description3: 'Coming soon.',
       },
       {
         name: 'Technical Leadership',
@@ -447,6 +513,21 @@ const contentData = {
         description:
           '<ul><li> Ability to take a strategic and future oriented approach to knowledge sharing in the practice</li><li>Drive recommendations for building practice level knowledge in up and coming technology areas</li><li>Scale deep technical expertise in a minimum of one area </li><li>  Breadth of technical capabilities and transferable / fungible skills</li><li>Recognize organizational needs and help others scale acumen in that area</li></ul>',
       },
+      {
+        name: 'Job Description',
+        specialism: 'Quality Engineer',
+        description: 'Coming soon.',
+      },
+      {
+        name: 'You Have',
+        specialism: 'Quality Engineer',
+        description: 'Coming soon.',
+      },
+      {
+        name: 'You Will',
+        specialism: 'Quality Engineer',
+        description: 'Coming Soon.',
+      },
     ],
     Delivery: [
       {
@@ -460,6 +541,15 @@ const contentData = {
           'Bob cares about the quality of the code he delivers. His code is clean, thorough, and is always accompanied by tests.  Bob is adept with his language of choice and is aware of software design principles such as SOLID, KISS, etc.',
         description3:
           'Alice is recognized within Capco as a go-to person for frontend application development. Alice was tasked to define a generic framework to generate web forms for an existing client onboarding application, which already has a number of existing forms in place. She successfully led the team in creating the framework and integrated it into the application and replaced the existing forms.',
+      },
+      {
+        name: 'Framework Criteria',
+        name2: 'Expected Performance',
+        name3: 'High Performance',
+        specialism: 'Quality Engineer',
+        description: 'Coming soon.',
+        description2: 'Coming soon.',
+        description3: 'Coming soon.',
       },
       {
         name: 'Technical Leadership',
@@ -547,6 +637,15 @@ const contentData = {
           'Bob was assigned as the lead of a small team to build a new front end application for a client.  There was some uncertainty around the technologies chosen by the client with respect to performance. Aware of the potential risks, Bob explained the risks to the client and recommended that they first prove out the technology with a POC of all the critical features. After the project, Bob hosted a lunch and learn and shared his findings with others in the practice.',
       },
       {
+        name: 'Framework Criteria',
+        name2: 'Expected Performance',
+        name3: 'High Performance',
+        specialism: 'Quality Engineer',
+        description: 'Coming soon.',
+        description2: 'Coming soon.',
+        description3: 'Coming soon.',
+      },
+      {
         name: 'Management',
         specialism: 'All',
         description: 'Not applicable at this level.',
@@ -606,6 +705,15 @@ const contentData = {
           'Bob regularly prepares for and performs relevant research before story grooming and technical design sessions. This enables him to lead and facilitate the sessions and bring valuable insights and questions to the table.',
         description3:
           'Alice was put on a difficult project where she had to report to multiple stakeholders, some with contradicting interests.  Over several meetings Alice was able to design a solution that satisfied the requirements and gain concurrence amongst all the stakeholders. Alice is highly regarded because of her efforts.',
+      },
+      {
+        name: 'Framework Criteria',
+        name2: 'Expected Performance',
+        name3: 'High Performance',
+        specialism: 'Quality Engineer',
+        description: 'Coming soon.',
+        description2: 'Coming soon.',
+        description3: 'Coming soon.',
       },
       {
         name: 'Dealing with Ambiguity & Risk',
@@ -671,6 +779,21 @@ const contentData = {
         description:
           '<ul><li>Participate in the development of the individual capabilities of technical resources</li><li>Capable of working across business streams and apply SME </li><li>Creating standardizations and best practices in the technical consulting space </li><li> Ability to participate in the selling of a technical solution and communication of the value proposition </li></ul>',
       },
+      {
+        name: 'Job Description',
+        specialism: 'Quality Engineer',
+        description: 'Coming soon.',
+      },
+      {
+        name: 'You Have',
+        specialism: 'Quality Engineer',
+        description: 'Coming soon.',
+      },
+      {
+        name: 'You Will',
+        specialism: 'Quality Engineer',
+        description: 'Coming Soon.',
+      },
     ],
     Delivery: [
       {
@@ -684,6 +807,15 @@ const contentData = {
           ' Bob defined the solution for how the users would access partner web applications via SSO.  Bob is highly experienced in the realm of security so his team was able to deliver the solution even though scope and complexity were added during development.',
         description3:
           'Alice defined the project scope and delivery plan for an upcoming project.  During execution, Alice continuously fine tunes the delivery process to increase quality and reduce development time.  Alice is known within Capco as a thought leader on software development practices and is brought in by program stakeholders to consult on development matters. ',
+      },
+      {
+        name: 'Framework Criteria',
+        name2: 'Expected Performance',
+        name3: 'High Performance',
+        specialism: 'Quality Engineer',
+        description: 'Coming soon.',
+        description2: 'Coming soon.',
+        description3: 'Coming soon.',
       },
       {
         name: 'Technical Leadership',
@@ -772,6 +904,15 @@ const contentData = {
           'Alice leads a development group composed of 23 developers working in small streams.  The development group is a major component of the client program and requires coordination with the program stakeholders and the other development groups.  Alice hosts a recurring lunch and learn for developers to connect and improve their development skill.  Alice also works to recruit and/or retain talented individuals with Capco.',
       },
       {
+        name: 'Framework Criteria',
+        name2: 'Expected Performance',
+        name3: 'High Performance',
+        specialism: 'Quality Engineer',
+        description: 'Coming soon.',
+        description2: 'Coming soon.',
+        description3: 'Coming soon.',
+      },
+      {
         name: 'Management',
         specialism: 'All',
         description:
@@ -834,6 +975,15 @@ const contentData = {
           'Alice’s project needs a new contract as the client stakeholder has lost partial funding to deliver the full solution.  Alice has been asked to decide on what can be delivered with the limited funding they have.  She works with the senior stakeholders to trim scope and manages the development teams to deliver a viable MVP into production.',
       },
       {
+        name: 'Framework Criteria',
+        name2: 'Expected Performance',
+        name3: 'High Performance',
+        specialism: 'Quality Engineer',
+        description: 'Coming soon.',
+        description2: 'Coming soon.',
+        description3: 'Coming soon.',
+      },
+      {
         name: 'Dealing with Ambiguity & Risk',
         specialism: 'All',
         description:
@@ -872,7 +1022,38 @@ const contentData = {
     ],
   },
   'Managing Principal': {
-    Overview: [],
+    Overview: [
+      {
+        name: 'Job Description',
+        specialism: 'Software Engineer',
+        description: 'Coming soon.',
+      },
+      {
+        name: 'You Have',
+        specialism: 'Software Engineer',
+        description: 'Coming soon.',
+      },
+      {
+        name: 'You Will',
+        specialism: 'Software Engineer',
+        description: 'Coming Soon.',
+      },
+      {
+        name: 'Job Description',
+        specialism: 'Quality Engineer',
+        description: 'Coming soon.',
+      },
+      {
+        name: 'You Have',
+        specialism: 'Quality Engineer',
+        description: 'Coming soon.',
+      },
+      {
+        name: 'You Will',
+        specialism: 'Quality Engineer',
+        description: 'Coming Soon.',
+      },
+    ],
     Delivery: [
       {
         name: 'Technical Leadership',
