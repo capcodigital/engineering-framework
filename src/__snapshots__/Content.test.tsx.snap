@@ -357,7 +357,7 @@ exports[`Content should render Content component 1`] = `
             id="overview-job-description"
           >
             <div
-              class="title job description"
+              class="title"
             >
               <span>
                 Job Description
@@ -366,7 +366,7 @@ exports[`Content should render Content component 1`] = `
             <p
               class="Content__Description-dq2n3w-4 jMEZjF"
             >
-              An associate developer has limited experience and is relatively new to the practice of software development.  Their focus should be on acquiring skills and improving their capabilities.  On the consulting side they should be focused on improving their communication and team work skills as these will be important for future leadership opportunities.
+              An associate developer has limited experience and is relatively new to the practice of software development. Their focus should be on acquiring skills and improving their capabilities. On the consulting side they should be focused on improving their communication and team work skills as these will be important for future leadership opportunities.
             </p>
             <hr
               class="MuiDivider-root"
@@ -377,7 +377,7 @@ exports[`Content should render Content component 1`] = `
             id="overview-you-have"
           >
             <div
-              class="title you have"
+              class="title"
             >
               <span>
                 You Have
@@ -407,7 +407,7 @@ exports[`Content should render Content component 1`] = `
             id="overview-you-will"
           >
             <div
-              class="title you will"
+              class="title"
             >
               <span>
                 You Will

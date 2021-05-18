@@ -43,7 +43,7 @@ describe('Content', () => {
     expect(screen.getByTestId('competency-list')).toBeTruthy();
   });
 
-  it('should check that Coding competency is in ContentContainer when opening Delivery category', () => {
+  it('should check that Framework Criteria competency is in ContentContainer when opening Delivery category', () => {
     const { container } = render(
       <Router>
         <EngineeringContextProvider>
@@ -52,7 +52,7 @@ describe('Content', () => {
       </Router>
     );
     fireEvent.click(screen.getByTestId('associate-delivery'));
-    expect(container.querySelector('.title.coding')).toBeVisible();
+    expect(container.querySelector('.list-item > .title')).toHaveTextContent('Framework Criteria');
   });
 
   it('should return a category and competency from hash url', () => {
