@@ -137,10 +137,9 @@ export default function Header() {
             titleOption.name === specialism ? (
               <StyledLink
                 key={titleOption.name}
-                to={`${titleOption.url}#${category}-${competency.replace(
-                  /\s/g,
-                  '-'
-                )}`.toLowerCase()}
+                to={`/engineering-framework${
+                  titleOption.url
+                }#${category}-${competency.replace(/\s/g, '-')}`.toLowerCase()}
                 className={'active'}
                 onClick={() => handleClick(titleOption.name)}
               >
@@ -149,10 +148,9 @@ export default function Header() {
             ) : (
               <StyledLink
                 key={titleOption.name}
-                to={`${titleOption.url}#${category}-${competency.replace(
-                  /\s/g,
-                  '-'
-                )}`.toLowerCase()}
+                to={`/engineering-framework${
+                  titleOption.url
+                }#${category}-${competency.replace(/\s/g, '-')}`.toLowerCase()}
                 onClick={() => handleClick(titleOption.name)}
               >
                 {titleOption.name}
@@ -182,7 +180,7 @@ export default function Header() {
                 key={titleOption.name}
                 button
                 component={Link}
-                to={titleOption.url}
+                to={`/engineering-framework${titleOption.url}`}
                 className={'active'}
                 onClick={() => handleClick(titleOption.name)}
               >
@@ -193,7 +191,7 @@ export default function Header() {
                 key={titleOption.name}
                 button
                 component={Link}
-                to={titleOption.url}
+                to={`/engineering-framework${titleOption.url}`}
                 onClick={() => handleClick(titleOption.name)}
               >
                 {titleOption.name}

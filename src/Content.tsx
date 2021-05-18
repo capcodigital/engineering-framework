@@ -177,7 +177,6 @@ const Content: FC<ContentType> = ({ title }) => {
         if (element) {
           element.scrollIntoView({ block: 'start', behavior: 'smooth' });
         }
-        console.log(window.innerWidth)
       }
     }, 100);
   }, []);
