@@ -43,11 +43,11 @@ const StyledList = styled(List)`
         color: white;
       }
     }
+    a {
+      color: grey;
+    }
     .competency.list-item {
       font-size: 16px;
-      a {
-        color: grey;
-      }
     }
     .competency.list-item.active {
       a {
@@ -129,22 +129,22 @@ const SideBarList = () => {
                           competencyName !== 'Framework Criteria'
                         )
                           return (
-                            <ListItem
-                              key={competencyName}
-                              button
-                              className={`nested competency list-item ${
-                                competency === competencyName ? 'active' : ''
-                              } `}
-                              onClick={() =>
-                                handleClickCompetency(competencyName)
-                              }
+                            <Link
+                              smooth
+                              to={`#${data.category}-${competencyName.replace(
+                                /\s/g,
+                                '-'
+                              )}`.toLowerCase()}
                             >
-                              <Link
-                                smooth
-                                to={`#${data.category}-${competencyName.replace(
-                                  /\s/g,
-                                  '-'
-                                )}`.toLowerCase()}
+                              <ListItem
+                                key={competencyName}
+                                button
+                                className={`nested competency list-item ${
+                                  competency === competencyName ? 'active' : ''
+                                } `}
+                                onClick={() =>
+                                  handleClickCompetency(competencyName)
+                                }
                               >
                                 {competencyName}
 
@@ -153,8 +153,8 @@ const SideBarList = () => {
                                   competency={competencyName}
                                   specialism={specialism}
                                 />
-                              </Link>
-                            </ListItem>
+                              </ListItem>
+                            </Link>
                           );
                         else {
                           return '';

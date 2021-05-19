@@ -11,7 +11,7 @@ exports[`Content should render Content component 1`] = `
     >
       <div>
         <ul
-          class="MuiList-root SideBarList__StyledList-sc-1egehub-0 gLBXYT list MuiList-padding"
+          class="MuiList-root SideBarList__StyledList-sc-1egehub-0 cUNKDb list MuiList-padding"
         >
           <div
             aria-disabled="false"
@@ -67,51 +67,51 @@ exports[`Content should render Content component 1`] = `
                           <div
                             class="MuiList-root"
                           >
-                            <div
-                              aria-disabled="false"
-                              class="MuiButtonBase-root MuiListItem-root nested competency list-item active  MuiListItem-gutters MuiListItem-button"
-                              role="button"
-                              tabindex="0"
+                            <a
+                              href="/#overview-job-description"
                             >
-                              <a
-                                href="/#overview-job-description"
+                              <div
+                                aria-disabled="false"
+                                class="MuiButtonBase-root MuiListItem-root nested competency list-item active  MuiListItem-gutters MuiListItem-button"
+                                role="button"
+                                tabindex="0"
                               >
                                 Job Description
-                              </a>
-                              <span
-                                class="MuiTouchRipple-root"
-                              />
-                            </div>
-                            <div
-                              aria-disabled="false"
-                              class="MuiButtonBase-root MuiListItem-root nested competency list-item   MuiListItem-gutters MuiListItem-button"
-                              role="button"
-                              tabindex="0"
+                                <span
+                                  class="MuiTouchRipple-root"
+                                />
+                              </div>
+                            </a>
+                            <a
+                              href="/#overview-you-have"
                             >
-                              <a
-                                href="/#overview-you-have"
+                              <div
+                                aria-disabled="false"
+                                class="MuiButtonBase-root MuiListItem-root nested competency list-item   MuiListItem-gutters MuiListItem-button"
+                                role="button"
+                                tabindex="0"
                               >
                                 You Have
-                              </a>
-                              <span
-                                class="MuiTouchRipple-root"
-                              />
-                            </div>
-                            <div
-                              aria-disabled="false"
-                              class="MuiButtonBase-root MuiListItem-root nested competency list-item   MuiListItem-gutters MuiListItem-button"
-                              role="button"
-                              tabindex="0"
+                                <span
+                                  class="MuiTouchRipple-root"
+                                />
+                              </div>
+                            </a>
+                            <a
+                              href="/#overview-you-will"
                             >
-                              <a
-                                href="/#overview-you-will"
+                              <div
+                                aria-disabled="false"
+                                class="MuiButtonBase-root MuiListItem-root nested competency list-item   MuiListItem-gutters MuiListItem-button"
+                                role="button"
+                                tabindex="0"
                               >
                                 You Will
-                              </a>
-                              <span
-                                class="MuiTouchRipple-root"
-                              />
-                            </div>
+                                <span
+                                  class="MuiTouchRipple-root"
+                                />
+                              </div>
+                            </a>
                           </div>
                         </div>
                       </div>
@@ -177,7 +177,7 @@ exports[`Content should render Content component 1`] = `
           </div>
         </ul>
         <ul
-          class="MuiList-root SideBarList__StyledList-sc-1egehub-0 gLBXYT list MuiList-padding"
+          class="MuiList-root SideBarList__StyledList-sc-1egehub-0 cUNKDb list MuiList-padding"
         >
           <div
             aria-disabled="false"
@@ -192,7 +192,7 @@ exports[`Content should render Content component 1`] = `
           </div>
         </ul>
         <ul
-          class="MuiList-root SideBarList__StyledList-sc-1egehub-0 gLBXYT list MuiList-padding"
+          class="MuiList-root SideBarList__StyledList-sc-1egehub-0 cUNKDb list MuiList-padding"
         >
           <div
             aria-disabled="false"
@@ -207,7 +207,7 @@ exports[`Content should render Content component 1`] = `
           </div>
         </ul>
         <ul
-          class="MuiList-root SideBarList__StyledList-sc-1egehub-0 gLBXYT list MuiList-padding"
+          class="MuiList-root SideBarList__StyledList-sc-1egehub-0 cUNKDb list MuiList-padding"
         >
           <div
             aria-disabled="false"
@@ -222,7 +222,7 @@ exports[`Content should render Content component 1`] = `
           </div>
         </ul>
         <ul
-          class="MuiList-root SideBarList__StyledList-sc-1egehub-0 gLBXYT list MuiList-padding"
+          class="MuiList-root SideBarList__StyledList-sc-1egehub-0 cUNKDb list MuiList-padding"
         >
           <div
             aria-disabled="false"

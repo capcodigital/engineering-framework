@@ -31,7 +31,7 @@ const StyledTag = styled.span<StyledTagProps>`
 `;
 
 const StyledSmallTag = styled.span<StyledSmallTagProps>`
-  height: 16px;
+  height: 24px;
   background-color: ${({ color }) => color};
   color: white;
   font-size: 12px;
