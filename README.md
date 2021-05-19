@@ -1,5 +1,6 @@
 # Digital Engineering Framework
 
+![unit](https://github.com/capcodigital/engineering-framework/workflows/Unit%20and%20E2E%20Tests/badge.svg)
 ![typescript](https://img.shields.io/badge/-TypeScript-007ACC?style=flat-square&logo=typescript&logoColor=white)
 ![react](https://img.shields.io/badge/-React-45b8d8?style=flat-square&logo=react&logoColor=white)
 ![styled](https://img.shields.io/badge/-Styled_Components-db7092?style=flat-square&logo=styled-components&logoColor=white)
