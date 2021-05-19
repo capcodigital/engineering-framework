@@ -19,17 +19,14 @@ function App() {
         <Switch>
           <EngineeringContextProvider>
             <Header />
-            <Route
-              exact
-              path='/engineering-framework'
-              render={() => <Redirect to='/engineering-framework/software' />}
-            />
-            <Route path='/engineering-framework/software'>
+            <Route exact path='/' render={() => <Redirect to='/software' />} />
+            <Route path='/software'>
               <Content title={'Software Engineer'} />
             </Route>
-            <Route path={'/engineering-framework/quality'}>
+            <Route path={'/quality'}>
               <Content title={'Quality Engineer'} />
             </Route>
+            <Redirect to='/software' />
           </EngineeringContextProvider>
         </Switch>
       </Router>

@@ -148,7 +148,7 @@ export default function Header() {
             ) : (
               <StyledLink
                 key={titleOption.name}
-                to={`/engineering-framework${
+                to={`${
                   titleOption.url
                 }#${category}-${competency.replace(/\s/g, '-')}`.toLowerCase()}
                 onClick={() => handleClick(titleOption.name)}
@@ -180,7 +180,7 @@ export default function Header() {
                 key={titleOption.name}
                 button
                 component={Link}
-                to={`/engineering-framework${titleOption.url}`}
+                to={`${titleOption.url}`}
                 className={'active'}
                 onClick={() => handleClick(titleOption.name)}
               >
@@ -191,7 +191,7 @@ export default function Header() {
                 key={titleOption.name}
                 button
                 component={Link}
-                to={`/engineering-framework${titleOption.url}`}
+                to={`${titleOption.url}`}
                 onClick={() => handleClick(titleOption.name)}
               >
                 {titleOption.name}
