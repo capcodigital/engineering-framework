@@ -1,4 +1,4 @@
-APP_NAME=engineering-framework,
+APP_NAME=woopsie-dasie
 APP_URL=foo.com
 APP_PORT=8080
 INSTANCE_ID=engineering-framework-id
