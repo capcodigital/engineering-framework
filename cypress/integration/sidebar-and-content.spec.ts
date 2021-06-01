@@ -5,7 +5,7 @@ describe('SideBar', () => {
     cy.contains('a', 'Coding').click();
   });
 
-  it('should select Delivery->Coding and check that the content text has changed', () => {
+  it('should select Delivery -> Coding and check that the content text has changed', () => {
     cy.get('#delivery-coding > p.description').should(
       'have.text',
       "Is able to gain context within the team's domain; Writes code with testability, readability, edge cases, and errors in mind."
@@ -14,14 +14,14 @@ describe('SideBar', () => {
 
   it('should select Delivery -> Coding, choose Quality Engineering and check that the same menu is active in sidebar', () => {
     cy.contains('a', 'Quality Engineer').click();
-    cy.contains('a', 'Delivery').parent().should('have.class', 'active');
-    cy.contains('a', 'Coding').parent().should('have.class', 'active');
+    cy.get('[data-cy=competency-active]').should('have.text', 'Coding')
+    cy.get('[data-cy=category-active]').should('have.text', 'Delivery')
   });
 
   it('should select Delivery -> Coding, select Consultant and check that the same menu is active in sidebar', () => {
     cy.contains('div', 'Consultant').click();
-    cy.contains('a', 'Delivery').parent().should('have.class', 'active');
-    cy.contains('a', 'Coding').parent().should('have.class', 'active');
+    cy.get('[data-cy=competency-active]').should('have.text', 'Coding')
+    cy.get('[data-cy=category-active]').should('have.text', 'Delivery')
   });
 
   it('should select Delivery->Coding, select Consultant and check that the content text has changed', () => {
