@@ -33,7 +33,6 @@ exports[`SideBarList should render SideBarList component 1`] = `
               <div
                 aria-disabled="false"
                 class="MuiButtonBase-root MuiListItem-root category list-item active MuiListItem-gutters MuiListItem-button"
-                data-cy="category-active"
                 data-testid="associate-overview"
                 role="button"
                 tabindex="0"
@@ -66,7 +65,6 @@ exports[`SideBarList should render SideBarList component 1`] = `
                         <div
                           aria-disabled="false"
                           class="MuiButtonBase-root MuiListItem-root nested competency list-item active  MuiListItem-gutters MuiListItem-button"
-                          data-cy="competency-active"
                           role="button"
                           tabindex="0"
                         >
@@ -82,7 +80,6 @@ exports[`SideBarList should render SideBarList component 1`] = `
                         <div
                           aria-disabled="false"
                           class="MuiButtonBase-root MuiListItem-root nested competency list-item   MuiListItem-gutters MuiListItem-button"
-                          data-cy="competency-"
                           role="button"
                           tabindex="0"
                         >
@@ -98,7 +95,6 @@ exports[`SideBarList should render SideBarList component 1`] = `
                         <div
                           aria-disabled="false"
                           class="MuiButtonBase-root MuiListItem-root nested competency list-item   MuiListItem-gutters MuiListItem-button"
-                          data-cy="competency-"
                           role="button"
                           tabindex="0"
                         >
@@ -117,7 +113,6 @@ exports[`SideBarList should render SideBarList component 1`] = `
               <div
                 aria-disabled="false"
                 class="MuiButtonBase-root MuiListItem-root category list-item  MuiListItem-gutters MuiListItem-button"
-                data-cy="category-"
                 data-testid="associate-delivery"
                 role="button"
                 tabindex="0"
@@ -136,7 +131,6 @@ exports[`SideBarList should render SideBarList component 1`] = `
               <div
                 aria-disabled="false"
                 class="MuiButtonBase-root MuiListItem-root category list-item  MuiListItem-gutters MuiListItem-button"
-                data-cy="category-"
                 data-testid="associate-people"
                 role="button"
                 tabindex="0"
@@ -155,7 +149,6 @@ exports[`SideBarList should render SideBarList component 1`] = `
               <div
                 aria-disabled="false"
                 class="MuiButtonBase-root MuiListItem-root category list-item  MuiListItem-gutters MuiListItem-button"
-                data-cy="category-"
                 data-testid="associate-stakeholder"
                 role="button"
                 tabindex="0"

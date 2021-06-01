@@ -14,21 +14,20 @@ describe('SideBar', () => {
 
   it('should select Delivery -> Coding, choose Quality Engineering and check that the same menu is active in sidebar', () => {
     cy.contains('a', 'Quality Engineer').click();
-    cy.get('[data-cy=competency-active]').should('have.text', 'Coding')
-    cy.get('[data-cy=category-active]').should('have.text', 'Delivery')
+    cy.contains('Delivery').should('have.css', 'color', 'rgb(255, 255, 255)');
+    cy.contains('Coding').should('have.css', 'color', 'rgb(255, 255, 255)');
   });
 
   it('should select Delivery -> Coding, select Consultant and check that the same menu is active in sidebar', () => {
     cy.contains('div', 'Consultant').click();
-    cy.get('[data-cy=competency-active]').should('have.text', 'Coding')
-    cy.get('[data-cy=category-active]').should('have.text', 'Delivery')
+    cy.contains('Delivery').should('have.css', 'color', 'rgb(255, 255, 255)');
+    cy.contains('Coding').should('have.css', 'color', 'rgb(255, 255, 255)');
   });
 
   it('should select Delivery->Coding, select Consultant and check that the content text has changed', () => {
     cy.get('#delivery-coding > p.description')
       .invoke('text')
       .then((text1) => {
-
         cy.contains('div', 'Consultant').click();
 
         cy.get('#delivery-coding > p.description')

@@ -106,7 +106,6 @@ const SideBarList = () => {
                     onClick={() =>
                       handleClickCategory(data.category, data.competencies[0])
                     }
-                    data-cy={`category-${category === data.category ? 'active' : ''}`}
                   >
                     <Link
                       smooth
@@ -146,7 +145,6 @@ const SideBarList = () => {
                                 onClick={() =>
                                   handleClickCompetency(competencyName)
                                 }
-                                data-cy={`competency-${competency === competencyName ? 'active' : ''}`}
                               >
                                 {competencyName}
 
