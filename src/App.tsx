@@ -26,7 +26,6 @@ function App() {
             <Route path={'/quality'}>
               <Content title={'Quality Engineer'} />
             </Route>
-            <Redirect to='/software' />
           </EngineeringContextProvider>
         </Switch>
       </Router>
