@@ -38,7 +38,6 @@
     <li>
       <a href="#getting-started">Getting Started</a>
       <ul>
-        <li><a href="#prerequisites">Prerequisites</a></li>
         <li><a href="#installation">Installation</a></li>
       </ul>
     </li>
@@ -52,6 +51,7 @@
 </details>
 
 <!-- ABOUT THE PROJECT -->
+
 ## About The Project
 
 [![Unit and E2E Tests](https://github.com/capcodigital/engineering-framework/actions/workflows/tests.yml/badge.svg)](https://github.com/capcodigital/engineering-framework/actions/workflows/tests.yml)
@@ -66,65 +66,50 @@ An application that allows Engineers to explore the Engineering performance mana
 ![react](https://img.shields.io/badge/-React-45b8d8?style=flat-square&logo=react&logoColor=white)
 ![styled](https://img.shields.io/badge/-Styled_Components-db7092?style=flat-square&logo=styled-components&logoColor=white)
 
-| Description                                                        | Link                                                                      |
-| :----------------------------------------------------------------- | :------------------------------------------------------------------------ |
-| React - JavaScript library for building user interfaces| [React](https://github.com/facebook/create-react-app)|
-| Cypress - JavaScript E2E Testing Framework| [Cypress](https://www.cypress.io/)|
-| React Testing Library - light-weight solution for testing React components| [React Testing Library](https://www.cypress.io/)|
-| Library that utilises tagged template literals to style React components | [Styled Components](https://styled-components.com/)|
+| Description                                                                | Link                                                  |
+| :------------------------------------------------------------------------- | :---------------------------------------------------- |
+| React - JavaScript library for building user interfaces                    | [React](https://github.com/facebook/create-react-app) |
+| Cypress - JavaScript E2E Testing Framework                                 | [Cypress](https://www.cypress.io/)                    |
+| React Testing Library - light-weight solution for testing React components | [React Testing Library](https://www.cypress.io/)      |
+| Library that utilises tagged template literals to style React components   | [Styled Components](https://styled-components.com/)   |
 
 <!-- GETTING STARTED -->
+
 ## Getting Started
 
 To get a local copy up and running follow these simple steps.
-
-### Prerequisites
-
-This is an example of how to list things you need to use the software and how to install them.
-
-#### Python Virtual Environment
-
-A Python virtual environment called _.venv-engineering-framework_ is required to use [pre-commit](https://pre-commit.com/) and [detect-secrets](https://github.com/Yelp/detect-secrets) from [git hooks](https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks).
-
-This example shows the use of [pyenv](https://github.com/pyenv/pyenv) but other tools can be used to configure the virtual environment if preferred.
-
-```shell
-# create a python virtual env
-pyenv virtualenv 3.9.1 .venv-engineering-framework
-```
 
 ### Installation
 
 ```shell
 # clone the repo
 
-# setup the git hooks using pre-commit
-pip install -r requirements.txt
-pre-commit install
-
 # installs the dependencies
 npm install
 ```
 
 <!-- USAGE EXAMPLES -->
+
 ## Development
 
 ### Commands
 
-* `npm start` - start the react app
-* `npm test` - run unit tests
-* `npm run cypress` - run e2e ui tests
+- `npm start` - start the react app
+- `npm test` - run unit tests
+- `npm run cypress` - run e2e ui tests
 
 ### CI/CD
 
 Unit and E2E UI tests are automated via [GitHub Actions](https://github.com/capcodigital/engineering-framework/actions).
 
 <!-- ROADMAP -->
+
 ## Roadmap
 
 See the [open issues](https://github.com/capcodigital/engineering-framework/issues) for a list of proposed features (and known issues).
 
 <!-- CONTRIBUTING -->
+
 ## Contributing
 
 Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are **greatly appreciated**.
@@ -137,21 +122,24 @@ Contributions are what make the open source community such an amazing place to b
 
 If you would like to contribute to any Capco Digital OSS projects please read:
 
-* [Code of Conduct](https://github.com/capcodigital/.github/blob/master/CODE_OF_CONDUCT.md)
-* [Contributing Guidelines](https://github.com/capcodigital/.github/blob/master/CONTRIBUTING.md)
+- [Code of Conduct](https://github.com/capcodigital/.github/blob/master/CODE_OF_CONDUCT.md)
+- [Contributing Guidelines](https://github.com/capcodigital/.github/blob/master/CONTRIBUTING.md)
 
 <!-- LICENSE -->
+
 ## License
 
 Distributed under the MIT License. See `LICENSE` for more information.
 
 <!-- ACKNOWLEDGEMENTS -->
+
 ## Acknowledgements
 
-* [Best README Template](https://github.com/othneildrew/Best-README-Template/blob/master/README.md)
+- [Best README Template](https://github.com/othneildrew/Best-README-Template/blob/master/README.md)
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
+
 [contributors-shield]: https://img.shields.io/github/contributors/capcodigital/engineering-framework.svg?style=for-the-badge
 [contributors-url]: https://github.com/capcodigital/engineering-framework/graphs/contributors
 [forks-shield]: https://img.shields.io/github/forks/capcodigital/engineering-framework.svg?style=for-the-badge
