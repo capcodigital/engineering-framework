@@ -32,6 +32,14 @@
     "cypress": "cypress open",
     "eject": "react-scripts eject"
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged && npm run test -- --watchAll=false"
+    }
+  },
+  "lint-staged": {
+    "*.{ts,tsx,json}": "prettier --write"
+  },
   "eslintConfig": {
     "extends": [
       "react-app",
@@ -55,6 +63,9 @@
     "@types/node": "^12.20.10",
     "@types/react-router-dom": "^5.1.7",
     "@types/react-router-hash-link": "^1.2.1",
-    "cypress": "^7.1.0"
+    "cypress": "^7.1.0",
+    "husky": "^4.2.3",
+    "lint-staged": "^11.0.0",
+    "prettier": "^2.3.1"
   }
 }

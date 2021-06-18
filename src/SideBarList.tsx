@@ -1,13 +1,13 @@
-import React, { useContext } from 'react';
-import { NavHashLink as Link } from 'react-router-hash-link';
+import React, { useContext } from "react";
+import { NavHashLink as Link } from "react-router-hash-link";
 import {
   EngineeringContext,
   EngineeringContextType,
-} from './EngineeringContext';
-import { Collapse, List, ListItem } from '@material-ui/core';
-import styled from 'styled-components/macro';
-import { SmallTag } from './Tag';
-import { sideBarData, levels } from './data/data';
+} from "./EngineeringContext";
+import { Collapse, List, ListItem } from "@material-ui/core";
+import styled from "styled-components/macro";
+import { SmallTag } from "./Tag";
+import { sideBarData, levels } from "./data/data";
 
 const StyledList = styled(List)`
   && {
@@ -85,23 +85,23 @@ const SideBarList = () => {
   return (
     <div>
       {levels.map((levelName: string) => (
-        <StyledList className='list' key={levelName}>
+        <StyledList className="list" key={levelName}>
           <ListItem
             button
-            className={`level list-item ${levelName === level ? 'active' : ''}`}
+            className={`level list-item ${levelName === level ? "active" : ""}`}
             onClick={() => handleClickLevel(levelName)}
           >
             {levelName}
           </ListItem>
-          <Collapse in={level === levelName} timeout='auto' unmountOnExit>
-            <List component='nav' className={'nested'}>
+          <Collapse in={level === levelName} timeout="auto" unmountOnExit>
+            <List component="nav" className={"nested"}>
               {sideBarData.map((data: any) => (
                 <span key={data.category}>
                   <ListItem
                     button
                     data-testid={`${levelName}-${data.category}`.toLowerCase()}
                     className={`category list-item ${
-                      category === data.category ? 'active' : ''
+                      category === data.category ? "active" : ""
                     }`}
                     onClick={() =>
                       handleClickCategory(data.category, data.competencies[0])
@@ -110,7 +110,7 @@ const SideBarList = () => {
                     <Link
                       smooth
                       to={`#${data.category.toLowerCase()}-${data.competencies[0]
-                        .replace(/\s/g, '-')
+                        .replace(/\s/g, "-")
                         .toLowerCase()}`}
                     >
                       {data.category}
@@ -118,29 +118,30 @@ const SideBarList = () => {
                   </ListItem>
                   <Collapse
                     in={category === data.category}
-                    timeout='auto'
+                    timeout="auto"
                     unmountOnExit
                   >
-                    <List component='div' disablePadding>
+                    <List component="div" disablePadding>
                       {data.competencies.map((competencyName: string) => {
                         // Don't have Framework Criteria at MP level
                         if (
-                          level !== 'Managing Principal' ||
-                          competencyName !== 'Framework Criteria'
+                          level !== "Managing Principal" ||
+                          competencyName !== "Framework Criteria"
                         )
                           return (
                             <Link
                               smooth
                               to={`#${data.category}-${competencyName.replace(
                                 /\s/g,
-                                '-'
+                                "-"
                               )}`.toLowerCase()}
+                              key={competencyName}
                             >
                               <ListItem
                                 key={competencyName}
                                 button
                                 className={`nested competency list-item ${
-                                  competency === competencyName ? 'active' : ''
+                                  competency === competencyName ? "active" : ""
                                 } `}
                                 onClick={() =>
                                   handleClickCompetency(competencyName)
@@ -157,7 +158,7 @@ const SideBarList = () => {
                             </Link>
                           );
                         else {
-                          return '';
+                          return "";
                         }
                       })}
                     </List>
