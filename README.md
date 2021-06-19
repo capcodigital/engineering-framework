@@ -38,6 +38,9 @@
     <li>
       <a href="#getting-started">Getting Started</a>
       <ul>
+        <li><a href="#prerequisites">Prerequisites</a></li>
+      </ul>
+      <ul>
         <li><a href="#installation">Installation</a></li>
       </ul>
     </li>
@@ -79,10 +82,26 @@ An application that allows Engineers to explore the Engineering performance mana
 
 To get a local copy up and running follow these simple steps.
 
+### Prerequisites
+
+A GitHub action is setup to test and then deploy the application into Cloud Run on GCP.  Therefore both GCP and GitHub require configuration.
+
+The high level steps are:
+
+* Setup a GCP project that will host the application
+* Within the project enable the following:
+  * Cloud Run Admin API
+  * Container Scanning API
+* Create a service account and download a key
+* Add `GCP_PROJECT` & `GCP_SA_KEY` as secrets in the repo
+
+For more detail on the exact steps, follow the instructions [here](https://github.com/google-github-actions/deploy-cloudrun).
+
 ### Installation
 
 ```shell
 # clone the repo
+git clone https://github.com/capcodigital/engineering-framework.git
 
 # installs the dependencies
 npm install
@@ -94,13 +113,27 @@ npm install
 
 ### Commands
 
-- `npm start` - start the react app
-- `npm test` - run unit tests
-- `npm run cypress` - run e2e ui tests
+* `npm start` - start the react app
+* `npm test` - run unit tests
+* `npm run cypress` - run e2e ui tests
 
 ### CI/CD
 
-Unit and E2E UI tests are automated via [GitHub Actions](https://github.com/capcodigital/engineering-framework/actions).
+[GitHub Actions](https://github.com/capcodigital/engineering-framework/actions) is being used to provide a lightweight CI/CD pipeline.  There are 3 primary steps:
+
+* Perform unit testing
+* Deploy the application to Cloud Run
+* Perform E2E testing
+
+#### Post Initial Deployment
+
+There ar 3 one off configurations required post deployment:
+
+* Change the Cloud Run permissions and grant the Cloud Run Invoker role to `allUsers`
+* Increase the memory requirements from `512Mi` to `1024Mi`
+* Map [https://framework.capco.io](https://framework.capco.io) to the service from within the console
+
+> Over time it is expected it will be possible to full automate these steps
 
 <!-- ROADMAP -->
 
@@ -122,8 +155,8 @@ Contributions are what make the open source community such an amazing place to b
 
 If you would like to contribute to any Capco Digital OSS projects please read:
 
-- [Code of Conduct](https://github.com/capcodigital/.github/blob/master/CODE_OF_CONDUCT.md)
-- [Contributing Guidelines](https://github.com/capcodigital/.github/blob/master/CONTRIBUTING.md)
+* [Code of Conduct](https://github.com/capcodigital/.github/blob/master/CODE_OF_CONDUCT.md)
+* [Contributing Guidelines](https://github.com/capcodigital/.github/blob/master/CONTRIBUTING.md)
 
 <!-- LICENSE -->
 
@@ -135,7 +168,7 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 ## Acknowledgements
 
-- [Best README Template](https://github.com/othneildrew/Best-README-Template/blob/master/README.md)
+* [Best README Template](https://github.com/othneildrew/Best-README-Template/blob/master/README.md)
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
