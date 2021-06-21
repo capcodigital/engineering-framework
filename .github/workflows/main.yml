@@ -23,6 +23,7 @@ jobs:
   gcp-deployment: 
     name: Cloud Run deployment
     needs: unit-tests
+    if: ${{ github.ref == 'refs/heads/master' }}
     runs-on: ubuntu-latest
     env:
       IMAGE_NAME: eu.gcr.io/${{ secrets.GCP_PROJECT }}/framework
@@ -54,9 +55,10 @@ jobs:
 
   e2e-tests:
     name: Run Cypress tests
-    runs-on: ubuntu-latest
     needs: gcp-deployment
-
+    if: ${{ github.ref == 'refs/heads/master' }}
+    runs-on: ubuntu-latest
+    
     steps:
       - uses: actions/checkout@v2
       - name: Use Node.js ${{ matrix.node-version}}
