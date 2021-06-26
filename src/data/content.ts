@@ -64,6 +64,11 @@ const contentData = {
           "Alice produces consistent quality tests with good coverage. She has good attention to detail especially around handling edge cases.  Even though hse has limited experience, he has successfully executed changes to increase the coverage and stability of the test suite.",
       },
       {
+        name: "Technical Leadership",
+        specialism: "All",
+        description: "Not applicable at this level.",
+      },
+      {
         name: "Coding",
         specialism: "Software Engineer",
         description:
@@ -120,11 +125,6 @@ const contentData = {
         specialism: "All",
         description:
           "Understands the importance and language of security concepts.",
-      },
-      {
-        name: "Technical Leadership",
-        specialism: "All",
-        description: "Not applicable at this level.",
       },
     ],
     People: [

@@ -25,14 +25,14 @@ export const tagText = {
   Management: {
     "Principal Consultant": {
       "Software Engineer": { name: "Engineering Lead", short: "EL" },
-      "Quality Engineer": { name: "Quality Engineering Lead", short: "TEL" },
+      "Quality Engineer": { name: "Quality Engineering Lead", short: "QEL" },
       color: "#5686E3",
     },
     "Managing Principal": {
       "Software Engineer": { name: "Senior Engineering Lead", short: "SEL" },
       "Quality Engineer": {
         name: "Senior Quality Engineering Lead",
-        short: "STEL",
+        short: "SQEL",
       },
       color: "#8356E3",
     },
@@ -67,6 +67,7 @@ export const sideBarData = [
     category: "Delivery",
     competencies: [
       "Narrative",
+      "Technical Leadership",
       "Coding",
       "Testing",
       "Debugging",
@@ -75,7 +76,6 @@ export const sideBarData = [
       "Cloud",
       "Data Design & Handling",
       "Security",
-      "Technical Leadership",
     ],
   },
   {
