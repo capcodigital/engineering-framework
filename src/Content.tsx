@@ -1,20 +1,20 @@
-import React, { useContext, useState, useEffect, FC } from 'react';
+import React, { useContext, useState, useEffect, FC } from "react";
 import {
   EngineeringContext,
   EngineeringContextType,
-} from './EngineeringContext';
-import { Collapse, Divider, List, ListItem } from '@material-ui/core';
-import SideBar from './SideBar';
-import { Tag } from './Tag';
-import { titles } from './data/data';
-import contentData from './data/content';
-import images from './img/';
-import styled from 'styled-components/macro';
-import BreadcrumbsNav from './BreadcrumbsNav';
-import SideBarList from './SideBarList';
+} from "./EngineeringContext";
+import { Collapse, Divider, List, ListItem } from "@material-ui/core";
+import SideBar from "./SideBar";
+import { Tag } from "./Tag";
+import { titles } from "./data/data";
+import contentData from "./data/content";
+import images from "./img/";
+import styled from "styled-components/macro";
+import BreadcrumbsNav from "./BreadcrumbsNav";
+import SideBarList from "./SideBarList";
 
 type ContentType = {
-  title: 'Software Engineer' | 'Quality Engineer';
+  title: "Software Engineer" | "Quality Engineer";
 };
 
 type ContentHeaderProps = {
@@ -38,7 +38,7 @@ export const ContentContainer = styled.div<ContentContainerProps>`
   background-color: #1f1f1f;
   color: white;
   text-align: left;
-  display: ${({ menuOpen }) => menuOpen && 'none'};
+  display: ${({ menuOpen }) => menuOpen && "none"};
 
   @media screen and (max-width: 1000px) {
     ::-webkit-scrollbar {
@@ -111,7 +111,7 @@ const ContentDiv = styled.div`
     margin: 48px 0px 0px 0px;
     background-color: white;
   }
-  .framework-criteria {
+  .narrative {
     hr {
       margin: 48px 0px 48px 0px;
     }
@@ -136,11 +136,11 @@ const Description = styled.p`
 `;
 
 export const categoryAndCompetencyFromUrl = (hash: string) => {
-  const [cat, ...comp] = hash.split('#')[1].split('-');
+  const [cat, ...comp] = hash.split("#")[1].split("-");
   const categoryfromUrl = cat.charAt(0).toUpperCase() + cat.slice(1);
   const competencyFromUrl = comp
     .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
-    .join(' ');
+    .join(" ");
 
   return { categoryfromUrl, competencyFromUrl };
 };
@@ -172,10 +172,10 @@ const Content: FC<ContentType> = ({ title }) => {
   useEffect(() => {
     setTimeout(() => {
       if (window.location.hash) {
-        const id = window.location.hash.replace('#', '');
+        const id = window.location.hash.replace("#", "");
         const element = document.getElementById(id);
         if (element) {
-          element.scrollIntoView({ block: 'start', behavior: 'smooth' });
+          element.scrollIntoView({ block: "start", behavior: "smooth" });
         }
       }
     }, 100);
@@ -192,41 +192,40 @@ const Content: FC<ContentType> = ({ title }) => {
       </SideBar>
 
       <BreadcrumbsNav open={open} onClick={() => handleClickOpen()}>
-        <Collapse in={open} timeout='auto' unmountOnExit>
+        <Collapse in={open} timeout="auto" unmountOnExit>
           <SideBarList />
         </Collapse>
       </BreadcrumbsNav>
 
       <ContentContainer menuOpen={open}>
-        <ContentHeader level={level} className='content-header'>
-          <div className='level-title'>
-            <span className='level'>{level}</span> •{' '}
+        <ContentHeader level={level} className="content-header">
+          <div className="level-title">
+            <span className="level">{level}</span> •{" "}
             {(titles as any)[specialism][level]}
           </div>
-          <div className='category'>{category}</div>
+          <div className="category">{category}</div>
         </ContentHeader>
         <ContentDiv>
           <List
-            component='div'
-            className={'competency-list'}
-            data-testid='competency-list'
+            component="div"
+            className={"competency-list"}
+            data-testid="competency-list"
           >
             {(contentData as any)[level][category].map(
               (comp: any) =>
-                [specialism, 'All'].includes(comp.specialism) && (
+                [specialism, "All"].includes(comp.specialism) && (
                   <ListItem
                     id={`${category.toLowerCase()}-${comp.name
-                      .replace(/\s/g, '-')
+                      .replace(/\s/g, "-")
                       .toLowerCase()}`}
-                    className='list-item'
+                    className="list-item"
                     key={`content-${comp.name}`}
-                    alignItems='flex-start'
+                    alignItems="flex-start"
                     style={{
-                      background:
-                        comp.name === 'Framework Criteria' ? '#161616' : '',
+                      background: comp.name === "Narrative" ? "#161616" : "",
                     }}
                   >
-                    <div className={'title'}>
+                    <div className={"title"}>
                       <span>{comp.name}</span>
 
                       <Tag
@@ -236,28 +235,28 @@ const Content: FC<ContentType> = ({ title }) => {
                       />
                     </div>
 
-                    {category === 'Overview' ? (
+                    {category === "Overview" ? (
                       <>
                         <Description
                           dangerouslySetInnerHTML={{ __html: comp.description }}
                         />
                         <Divider />
                       </>
-                    ) : comp.name === 'Framework Criteria' ? (
-                      <div className='framework-criteria'>
+                    ) : comp.name === "Narrative" ? (
+                      <div className="narrative">
                         <Description
                           dangerouslySetInnerHTML={{ __html: comp.description }}
                         />
                         <hr />
-                        <div className='title'>{comp.name2}</div>
-                        <p className='description'>{comp.description2}</p>
+                        <div className="title">{comp.name2}</div>
+                        <p className="description">{comp.description2}</p>
                         <hr />
-                        <div className='title'>{comp.name3}</div>
-                        <p className='description'>{comp.description3}</p>
+                        <div className="title">{comp.name3}</div>
+                        <p className="description">{comp.description3}</p>
                       </div>
                     ) : (
                       <>
-                        <p className='description'>{comp.description}</p>
+                        <p className="description">{comp.description}</p>
                         <Divider />
                       </>
                     )}

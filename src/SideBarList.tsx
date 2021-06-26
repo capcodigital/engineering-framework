@@ -123,10 +123,10 @@ const SideBarList = () => {
                   >
                     <List component="div" disablePadding>
                       {data.competencies.map((competencyName: string) => {
-                        // Don't have Framework Criteria at MP level
+                        // Don't have Narrative at MP level
                         if (
                           level !== "Managing Principal" ||
-                          competencyName !== "Framework Criteria"
+                          competencyName !== "Narrative"
                         )
                           return (
                             <Link

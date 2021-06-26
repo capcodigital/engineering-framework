@@ -1,4 +1,4 @@
-import { createContext, useState, FC } from 'react';
+import { createContext, useState, FC } from "react";
 export type EngineeringContextType = {
   specialism: string;
   level: string;
@@ -11,10 +11,10 @@ export type EngineeringContextType = {
 };
 
 export const EngineeringContext = createContext<EngineeringContextType>({
-  specialism: '',
-  level: '',
-  category: '',
-  competency: '',
+  specialism: "",
+  level: "",
+  category: "",
+  competency: "",
   setSpecialism: () => {},
   setLevel: () => {},
   setCategory: () => {},
@@ -22,10 +22,10 @@ export const EngineeringContext = createContext<EngineeringContextType>({
 });
 
 export const EngineeringContextProvider: FC = ({ children }) => {
-  const [specialism, setSpecialism] = useState('Software Engineer');
-  const [level, setLevel] = useState('Associate');
-  const [category, setCategory] = useState('Overview');
-  const [competency, setCompetency] = useState('Job Description');
+  const [specialism, setSpecialism] = useState("Software Engineer");
+  const [level, setLevel] = useState("Associate");
+  const [category, setCategory] = useState("Overview");
+  const [competency, setCompetency] = useState("Description");
   const initialValue = {
     specialism,
     level,

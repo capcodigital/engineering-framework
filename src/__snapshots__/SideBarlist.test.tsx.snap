@@ -38,7 +38,7 @@ exports[`SideBarList should render SideBarList component 1`] = `
                 tabindex="0"
               >
                 <a
-                  href="/#overview-job-description"
+                  href="/#overview-description"
                 >
                   Overview
                 </a>
@@ -60,7 +60,7 @@ exports[`SideBarList should render SideBarList component 1`] = `
                       class="MuiList-root"
                     >
                       <a
-                        href="/#overview-job-description"
+                        href="/#overview-description"
                       >
                         <div
                           aria-disabled="false"
@@ -68,7 +68,7 @@ exports[`SideBarList should render SideBarList component 1`] = `
                           role="button"
                           tabindex="0"
                         >
-                          Job Description
+                          Description
                           <span
                             class="MuiTouchRipple-root"
                           />
@@ -118,7 +118,7 @@ exports[`SideBarList should render SideBarList component 1`] = `
                 tabindex="0"
               >
                 <a
-                  href="/#delivery-framework-criteria"
+                  href="/#delivery-narrative"
                 >
                   Delivery
                 </a>
@@ -136,7 +136,7 @@ exports[`SideBarList should render SideBarList component 1`] = `
                 tabindex="0"
               >
                 <a
-                  href="/#people-framework-criteria"
+                  href="/#people-narrative"
                 >
                   People
                 </a>
@@ -154,7 +154,7 @@ exports[`SideBarList should render SideBarList component 1`] = `
                 tabindex="0"
               >
                 <a
-                  href="/#stakeholder-framework-criteria"
+                  href="/#stakeholder-narrative"
                 >
                   Stakeholder
                 </a>
