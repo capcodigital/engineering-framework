@@ -38,13 +38,13 @@ exports[`Header should render Header component 1`] = `
     />
     <a
       class="Header__StyledLink-u4z9pp-2 cMYGaa"
-      href="/software#-"
+      href="/software/#-"
     >
       Software Engineer
     </a>
     <a
       class="Header__StyledLink-u4z9pp-2 cMYGaa"
-      href="/quality#-"
+      href="/quality/#-"
     >
       Quality Engineer
     </a>

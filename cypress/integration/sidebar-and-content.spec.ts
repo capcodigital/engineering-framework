@@ -14,14 +14,30 @@ describe("SideBar", () => {
 
   it("should select Delivery -> Coding, choose Quality Engineering and check that the same menu is active in sidebar", () => {
     cy.contains("a", "Quality Engineer").click();
-    cy.contains("Delivery").should("have.css", "color", "rgb(255, 255, 255)");
-    cy.contains("Coding").should("have.css", "color", "rgb(255, 255, 255)");
+    cy.contains("div", "Delivery").should(
+      "have.css",
+      "color",
+      "rgb(255, 255, 255)"
+    );
+    cy.contains("div", "Coding").should(
+      "have.css",
+      "color",
+      "rgb(255, 255, 255)"
+    );
   });
 
   it("should select Delivery -> Coding, select Consultant and check that the same menu is active in sidebar", () => {
     cy.contains("div", "Consultant").click();
-    cy.contains("Delivery").should("have.css", "color", "rgb(255, 255, 255)");
-    cy.contains("Coding").should("have.css", "color", "rgb(255, 255, 255)");
+    cy.contains("div", "Consultant").should(
+      "have.css",
+      "color",
+      "rgb(255, 255, 255)"
+    );
+    cy.contains("div", "Delivery").should(
+      "have.css",
+      "color",
+      "rgb(255, 255, 255)"
+    );
   });
 
   it("should select Delivery->Coding, select Consultant and check that the content text has changed", () => {

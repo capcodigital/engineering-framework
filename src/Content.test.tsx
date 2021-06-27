@@ -3,11 +3,8 @@ import { render, screen, fireEvent } from "@testing-library/react";
 import Content from "./Content";
 import { BrowserRouter as Router } from "react-router-dom";
 import { EngineeringContextProvider } from "./EngineeringContext";
-import {
-  ContentContainer,
-  ContentHeader,
-  categoryAndCompetencyFromUrl,
-} from "./Content";
+import { ContentContainer, ContentHeader } from "./Content";
+import { categoryAndCompetencyFromUrl } from "./helpers";
 
 describe("Content", () => {
   it("should render Content component", () => {
@@ -80,6 +77,12 @@ describe("Content", () => {
     });
 
     it("should render level title with Associate Engineer text by default", () => {
+      global.window = Object.create(window);
+      Object.defineProperty(window, "location", {
+        value: {
+          href: "https://framework.capco.io/software/associate#overview-description",
+        },
+      });
       const { container } = render(
         <Router>
           <EngineeringContextProvider>

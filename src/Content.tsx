@@ -12,6 +12,7 @@ import images from "./img/";
 import styled from "styled-components/macro";
 import BreadcrumbsNav from "./BreadcrumbsNav";
 import SideBarList from "./SideBarList";
+import { categoryAndCompetencyFromUrl, fromUrl, toUrl } from "./helpers";
 
 type ContentType = {
   title: "Software Engineer" | "Quality Engineer";
@@ -135,16 +136,6 @@ const Description = styled.p`
   }
 `;
 
-export const categoryAndCompetencyFromUrl = (hash: string) => {
-  const [cat, ...comp] = hash.split("#")[1].split("-");
-  const categoryfromUrl = cat.charAt(0).toUpperCase() + cat.slice(1);
-  const competencyFromUrl = comp
-    .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
-    .join(" ");
-
-  return { categoryfromUrl, competencyFromUrl };
-};
-
 const Content: FC<ContentType> = ({ title }) => {
   const [open, setOpen] = useState<boolean>(false);
   const {
@@ -152,6 +143,7 @@ const Content: FC<ContentType> = ({ title }) => {
     level,
     category,
     setSpecialism,
+    setLevel,
     setCategory,
     setCompetency,
   } = useContext<EngineeringContextType>(EngineeringContext);
@@ -166,6 +158,11 @@ const Content: FC<ContentType> = ({ title }) => {
         categoryAndCompetencyFromUrl(window.location.hash);
       setCategory(categoryfromUrl);
       setCompetency(competencyFromUrl);
+
+      setSpecialism(
+        `${fromUrl(window.location.pathname.split("/")[1])} Engineer`
+      );
+      setLevel(fromUrl(window.location.pathname.split("/")[2]));
     }
   }, [setCategory, setCompetency]);
 
@@ -215,9 +212,7 @@ const Content: FC<ContentType> = ({ title }) => {
               (comp: any) =>
                 [specialism, "All"].includes(comp.specialism) && (
                   <ListItem
-                    id={`${category.toLowerCase()}-${comp.name
-                      .replace(/\s/g, "-")
-                      .toLowerCase()}`}
+                    id={toUrl(`${category.toLowerCase()}-${comp.name}`)}
                     className="list-item"
                     key={`content-${comp.name}`}
                     alignItems="flex-start"

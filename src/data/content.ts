@@ -1040,38 +1040,6 @@ const contentData = {
     ],
   },
   "Managing Principal": {
-    Overview: [
-      {
-        name: "Description",
-        specialism: "Software Engineer",
-        description: "Coming soon.",
-      },
-      {
-        name: "You Have",
-        specialism: "Software Engineer",
-        description: "Coming soon.",
-      },
-      {
-        name: "You Will",
-        specialism: "Software Engineer",
-        description: "Coming Soon.",
-      },
-      {
-        name: "Description",
-        specialism: "Quality Engineer",
-        description: "Coming soon.",
-      },
-      {
-        name: "You Have",
-        specialism: "Quality Engineer",
-        description: "Coming soon.",
-      },
-      {
-        name: "You Will",
-        specialism: "Quality Engineer",
-        description: "Coming Soon.",
-      },
-    ],
     Delivery: [
       {
         name: "Technical Leadership",

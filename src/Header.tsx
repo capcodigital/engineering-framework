@@ -1,6 +1,6 @@
-import React, { useState, useContext } from 'react';
-import { Link } from 'react-router-dom';
-import { EngineeringContext } from './EngineeringContext';
+import React, { useState, useContext } from "react";
+import { Link } from "react-router-dom";
+import { EngineeringContext } from "./EngineeringContext";
 import {
   AppBar,
   Drawer,
@@ -8,11 +8,11 @@ import {
   List,
   ListItem,
   Toolbar,
-} from '@material-ui/core/';
-import MenuIcon from '@material-ui/icons/Menu';
-import ClearIcon from '@material-ui/icons/Clear';
-import logo from './img/logo.png';
-import styled from 'styled-components/macro';
+} from "@material-ui/core/";
+import MenuIcon from "@material-ui/icons/Menu";
+import ClearIcon from "@material-ui/icons/Clear";
+import logo from "./img/logo.png";
+import styled from "styled-components/macro";
 
 const StyledAppBar = styled(AppBar)`
   && {
@@ -85,12 +85,12 @@ const StyledDrawer = styled(Drawer)`
 `;
 
 const titleData = [
-  { name: 'Software Engineer', url: '/software' },
-  { name: 'Quality Engineer', url: '/quality' },
+  { name: "Software Engineer", url: "/software" },
+  { name: "Quality Engineer", url: "/quality" },
 ];
 
 export default function Header() {
-  const { specialism, category, competency, setSpecialism } =
+  const { specialism, level, category, competency, setSpecialism } =
     useContext(EngineeringContext);
   const [open, setOpen] = useState<boolean>(false);
 
@@ -100,8 +100,8 @@ export default function Header() {
 
   const toggleDrawer = (open: boolean) => (event: any) => {
     if (
-      event.type === 'keydown' &&
-      (event.key === 'Tab' || event.key === 'Shift')
+      event.type === "keydown" &&
+      (event.key === "Tab" || event.key === "Shift")
     ) {
       return;
     }
@@ -110,37 +110,37 @@ export default function Header() {
 
   return (
     <>
-      <StyledAppBar position='sticky'>
+      <StyledAppBar position="sticky">
         <Toolbar>
           {open ? (
             <IconButton
               onClick={toggleDrawer(false)}
-              edge='end'
-              color='inherit'
-              aria-label='clear'
+              edge="end"
+              color="inherit"
+              aria-label="clear"
             >
-              <ClearIcon fontSize='large' />
+              <ClearIcon fontSize="large" />
             </IconButton>
           ) : (
             <StyledIconButton
               onClick={toggleDrawer(true)}
-              edge='start'
-              color='inherit'
-              aria-label='menu'
+              edge="start"
+              color="inherit"
+              aria-label="menu"
             >
-              <MenuIcon fontSize='large' />
+              <MenuIcon fontSize="large" />
             </StyledIconButton>
           )}
 
-          <img height={32} src={logo} alt='Logo' />
+          <img height={32} src={logo} alt="Logo" />
           {titleData.map((titleOption: any) =>
             titleOption.name === specialism ? (
               <StyledLink
                 key={titleOption.name}
-                to={`/engineering-framework${
-                  titleOption.url
-                }#${category}-${competency.replace(/\s/g, '-')}`.toLowerCase()}
-                className={'active'}
+                to={`${titleOption.url}/${level}#${category}-${competency}`
+                  .replace(/\s/g, "-")
+                  .toLowerCase()}
+                className={"active"}
                 onClick={() => handleClick(titleOption.name)}
               >
                 {titleOption.name}
@@ -148,9 +148,9 @@ export default function Header() {
             ) : (
               <StyledLink
                 key={titleOption.name}
-                to={`${
-                  titleOption.url
-                }#${category}-${competency.replace(/\s/g, '-')}`.toLowerCase()}
+                to={`${titleOption.url}/${level}#${category}-${competency}`
+                  .replace(/\s/g, "-")
+                  .toLowerCase()}
                 onClick={() => handleClick(titleOption.name)}
               >
                 {titleOption.name}
@@ -160,7 +160,7 @@ export default function Header() {
         </Toolbar>
       </StyledAppBar>
       <StyledDrawer
-        anchor={'left'}
+        anchor={"left"}
         open={open}
         onClose={toggleDrawer(false)}
         ModalProps={{
@@ -170,7 +170,7 @@ export default function Header() {
         }}
       >
         <List
-          role='presentation'
+          role="presentation"
           onClick={toggleDrawer(false)}
           onKeyDown={toggleDrawer(false)}
         >
@@ -181,7 +181,7 @@ export default function Header() {
                 button
                 component={Link}
                 to={`${titleOption.url}`}
-                className={'active'}
+                className={"active"}
                 onClick={() => handleClick(titleOption.name)}
               >
                 {titleOption.name}

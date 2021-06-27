@@ -38,22 +38,22 @@ exports[`Content should render Content component 1`] = `
                   class="MuiList-root nested MuiList-padding"
                 >
                   <span>
-                    <div
-                      aria-disabled="false"
-                      class="MuiButtonBase-root MuiListItem-root category list-item active MuiListItem-gutters MuiListItem-button"
-                      data-testid="associate-overview"
-                      role="button"
-                      tabindex="0"
+                    <a
+                      href="/#overview-description"
                     >
-                      <a
-                        href="/#overview-description"
+                      <div
+                        aria-disabled="false"
+                        class="MuiButtonBase-root MuiListItem-root category list-item active MuiListItem-gutters MuiListItem-button"
+                        data-testid="associate-overview"
+                        role="button"
+                        tabindex="0"
                       >
                         Overview
-                      </a>
-                      <span
-                        class="MuiTouchRipple-root"
-                      />
-                    </div>
+                        <span
+                          class="MuiTouchRipple-root"
+                        />
+                      </div>
+                    </a>
                     <div
                       class="MuiCollapse-container MuiCollapse-entered"
                       style="min-height: 0px;"
@@ -118,58 +118,58 @@ exports[`Content should render Content component 1`] = `
                     </div>
                   </span>
                   <span>
-                    <div
-                      aria-disabled="false"
-                      class="MuiButtonBase-root MuiListItem-root category list-item  MuiListItem-gutters MuiListItem-button"
-                      data-testid="associate-delivery"
-                      role="button"
-                      tabindex="0"
+                    <a
+                      href="/#delivery-narrative"
                     >
-                      <a
-                        href="/#delivery-narrative"
+                      <div
+                        aria-disabled="false"
+                        class="MuiButtonBase-root MuiListItem-root category list-item  MuiListItem-gutters MuiListItem-button"
+                        data-testid="associate-delivery"
+                        role="button"
+                        tabindex="0"
                       >
                         Delivery
-                      </a>
-                      <span
-                        class="MuiTouchRipple-root"
-                      />
-                    </div>
+                        <span
+                          class="MuiTouchRipple-root"
+                        />
+                      </div>
+                    </a>
                   </span>
                   <span>
-                    <div
-                      aria-disabled="false"
-                      class="MuiButtonBase-root MuiListItem-root category list-item  MuiListItem-gutters MuiListItem-button"
-                      data-testid="associate-people"
-                      role="button"
-                      tabindex="0"
+                    <a
+                      href="/#people-narrative"
                     >
-                      <a
-                        href="/#people-narrative"
+                      <div
+                        aria-disabled="false"
+                        class="MuiButtonBase-root MuiListItem-root category list-item  MuiListItem-gutters MuiListItem-button"
+                        data-testid="associate-people"
+                        role="button"
+                        tabindex="0"
                       >
                         People
-                      </a>
-                      <span
-                        class="MuiTouchRipple-root"
-                      />
-                    </div>
+                        <span
+                          class="MuiTouchRipple-root"
+                        />
+                      </div>
+                    </a>
                   </span>
                   <span>
-                    <div
-                      aria-disabled="false"
-                      class="MuiButtonBase-root MuiListItem-root category list-item  MuiListItem-gutters MuiListItem-button"
-                      data-testid="associate-stakeholder"
-                      role="button"
-                      tabindex="0"
+                    <a
+                      href="/#stakeholder-narrative"
                     >
-                      <a
-                        href="/#stakeholder-narrative"
+                      <div
+                        aria-disabled="false"
+                        class="MuiButtonBase-root MuiListItem-root category list-item  MuiListItem-gutters MuiListItem-button"
+                        data-testid="associate-stakeholder"
+                        role="button"
+                        tabindex="0"
                       >
                         Stakeholder
-                      </a>
-                      <span
-                        class="MuiTouchRipple-root"
-                      />
-                    </div>
+                        <span
+                          class="MuiTouchRipple-root"
+                        />
+                      </div>
+                    </a>
                   </span>
                 </nav>
               </div>
