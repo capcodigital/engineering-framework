@@ -1,11 +1,11 @@
-import * as React from 'react';
-import { render } from '@testing-library/react';
-import BreadcrumbsNav from './BreadcrumbsNav';
-import { BrowserRouter as Router } from 'react-router-dom';
-import { EngineeringContextProvider } from './EngineeringContext';
+import * as React from "react";
+import { render } from "@testing-library/react";
+import BreadcrumbsNav from "./BreadcrumbsNav";
+import { BrowserRouter as Router } from "react-router-dom";
+import { EngineeringContextProvider } from "./EngineeringContext";
 
-describe('BreadcrumbsNav', () => {
-  it('should render BreadcrumbsNav component with default values', () => {
+describe("BreadcrumbsNav", () => {
+  it("should render BreadcrumbsNav component with default values", () => {
     const { container } = render(
       <Router>
         <EngineeringContextProvider>
@@ -15,7 +15,7 @@ describe('BreadcrumbsNav', () => {
     );
 
     expect(container.firstChild).toHaveTextContent(
-      'Software EngineerAssociateOverviewJob Description'
+      "Software EngineerAssociateOverviewDescription"
     );
   });
 });

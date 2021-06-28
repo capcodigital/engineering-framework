@@ -1,4 +1,5 @@
 import React, { useContext } from "react";
+import { useHistory } from "react-router-dom";
 import { NavHashLink as Link } from "react-router-hash-link";
 import {
   EngineeringContext,
@@ -8,6 +9,7 @@ import { Collapse, List, ListItem } from "@material-ui/core";
 import styled from "styled-components/macro";
 import { SmallTag } from "./Tag";
 import { sideBarData, levels } from "./data/data";
+import { toUrl, getCompetencies } from "./helpers";
 
 const StyledList = styled(List)`
   && {
@@ -67,19 +69,40 @@ const SideBarList = () => {
     setCategory,
     setCompetency,
   } = useContext<EngineeringContextType>(EngineeringContext);
+  const history = useHistory();
 
-  const handleClickCategory = (
-    categoryName: string,
-    firstCompetency: string
-  ) => {
-    setCategory(categoryName);
-    setCompetency(firstCompetency);
-  };
-  const handleClickCompetency = (competencyName: string) => {
-    setCompetency(competencyName);
-  };
   const handleClickLevel = (levelName: string) => {
     setLevel(levelName);
+    if (levelName === "Managing Principal" && category === "Overview") {
+      setCategory("Delivery");
+      setCompetency(getCompetencies("Delivery")[1]);
+      history.push(
+        toUrl(`${levelName}#${"Delivery"}-${getCompetencies("Delivery")[1]}`)
+      );
+    } else if (
+      levelName === "Managing Principal" &&
+      competency === "Narrative"
+    ) {
+      setCategory(category);
+      setCompetency(getCompetencies(category)[1]);
+      history.push(
+        toUrl(`${levelName}#${category}-${getCompetencies(category)[1]}`)
+      );
+    } else history.push(toUrl(`${levelName}#${category}-${competency}`));
+  };
+
+  const handleClickCategory = (categoryName: string) => {
+    setCategory(categoryName);
+
+    if (level == "Managing Principal") {
+      setCompetency(getCompetencies(categoryName)[1]);
+    } else {
+      setCompetency(getCompetencies(categoryName)[0]);
+    }
+  };
+
+  const handleClickCompetency = (competencyName: string) => {
+    setCompetency(competencyName);
   };
 
   return (
@@ -97,72 +120,77 @@ const SideBarList = () => {
             <List component="nav" className={"nested"}>
               {sideBarData.map((data: any) => (
                 <span key={data.category}>
-                  <ListItem
-                    button
-                    data-testid={`${levelName}-${data.category}`.toLowerCase()}
-                    className={`category list-item ${
-                      category === data.category ? "active" : ""
-                    }`}
-                    onClick={() =>
-                      handleClickCategory(data.category, data.competencies[0])
-                    }
-                  >
-                    <Link
-                      smooth
-                      to={`#${data.category.toLowerCase()}-${data.competencies[0]
-                        .replace(/\s/g, "-")
-                        .toLowerCase()}`}
-                    >
-                      {data.category}
-                    </Link>
-                  </ListItem>
-                  <Collapse
-                    in={category === data.category}
-                    timeout="auto"
-                    unmountOnExit
-                  >
-                    <List component="div" disablePadding>
-                      {data.competencies.map((competencyName: string) => {
-                        // Don't have Framework Criteria at MP level
-                        if (
-                          level !== "Managing Principal" ||
-                          competencyName !== "Framework Criteria"
-                        )
-                          return (
-                            <Link
-                              smooth
-                              to={`#${data.category}-${competencyName.replace(
-                                /\s/g,
-                                "-"
-                              )}`.toLowerCase()}
-                              key={competencyName}
-                            >
-                              <ListItem
-                                key={competencyName}
-                                button
-                                className={`nested competency list-item ${
-                                  competency === competencyName ? "active" : ""
-                                } `}
-                                onClick={() =>
-                                  handleClickCompetency(competencyName)
-                                }
-                              >
-                                {competencyName}
-
-                                <SmallTag
-                                  level={level}
-                                  competency={competencyName}
-                                  specialism={specialism}
-                                />
-                              </ListItem>
-                            </Link>
-                          );
-                        else {
-                          return "";
-                        }
-                      })}
-                    </List>
-                  </Collapse>
+                  {
+                    // Don't have Overview at MP level
+                    (level !== "Managing Principal" ||
+                      data.category !== "Overview") && (
+                      <>
+                        <Link
+                          smooth
+                          to={toUrl(
+                            `#${data.category}-${
+                              level == "Managing Principal"
+                                ? getCompetencies(data.category)[1]
+                                : getCompetencies(data.category)[0]
+                            }`
+                          )}
+                        >
+                          <ListItem
+                            button
+                            data-testid={`${levelName}-${data.category}`.toLowerCase()}
+                            className={`category list-item ${
+                              category === data.category ? "active" : ""
+                            }`}
+                            onClick={() => handleClickCategory(data.category)}
+                          >
+                            {data.category}
+                          </ListItem>
+                        </Link>
+                        <Collapse
+                          in={category === data.category}
+                          timeout="auto"
+                          unmountOnExit
+                        >
+                          <List component="div" disablePadding>
+                            {data.competencies.map(
+                              (competencyName: string) =>
+                                // Don't have Narrative at MP level
+                                (level !== "Managing Principal" ||
+                                  competencyName !== "Narrative") && (
+                                  <Link
+                                    smooth
+                                    to={toUrl(
+                                      `#${data.category}-${competencyName}`
+                                    )}
+                                    key={competencyName}
+                                    onClick={() =>
+                                      handleClickCompetency(competencyName)
+                                    }
+                                  >
+                                    <ListItem
+                                      key={competencyName}
+                                      button
+                                      className={`nested competency list-item ${
+                                        competency === competencyName
+                                          ? "active"
+                                          : ""
+                                      } `}
+                                    >
+                                      {competencyName}
+                                      <SmallTag
+                                        level={level}
+                                        competency={competencyName}
+                                        specialism={specialism}
+                                      />
+                                    </ListItem>
+                                  </Link>
+                                )
+                            )}
+                          </List>
+                        </Collapse>
+                      </>
+                    )
+                  }
                 </span>
               ))}
             </List>

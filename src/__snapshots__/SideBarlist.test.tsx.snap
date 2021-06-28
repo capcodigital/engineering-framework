@@ -30,22 +30,22 @@ exports[`SideBarList should render SideBarList component 1`] = `
             class="MuiList-root nested MuiList-padding"
           >
             <span>
-              <div
-                aria-disabled="false"
-                class="MuiButtonBase-root MuiListItem-root category list-item active MuiListItem-gutters MuiListItem-button"
-                data-testid="associate-overview"
-                role="button"
-                tabindex="0"
+              <a
+                href="/#overview-description"
               >
-                <a
-                  href="/#overview-job-description"
+                <div
+                  aria-disabled="false"
+                  class="MuiButtonBase-root MuiListItem-root category list-item active MuiListItem-gutters MuiListItem-button"
+                  data-testid="associate-overview"
+                  role="button"
+                  tabindex="0"
                 >
                   Overview
-                </a>
-                <span
-                  class="MuiTouchRipple-root"
-                />
-              </div>
+                  <span
+                    class="MuiTouchRipple-root"
+                  />
+                </div>
+              </a>
               <div
                 class="MuiCollapse-container MuiCollapse-entered"
                 style="min-height: 0px;"
@@ -60,7 +60,7 @@ exports[`SideBarList should render SideBarList component 1`] = `
                       class="MuiList-root"
                     >
                       <a
-                        href="/#overview-job-description"
+                        href="/#overview-description"
                       >
                         <div
                           aria-disabled="false"
@@ -68,7 +68,7 @@ exports[`SideBarList should render SideBarList component 1`] = `
                           role="button"
                           tabindex="0"
                         >
-                          Job Description
+                          Description
                           <span
                             class="MuiTouchRipple-root"
                           />
@@ -110,58 +110,58 @@ exports[`SideBarList should render SideBarList component 1`] = `
               </div>
             </span>
             <span>
-              <div
-                aria-disabled="false"
-                class="MuiButtonBase-root MuiListItem-root category list-item  MuiListItem-gutters MuiListItem-button"
-                data-testid="associate-delivery"
-                role="button"
-                tabindex="0"
+              <a
+                href="/#delivery-narrative"
               >
-                <a
-                  href="/#delivery-framework-criteria"
+                <div
+                  aria-disabled="false"
+                  class="MuiButtonBase-root MuiListItem-root category list-item  MuiListItem-gutters MuiListItem-button"
+                  data-testid="associate-delivery"
+                  role="button"
+                  tabindex="0"
                 >
                   Delivery
-                </a>
-                <span
-                  class="MuiTouchRipple-root"
-                />
-              </div>
+                  <span
+                    class="MuiTouchRipple-root"
+                  />
+                </div>
+              </a>
             </span>
             <span>
-              <div
-                aria-disabled="false"
-                class="MuiButtonBase-root MuiListItem-root category list-item  MuiListItem-gutters MuiListItem-button"
-                data-testid="associate-people"
-                role="button"
-                tabindex="0"
+              <a
+                href="/#people-narrative"
               >
-                <a
-                  href="/#people-framework-criteria"
+                <div
+                  aria-disabled="false"
+                  class="MuiButtonBase-root MuiListItem-root category list-item  MuiListItem-gutters MuiListItem-button"
+                  data-testid="associate-people"
+                  role="button"
+                  tabindex="0"
                 >
                   People
-                </a>
-                <span
-                  class="MuiTouchRipple-root"
-                />
-              </div>
+                  <span
+                    class="MuiTouchRipple-root"
+                  />
+                </div>
+              </a>
             </span>
             <span>
-              <div
-                aria-disabled="false"
-                class="MuiButtonBase-root MuiListItem-root category list-item  MuiListItem-gutters MuiListItem-button"
-                data-testid="associate-stakeholder"
-                role="button"
-                tabindex="0"
+              <a
+                href="/#stakeholder-narrative"
               >
-                <a
-                  href="/#stakeholder-framework-criteria"
+                <div
+                  aria-disabled="false"
+                  class="MuiButtonBase-root MuiListItem-root category list-item  MuiListItem-gutters MuiListItem-button"
+                  data-testid="associate-stakeholder"
+                  role="button"
+                  tabindex="0"
                 >
                   Stakeholder
-                </a>
-                <span
-                  class="MuiTouchRipple-root"
-                />
-              </div>
+                  <span
+                    class="MuiTouchRipple-root"
+                  />
+                </div>
+              </a>
             </span>
           </nav>
         </div>

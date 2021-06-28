@@ -1,132 +1,137 @@
-import * as React from 'react';
-import { render, screen, fireEvent } from '@testing-library/react';
-import Content from './Content';
-import { BrowserRouter as Router } from 'react-router-dom';
-import { EngineeringContextProvider } from './EngineeringContext';
-import {
-  ContentContainer,
-  ContentHeader,
-  categoryAndCompetencyFromUrl,
-} from './Content';
+import * as React from "react";
+import { render, screen, fireEvent } from "@testing-library/react";
+import Content from "./Content";
+import { BrowserRouter as Router } from "react-router-dom";
+import { EngineeringContextProvider } from "./EngineeringContext";
+import { ContentContainer, ContentHeader } from "./Content";
+import { categoryAndCompetencyFromUrl } from "./helpers";
 
-describe('Content', () => {
-  it('should render Content component', () => {
+describe("Content", () => {
+  it("should render Content component", () => {
     const { container } = render(
       <Router>
         <EngineeringContextProvider>
-          <Content title={'Software Engineer'} />
+          <Content title={"Software Engineer"} />
         </EngineeringContextProvider>
       </Router>
     );
     expect(container).toMatchSnapshot();
   });
 
-  it('should render Content component and check SideBar exists', () => {
+  it("should render Content component and check SideBar exists", () => {
     render(
       <Router>
         <EngineeringContextProvider>
-          <Content title={'Software Engineer'} />
+          <Content title={"Software Engineer"} />
         </EngineeringContextProvider>
       </Router>
     );
-    expect(screen.getByTestId('sidebar')).toBeTruthy();
+    expect(screen.getByTestId("sidebar")).toBeTruthy();
   });
 
-  it('should render Content component and check competency list exists', () => {
+  it("should render Content component and check competency list exists", () => {
     render(
       <Router>
         <EngineeringContextProvider>
-          <Content title={'Software Engineer'} />
+          <Content title={"Software Engineer"} />
         </EngineeringContextProvider>
       </Router>
     );
-    expect(screen.getByTestId('competency-list')).toBeTruthy();
+    expect(screen.getByTestId("competency-list")).toBeTruthy();
   });
 
-  it('should check that Framework Criteria competency is in ContentContainer when opening Delivery category', () => {
+  it("should check that Narrative competency is in ContentContainer when opening Delivery category", () => {
     const { container } = render(
       <Router>
         <EngineeringContextProvider>
-          <Content title={'Software Engineer'} />
+          <Content title={"Software Engineer"} />
         </EngineeringContextProvider>
       </Router>
     );
-    fireEvent.click(screen.getByTestId('associate-delivery'));
-    expect(container.querySelector('.list-item > .title')).toHaveTextContent('Framework Criteria');
-  });
-
-  it('should return a category and competency from hash url', () => {
-    const { categoryfromUrl, competencyFromUrl } = categoryAndCompetencyFromUrl(
-      '#delivery-technical-leadership'
+    fireEvent.click(screen.getByTestId("associate-delivery"));
+    expect(container.querySelector(".list-item > .title")).toHaveTextContent(
+      "Narrative"
     );
-    expect(categoryfromUrl).toBe('Delivery');
-    expect(competencyFromUrl).toBe('Technical Leadership');
   });
 
-  describe('ContentHeader', () => {
-    it('should check that correct background image renders', () => {
+  it("should return a category and competency from hash url", () => {
+    const { categoryfromUrl, competencyFromUrl } = categoryAndCompetencyFromUrl(
+      "#delivery-technical-leadership"
+    );
+    expect(categoryfromUrl).toBe("Delivery");
+    expect(competencyFromUrl).toBe("Technical Leadership");
+  });
+
+  describe("ContentHeader", () => {
+    it("should check that correct background image renders", () => {
       const { container } = render(
         <Router>
           <EngineeringContextProvider>
-            <ContentHeader level={'Associate'} />
+            <ContentHeader level={"Associate"} />
           </EngineeringContextProvider>
         </Router>
       );
       expect(container.firstChild).toHaveStyle(
-        'background-image: url(associate.png)'
+        "background-image: url(associate.png)"
       );
     });
 
-    it('should render level title with Associate Engineer text by default', () => {
+    it("should render level title with Associate Engineer text by default", () => {
+      global.window = Object.create(window);
+      Object.defineProperty(window, "location", {
+        value: {
+          href: "https://framework.capco.io/software/associate#overview-description",
+        },
+      });
       const { container } = render(
         <Router>
           <EngineeringContextProvider>
-            <Content title={'Software Engineer'} />
+            <Content title={"Software Engineer"} />
           </EngineeringContextProvider>
         </Router>
       );
-      expect(container.querySelector('.level-title')).toHaveTextContent(
-        'Associate • Associate Engineer'
+      expect(container.querySelector(".level-title")).toHaveTextContent(
+        "Associate • Associate Engineer"
       );
     });
 
-    it('should click Consultant in the side bar and render level title with Consultant Engineer text', () => {
+    it("should click Consultant in the side bar and render level title with Consultant Engineer text", () => {
       const { container } = render(
         <Router>
           <EngineeringContextProvider>
-            <Content title={'Software Engineer'} />
-          </EngineeringContextProvider>
-        </Router>
-      );
-
-      expect(container.querySelector('.level-title')).toHaveTextContent(
-        'Associate • Associate Engineer'
-      );
-
-      fireEvent.click(screen.getByText('Consultant'));
-
-      expect(container.querySelector('.level-title')).toHaveTextContent(
-        'Consultant • Engineer'
-      );
-    });
-
-    it('should check that the default category displayed is Overview ', () => {
-      const { container } = render(
-        <Router>
-          <EngineeringContextProvider>
-            <Content title={'Software Engineer'} />
+            <Content title={"Software Engineer"} />
           </EngineeringContextProvider>
         </Router>
       );
 
-      expect(container.querySelector('.category')).toHaveTextContent(
-        'Overview'
+      expect(container.querySelector(".level-title")).toHaveTextContent(
+        "Associate • Associate Engineer"
+      );
+
+      fireEvent.click(screen.getByText("Consultant"));
+
+      expect(container.querySelector(".level-title")).toHaveTextContent(
+        "Consultant • Engineer"
+      );
+    });
+
+    it("should check that the default category displayed is Overview ", () => {
+      const { container } = render(
+        <Router>
+          <EngineeringContextProvider>
+            <Content title={"Software Engineer"} />
+          </EngineeringContextProvider>
+        </Router>
+      );
+
+      expect(container.querySelector(".category")).toHaveTextContent(
+        "Overview"
       );
     });
   });
 
-  describe('ContentContainer', () => {
-    it('should check that ContentContainer is hidden when menu is open on mobile', () => {
+  describe("ContentContainer", () => {
+    it("should check that ContentContainer is hidden when menu is open on mobile", () => {
       const { container } = render(
         <Router>
           <EngineeringContextProvider>
@@ -137,7 +142,7 @@ describe('Content', () => {
       expect(container.firstChild).not.toBeVisible();
     });
 
-    it('should check that ContentContainer is visible when menu is closed on mobile', () => {
+    it("should check that ContentContainer is visible when menu is closed on mobile", () => {
       const { container } = render(
         <Router>
           <EngineeringContextProvider>

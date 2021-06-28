@@ -38,22 +38,22 @@ exports[`Content should render Content component 1`] = `
                   class="MuiList-root nested MuiList-padding"
                 >
                   <span>
-                    <div
-                      aria-disabled="false"
-                      class="MuiButtonBase-root MuiListItem-root category list-item active MuiListItem-gutters MuiListItem-button"
-                      data-testid="associate-overview"
-                      role="button"
-                      tabindex="0"
+                    <a
+                      href="/#overview-description"
                     >
-                      <a
-                        href="/#overview-job-description"
+                      <div
+                        aria-disabled="false"
+                        class="MuiButtonBase-root MuiListItem-root category list-item active MuiListItem-gutters MuiListItem-button"
+                        data-testid="associate-overview"
+                        role="button"
+                        tabindex="0"
                       >
                         Overview
-                      </a>
-                      <span
-                        class="MuiTouchRipple-root"
-                      />
-                    </div>
+                        <span
+                          class="MuiTouchRipple-root"
+                        />
+                      </div>
+                    </a>
                     <div
                       class="MuiCollapse-container MuiCollapse-entered"
                       style="min-height: 0px;"
@@ -68,7 +68,7 @@ exports[`Content should render Content component 1`] = `
                             class="MuiList-root"
                           >
                             <a
-                              href="/#overview-job-description"
+                              href="/#overview-description"
                             >
                               <div
                                 aria-disabled="false"
@@ -76,7 +76,7 @@ exports[`Content should render Content component 1`] = `
                                 role="button"
                                 tabindex="0"
                               >
-                                Job Description
+                                Description
                                 <span
                                   class="MuiTouchRipple-root"
                                 />
@@ -118,58 +118,58 @@ exports[`Content should render Content component 1`] = `
                     </div>
                   </span>
                   <span>
-                    <div
-                      aria-disabled="false"
-                      class="MuiButtonBase-root MuiListItem-root category list-item  MuiListItem-gutters MuiListItem-button"
-                      data-testid="associate-delivery"
-                      role="button"
-                      tabindex="0"
+                    <a
+                      href="/#delivery-narrative"
                     >
-                      <a
-                        href="/#delivery-framework-criteria"
+                      <div
+                        aria-disabled="false"
+                        class="MuiButtonBase-root MuiListItem-root category list-item  MuiListItem-gutters MuiListItem-button"
+                        data-testid="associate-delivery"
+                        role="button"
+                        tabindex="0"
                       >
                         Delivery
-                      </a>
-                      <span
-                        class="MuiTouchRipple-root"
-                      />
-                    </div>
+                        <span
+                          class="MuiTouchRipple-root"
+                        />
+                      </div>
+                    </a>
                   </span>
                   <span>
-                    <div
-                      aria-disabled="false"
-                      class="MuiButtonBase-root MuiListItem-root category list-item  MuiListItem-gutters MuiListItem-button"
-                      data-testid="associate-people"
-                      role="button"
-                      tabindex="0"
+                    <a
+                      href="/#people-narrative"
                     >
-                      <a
-                        href="/#people-framework-criteria"
+                      <div
+                        aria-disabled="false"
+                        class="MuiButtonBase-root MuiListItem-root category list-item  MuiListItem-gutters MuiListItem-button"
+                        data-testid="associate-people"
+                        role="button"
+                        tabindex="0"
                       >
                         People
-                      </a>
-                      <span
-                        class="MuiTouchRipple-root"
-                      />
-                    </div>
+                        <span
+                          class="MuiTouchRipple-root"
+                        />
+                      </div>
+                    </a>
                   </span>
                   <span>
-                    <div
-                      aria-disabled="false"
-                      class="MuiButtonBase-root MuiListItem-root category list-item  MuiListItem-gutters MuiListItem-button"
-                      data-testid="associate-stakeholder"
-                      role="button"
-                      tabindex="0"
+                    <a
+                      href="/#stakeholder-narrative"
                     >
-                      <a
-                        href="/#stakeholder-framework-criteria"
+                      <div
+                        aria-disabled="false"
+                        class="MuiButtonBase-root MuiListItem-root category list-item  MuiListItem-gutters MuiListItem-button"
+                        data-testid="associate-stakeholder"
+                        role="button"
+                        tabindex="0"
                       >
                         Stakeholder
-                      </a>
-                      <span
-                        class="MuiTouchRipple-root"
-                      />
-                    </div>
+                        <span
+                          class="MuiTouchRipple-root"
+                        />
+                      </div>
+                    </a>
                   </span>
                 </nav>
               </div>
@@ -304,7 +304,7 @@ exports[`Content should render Content component 1`] = `
               class="MuiBreadcrumbs-li"
             >
               <div>
-                Job Description
+                Description
               </div>
             </li>
           </ol>
@@ -346,7 +346,7 @@ exports[`Content should render Content component 1`] = `
         </div>
       </div>
       <div
-        class="Content__ContentDiv-dq2n3w-3 kjLGBI"
+        class="Content__ContentDiv-dq2n3w-3 kDmaJa"
       >
         <div
           class="MuiList-root competency-list MuiList-padding"
@@ -354,19 +354,19 @@ exports[`Content should render Content component 1`] = `
         >
           <li
             class="MuiListItem-root list-item MuiListItem-gutters MuiListItem-alignItemsFlexStart"
-            id="overview-job-description"
+            id="overview-description"
           >
             <div
               class="title"
             >
               <span>
-                Job Description
+                Description
               </span>
             </div>
             <p
               class="Content__Description-dq2n3w-4 jMEZjF"
             >
-              An associate developer has limited experience and is relatively new to the practice of software development. Their focus should be on acquiring skills and improving their capabilities. On the consulting side they should be focused on improving their communication and team work skills as these will be important for future leadership opportunities.
+              An Associate Engineer has limited experience and is relatively new to the practice of software development. Their focus should be on acquiring skills and improving their capabilities. In terms of consulting, they should be focused on improving their communication and teamwork as these will be important for future leadership opportunities.
             </p>
             <hr
               class="MuiDivider-root"
@@ -388,13 +388,13 @@ exports[`Content should render Content component 1`] = `
             >
               <ul>
                 <li>
-                  Theoretical background such as a university or college program in Computer Science (Technology)
+                  Educational background such as a university or college program in Computer Science
                 </li>
                 <li>
-                  Coop / internship or equivalent work experience
+                  Practical experience through bootcamps, internship, open source contributions and/or equivalent work experience
                 </li>
                 <li>
-                  Desire / drive to scale your business and technology knowledge
+                  Desire/drive to scale your technology and business knowledge
                 </li>
               </ul>
             </p>
@@ -418,10 +418,13 @@ exports[`Content should render Content component 1`] = `
             >
               <ul>
                 <li>
+                  Building technology agnostic foundational knowledge (e.g. mastering Git)
+                </li>
+                <li>
                   Focus on increasing competencies in Software Development
                 </li>
                 <li>
-                  Enhance communication and relationship management skills with stakeholders.
+                  Enhance communication and relationship skills with team members and stakeholders
                 </li>
               </ul>
             </p>
