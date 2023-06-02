@@ -416,7 +416,7 @@ const contentData = {
         name: "Feedback",
         specialism: "All",
         description:
-          "Understands the importance and language of security concepts. Utilises this knowledge to ask more senior engineers for help on making decisions that may have security implications.",
+          "Delivers praise and constructive feedback to their team, teammates, and manager in a useful manner.  Actively seeks out feedback from their teammates and manager, and works to use feedback that they receive as a tool for growth.",
       },
       {
         name: "Effective Communication",
